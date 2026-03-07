@@ -1,18 +1,26 @@
 {
   "title": "SportzStatz NHL Picks",
   "report_date": "2026-03-07",
-  "last_updated_display": "2026-03-07 05:16 PM CT",
-  "last_updated_iso": "2026-03-07T17:16:30.032234-06:00",
+  "last_updated_display": "2026-03-07 05:24 PM CT",
+  "last_updated_iso": "2026-03-07T17:24:34.288455-06:00",
   "subtitle": "Top plays based on model edge versus market pricing.",
   "summary": {
     "total_games": 11,
     "recommended_picks": 8,
     "high_confidence_plays": 5,
-    "pass_picks": 3
+    "pass_picks": 3,
+    "record": "10-3",
+    "wins": 10,
+    "losses": 3,
+    "units": 13.26890290037831,
+    "units_display": "+13.27",
+    "graded_bets": 13,
+    "pending_bets": 8
   },
   "top_picks": [
     {
       "game_key": "ottawa senators__seattle kraken",
+      "html_id": "ottawa-senators__seattle-kraken",
       "matchup": "Ottawa Senators vs Seattle Kraken",
       "recommended_pick": "Ottawa Senators -1.5",
       "recommended_odds": 164.0,
@@ -48,6 +56,7 @@
     },
     {
       "game_key": "calgary flames__carolina hurricanes",
+      "html_id": "calgary-flames__carolina-hurricanes",
       "matchup": "Calgary Flames vs Carolina Hurricanes",
       "recommended_pick": "Carolina Hurricanes -1.5",
       "recommended_odds": 130.0,
@@ -83,6 +92,7 @@
     },
     {
       "game_key": "buffalo sabres__nashville predators",
+      "html_id": "buffalo-sabres__nashville-predators",
       "matchup": "Buffalo Sabres vs Nashville Predators",
       "recommended_pick": "Nashville Predators ML",
       "recommended_odds": 154.0,
@@ -120,6 +130,7 @@
   "all_picks": [
     {
       "game_key": "ottawa senators__seattle kraken",
+      "html_id": "ottawa-senators__seattle-kraken",
       "matchup": "Ottawa Senators vs Seattle Kraken",
       "recommended_pick": "Ottawa Senators -1.5",
       "recommended_odds": 164.0,
@@ -155,6 +166,7 @@
     },
     {
       "game_key": "calgary flames__carolina hurricanes",
+      "html_id": "calgary-flames__carolina-hurricanes",
       "matchup": "Calgary Flames vs Carolina Hurricanes",
       "recommended_pick": "Carolina Hurricanes -1.5",
       "recommended_odds": 130.0,
@@ -190,6 +202,7 @@
     },
     {
       "game_key": "tampa bay lightning__toronto maple leafs",
+      "html_id": "tampa-bay-lightning__toronto-maple-leafs",
       "matchup": "Tampa Bay Lightning vs Toronto Maple Leafs",
       "recommended_pick": "Tampa Bay Lightning -1.5",
       "recommended_odds": 124.0,
@@ -225,6 +238,7 @@
     },
     {
       "game_key": "philadelphia flyers__pittsburgh penguins",
+      "html_id": "philadelphia-flyers__pittsburgh-penguins",
       "matchup": "Philadelphia Flyers vs Pittsburgh Penguins",
       "recommended_pick": "Pittsburgh Penguins -1.5",
       "recommended_odds": 180.0,
@@ -260,6 +274,7 @@
     },
     {
       "game_key": "vancouver canucks__winnipeg jets",
+      "html_id": "vancouver-canucks__winnipeg-jets",
       "matchup": "Vancouver Canucks vs Winnipeg Jets",
       "recommended_pick": "Winnipeg Jets -1.5",
       "recommended_odds": -105.0,
@@ -295,6 +310,7 @@
     },
     {
       "game_key": "buffalo sabres__nashville predators",
+      "html_id": "buffalo-sabres__nashville-predators",
       "matchup": "Buffalo Sabres vs Nashville Predators",
       "recommended_pick": "Nashville Predators ML",
       "recommended_odds": 154.0,
@@ -330,6 +346,7 @@
     },
     {
       "game_key": "new york islanders__san jose sharks",
+      "html_id": "new-york-islanders__san-jose-sharks",
       "matchup": "New York Islanders vs San Jose Sharks",
       "recommended_pick": "San Jose Sharks ML",
       "recommended_odds": 114.0,
@@ -365,6 +382,7 @@
     },
     {
       "game_key": "columbus blue jackets__utah mammoth",
+      "html_id": "columbus-blue-jackets__utah-mammoth",
       "matchup": "Columbus Blue Jackets vs Utah Mammoth",
       "recommended_pick": "Utah Mammoth ML",
       "recommended_odds": -115.0,
@@ -402,6 +420,7 @@
   "pass_picks": [
     {
       "game_key": "boston bruins__washington capitals",
+      "html_id": "boston-bruins__washington-capitals",
       "matchup": "Boston Bruins vs Washington Capitals",
       "recommended_pick": "PASS (small core edge)",
       "recommended_odds": null,
@@ -437,6 +456,7 @@
     },
     {
       "game_key": "los angeles kings__montreal canadiens",
+      "html_id": "los-angeles-kings__montreal-canadiens",
       "matchup": "Los Angeles Kings vs Montreal Canadiens",
       "recommended_pick": "PASS (small core edge)",
       "recommended_odds": null,
@@ -472,6 +492,7 @@
     },
     {
       "game_key": "new jersey devils__new york rangers",
+      "html_id": "new-jersey-devils__new-york-rangers",
       "matchup": "New Jersey Devils vs New York Rangers",
       "recommended_pick": "PASS (price not favorable)",
       "recommended_odds": null,
