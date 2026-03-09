@@ -3,777 +3,423 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SportzStatz NHL Picks</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>NHL3.0 Morning Picks</title>
   <style>
     :root {
-      --page-bg: #f4f6f8;
-      --card-border: rgba(15, 23, 42, 0.08);
-      --ink-muted: #5b6472;
-      --accent: #0f766e;
-      --accent-soft: rgba(15, 118, 110, 0.10);
-      --top-pick: #d97706;
+      --bg: #f4efe6;
+      --panel: #fffaf1;
+      --ink: #18222d;
+      --muted: #6b7280;
+      --line: #d8cdbb;
+      --accent: #b14424;
+      --accent-soft: #f4d6c8;
+      --good: #166534;
+      --warn: #8a5a00;
+      --shadow: 0 18px 45px rgba(24, 34, 45, 0.10);
     }
-
+    * { box-sizing: border-box; }
     body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(14, 165, 233, 0.12), transparent 32%),
-        radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 28%),
-        var(--page-bg);
-      color: #111827;
+        radial-gradient(circle at top left, rgba(177,68,36,0.12), transparent 28%),
+        linear-gradient(180deg, #f8f3eb 0%, var(--bg) 100%);
     }
-
-    .hero-card,
-    .pick-card,
-    .summary-card,
-    .info-card {
-      border: 1px solid var(--card-border);
-      border-radius: 1.25rem;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
     }
-
-    .hero-card {
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.10), rgba(255, 255, 255, 0.96));
+    .hero {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 28px;
     }
-
-    .section-heading {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
     .eyebrow {
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.75rem;
       color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 12px;
       font-weight: 700;
+      font-family: "Trebuchet MS", sans-serif;
     }
-
-    .pick-card {
-      background: rgba(255, 255, 255, 0.92);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.95;
+      max-width: 9ch;
     }
-
-    .pick-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 24px 44px rgba(15, 23, 42, 0.08);
+    .sub {
+      color: var(--muted);
+      max-width: 74ch;
+      line-height: 1.5;
+      font-size: 16px;
     }
-
-    .pick-card.top-pick {
-      border-color: rgba(217, 119, 6, 0.28);
-      background: linear-gradient(180deg, rgba(255, 251, 235, 0.98), rgba(255, 255, 255, 0.96));
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
     }
-
-    .stat-pill {
-      background: #eef2f7;
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.7);
+      padding: 8px 12px;
       border-radius: 999px;
-      padding: 0.45rem 0.75rem;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: #1f2937;
+      font-size: 13px;
+      color: var(--muted);
+      font-family: "Trebuchet MS", sans-serif;
     }
-
-    .summary-card {
-      background: rgba(255, 255, 255, 0.94);
+    .top-picks, .games {
+      display: grid;
+      gap: 18px;
     }
-
-    .summary-card .label,
-    .muted-note,
-    .details-list dt {
-      color: var(--ink-muted);
+    .section-title {
+      margin: 28px 0 6px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      font-family: "Trebuchet MS", sans-serif;
     }
-
-    .pick-line {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
+    .pick-card, .game-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: var(--shadow);
     }
-
-    .pick-odds {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #0f172a;
+    .pick-grid, .game-grid {
+      display: grid;
+      gap: 16px;
     }
-
-    .accordion-button:not(.collapsed) {
-      background: var(--accent-soft);
-      color: #0f172a;
-      box-shadow: none;
+    .pick-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .game-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+    .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; font-family: "Trebuchet MS", sans-serif; }
+    .value { font-size: 18px; font-weight: 700; }
+    .reason { color: var(--muted); line-height: 1.45; }
+    .recommendation {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      margin-top: 12px;
     }
-
-    .badge-high {
-      background: #166534;
+    .confidence-high { color: var(--good); }
+    .confidence-medium { color: var(--warn); }
+    .stat-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
     }
-
-    .badge-medium {
-      background: #b45309;
+    .stat-table td {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(216,205,187,0.55);
     }
-
-    .badge-low {
-      background: #475569;
+    .stat-table td:last-child { text-align: right; font-weight: 700; }
+    .edge-list { display: grid; gap: 10px; }
+    .edge-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(216,205,187,0.55);
     }
-
-    footer {
-      color: var(--ink-muted);
+    .edge-row:last-child { border-bottom: none; }
+    .footer {
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: 13px;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+    @media (max-width: 900px) {
+      .game-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <main class="container py-4 py-lg-5">
-    <section class="hero-card p-4 p-lg-5 mb-4">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-8">
-          <div class="eyebrow mb-2">SportzStatz NHL Board</div>
-          <h1 class="display-6 fw-bold mb-2">SportzStatz NHL Picks</h1>
-          <p class="lead mb-3">Top plays based on model edge versus market pricing.</p>
-          <div class="d-flex flex-wrap gap-2 align-items-center">
-            <span class="stat-pill">Report Date: 2026-03-07</span>
-            <span class="stat-pill">Last Updated: 2026-03-07 05:31 PM CT</span>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="info-card p-3 bg-white h-100">
-            <h2 class="h6 fw-bold mb-2">How to read this page</h2>
-            <p class="mb-0 muted-note">Start with Top Picks. Each card shows the matchup, recommended bet, odds, confidence, edge, projected score, and one-line reason. Open Details only when you want more context.</p>
-          </div>
-        </div>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">NHL3.0 Morning Board</div>
+      <h1>Market first. Model second.</h1>
+      <div class="sub">This page is generated from the NHL3.0 morning pipeline. Current DraftKings and FanDuel odds remain the prior, while preview features and schedule context provide only a conservative nudge.</div>
+      <div class="meta">
+        <div class="pill">Generated 2026-03-08 08:24 PM CT</div>
+        <div class="pill">Matched games 3</div>
+        <div class="pill">Recommendations 3</div>
+        <div class="pill">Formula phase3_market_anchor_v1</div>
       </div>
     </section>
 
-    <section class="row g-3 mb-4">
-      <div class="col-6 col-lg-2">
-        <div class="summary-card p-3 h-100">
-          <div class="label small text-uppercase">Games</div>
-          <div class="display-6 fw-bold mb-0">11</div>
+    <div class="section-title">Top Picks</div>
+    <section class="top-picks">
+      <article class="pick-card">
+        <div class="pick-grid">
+          <div>
+            <div class="label">Game</div>
+            <div class="value">Detroit Red Wings at New Jersey Devils</div>
+          </div>
+          <div>
+            <div class="label">Bet</div>
+            <div class="value">Under +6.5</div>
+          </div>
+          <div>
+            <div class="label">Book</div>
+            <div class="value">FanDuel -106</div>
+          </div>
+          <div>
+            <div class="label">Edge / EV</div>
+            <div class="value">4.58% / 2.88%</div>
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-lg-2">
-        <div class="summary-card p-3 h-100">
-          <div class="label small text-uppercase">Recommended Picks</div>
-          <div class="display-6 fw-bold mb-0">8</div>
+        <div class="recommendation">
+          <div class="label">Confidence</div>
+          <div class="value confidence-medium">Medium</div>
+          <div class="reason">Expected total moved modestly off the market line after preview offense/defense and special-teams pressure.</div>
         </div>
-      </div>
-      <div class="col-6 col-lg-2">
-        <div class="summary-card p-3 h-100">
-          <div class="label small text-uppercase">Record</div>
-          <div class="display-6 fw-bold mb-0">10-3</div>
+      </article>
+      <article class="pick-card">
+        <div class="pick-grid">
+          <div>
+            <div class="label">Game</div>
+            <div class="value">Edmonton Oilers at Vegas Golden Knights</div>
+          </div>
+          <div>
+            <div class="label">Bet</div>
+            <div class="value">Under +6.5</div>
+          </div>
+          <div>
+            <div class="label">Book</div>
+            <div class="value">DraftKings 124</div>
+          </div>
+          <div>
+            <div class="label">Edge / EV</div>
+            <div class="value">9.86% / 17.94%</div>
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-lg-2">
-        <div class="summary-card p-3 h-100">
-          <div class="label small text-uppercase">Units</div>
-          <div class="display-6 fw-bold mb-0">+13.27</div>
+        <div class="recommendation">
+          <div class="label">Confidence</div>
+          <div class="value confidence-high">High</div>
+          <div class="reason">Expected total moved modestly off the market line after preview offense/defense and special-teams pressure.</div>
         </div>
-      </div>
-      <div class="col-6 col-lg-2">
-        <div class="summary-card p-3 h-100">
-          <div class="label small text-uppercase">High Confidence</div>
-          <div class="display-6 fw-bold mb-0">5</div>
-        </div>
-      </div>
-      <div class="col-6 col-lg-2">
-        <div class="summary-card p-3 h-100">
-          <div class="label small text-uppercase">PASS</div>
-          <div class="display-6 fw-bold mb-0">3</div>
-        </div>
-      </div>
+      </article>
     </section>
-    <div class="muted-note small mb-4">Graded bets: 13 | Pending: 8</div>
 
-    <ul class="nav nav-pills gap-2 mb-4" id="picks-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="top-tab" data-bs-toggle="pill" data-bs-target="#top-picks-pane" type="button" role="tab">Top Picks</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="all-tab" data-bs-toggle="pill" data-bs-target="#all-picks-pane" type="button" role="tab">All Picks</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pass-tab" data-bs-toggle="pill" data-bs-target="#pass-picks-pane" type="button" role="tab">PASS</button>
-      </li>
-    </ul>
-
-    <div class="tab-content">
-      <section class="tab-pane fade show active" id="top-picks-pane" role="tabpanel" aria-labelledby="top-tab">
-        <div class="d-flex justify-content-between align-items-end mb-3">
+    <div class="section-title">Game Cards</div>
+    <section class="games">
+      <article class="game-card" id="detroit_red_wings_new_jersey_devils">
+        <div class="pick-grid">
           <div>
-            <div class="eyebrow">Top Picks</div>
-            <h2 class="section-heading h3 mb-0">Best board at a glance</h2>
+            <div class="label">Matchup</div>
+            <div class="value">Detroit Red Wings at New Jersey Devils</div>
+            <div class="reason">Sun 06:09 PM CT</div>
+          </div>
+          <div>
+            <div class="label">Feature Edge</div>
+            <div class="value">-0.20</div>
+          </div>
+          <div>
+            <div class="label">Total Pressure</div>
+            <div class="value">-0.10</div>
           </div>
         </div>
-        <div class="row g-4">
-              <div class="col-12 col-lg-6">
-                <article class="pick-card top-pick h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <div class="eyebrow mb-1">Featured Play</div>
-                      <h3 class="h4 mb-1">Ottawa Senators vs Seattle Kraken</h3>
-                      <div class="muted-note">Ottawa Senators 3 - 2 Seattle Kraken</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
-                    <div>
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Ottawa Senators -1.5</div>
-                    </div>
-                    <div class="text-lg-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+164</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Edge +42.1%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 42.1%.</p>
-                    <div class="muted-note small">Alt: Ottawa Senators ML (-162)</div>
-                </article>
-              </div>
-              <div class="col-12 col-lg-6">
-                <article class="pick-card top-pick h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <div class="eyebrow mb-1">Featured Play</div>
-                      <h3 class="h4 mb-1">Calgary Flames vs Carolina Hurricanes</h3>
-                      <div class="muted-note">Calgary Flames 2 - 3 Carolina Hurricanes</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
-                    <div>
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Carolina Hurricanes -1.5</div>
-                    </div>
-                    <div class="text-lg-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+130</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Edge +36.5%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 36.5%.</p>
-                    <div class="muted-note small">Alt: Carolina Hurricanes ML (-192)</div>
-                </article>
-              </div>
-              <div class="col-12 col-lg-6">
-                <article class="pick-card top-pick h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <div class="eyebrow mb-1">Featured Play</div>
-                      <h3 class="h4 mb-1">Tampa Bay Lightning vs Toronto Maple Leafs</h3>
-                      <div class="muted-note">Tampa Bay Lightning 3 - 2 Toronto Maple Leafs</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
-                    <div>
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Tampa Bay Lightning -1.5</div>
-                    </div>
-                    <div class="text-lg-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+124</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Edge +35.4%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 35.4%.</p>
-                    <div class="muted-note small">Alt: Tampa Bay Lightning ML (-192)</div>
-                </article>
-              </div>
-        </div>
-      </section>
-
-      <section class="tab-pane fade" id="all-picks-pane" role="tabpanel" aria-labelledby="all-tab">
-        <div class="d-flex justify-content-between align-items-end mb-3">
+        <div class="game-grid">
           <div>
-            <div class="eyebrow">All Picks</div>
-            <h2 class="section-heading h3 mb-0">Recommended plays</h2>
+            <div class="label">Moneyline</div>
+            <table class="stat-table">
+              <tr><td>Detroit Red Wings</td><td>68.2%</td></tr>
+              <tr><td>New Jersey Devils</td><td>31.8%</td></tr>
+            </table>
+            <div class="label" style="margin-top:12px;">Market Prior</div>
+            <table class="stat-table">
+              <tr><td>Detroit Red Wings</td><td>67.4%</td></tr>
+              <tr><td>New Jersey Devils</td><td>32.6%</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="label">Puck Line</div>
+            <table class="stat-table">
+              <tr><td>Main line</td><td>+1.5</td></tr>
+              <tr><td>New Jersey Devils cover</td><td>54.9%</td></tr>
+              <tr><td>Detroit Red Wings cover</td><td>45.1%</td></tr>
+            </table>
+            <div class="label" style="margin-top:12px;">Total</div>
+            <table class="stat-table">
+              <tr><td>Main line</td><td>6.5</td></tr>
+              <tr><td>Expected total</td><td>6.48</td></tr>
+              <tr><td>Over</td><td>47.1%</td></tr>
+              <tr><td>Under</td><td>52.9%</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="label">Recommended Bets</div>
+              <div class="recommendation">
+                <div class="value">Under +6.5 @ FanDuel -106</div>
+                <div class="reason">Edge 4.58% | EV 2.88% | Medium</div>
+              </div>
+            <div class="label" style="margin-top:12px;">Best Positive-EV Lines</div>
+            <div class="edge-list">
+              <div class="edge-row">
+                <div>
+                  <div class="value" style="font-size:15px;">Under +6.5</div>
+                  <div class="reason">FanDuel -106</div>
+                </div>
+                <div style="text-align:right;">
+                  <div class="value" style="font-size:15px;">2.88%</div>
+                  <div class="reason">EV</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row g-4">
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">Ottawa Senators vs Seattle Kraken</h3>
-                      <div class="muted-note">Projected Score: Ottawa Senators 3 - 2 Seattle Kraken</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Ottawa Senators -1.5</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+164</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence High</span>
-                    <span class="stat-pill">Edge +42.1%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 42.1%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-ottawa-senators__seattle-kraken">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-ottawa-senators__seattle-kraken" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-ottawa-senators__seattle-kraken" class="accordion-collapse collapse" data-bs-parent="#accordion-ottawa-senators__seattle-kraken">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">80.0%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">37.9%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 80.0% vs market 37.9%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">Ottawa Senators ML (-162)</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 90.0%, B 10.0%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">Calgary Flames vs Carolina Hurricanes</h3>
-                      <div class="muted-note">Projected Score: Calgary Flames 2 - 3 Carolina Hurricanes</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Carolina Hurricanes -1.5</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+130</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence High</span>
-                    <span class="stat-pill">Edge +36.5%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 36.5%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-calgary-flames__carolina-hurricanes">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-calgary-flames__carolina-hurricanes" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-calgary-flames__carolina-hurricanes" class="accordion-collapse collapse" data-bs-parent="#accordion-calgary-flames__carolina-hurricanes">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">80.0%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">43.5%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 80.0% vs market 43.5%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">Carolina Hurricanes ML (-192)</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 10.0%, B 90.0%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">Tampa Bay Lightning vs Toronto Maple Leafs</h3>
-                      <div class="muted-note">Projected Score: Tampa Bay Lightning 3 - 2 Toronto Maple Leafs</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Tampa Bay Lightning -1.5</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+124</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence High</span>
-                    <span class="stat-pill">Edge +35.4%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 35.4%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-tampa-bay-lightning__toronto-maple-leafs">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-tampa-bay-lightning__toronto-maple-leafs" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-tampa-bay-lightning__toronto-maple-leafs" class="accordion-collapse collapse" data-bs-parent="#accordion-tampa-bay-lightning__toronto-maple-leafs">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">80.0%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">44.6%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 80.0% vs market 44.6%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">Tampa Bay Lightning ML (-192)</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 90.0%, B 10.0%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">Philadelphia Flyers vs Pittsburgh Penguins</h3>
-                      <div class="muted-note">Projected Score: Philadelphia Flyers 2 - 3 Pittsburgh Penguins</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Pittsburgh Penguins -1.5</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+180</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence High</span>
-                    <span class="stat-pill">Edge +29.8%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 29.8%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-philadelphia-flyers__pittsburgh-penguins">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-philadelphia-flyers__pittsburgh-penguins" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-philadelphia-flyers__pittsburgh-penguins" class="accordion-collapse collapse" data-bs-parent="#accordion-philadelphia-flyers__pittsburgh-penguins">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">65.5%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">35.7%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 65.5% vs market 35.7%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">Pittsburgh Penguins ML (-142)</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 29.2%, B 70.8%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">Vancouver Canucks vs Winnipeg Jets</h3>
-                      <div class="muted-note">Projected Score: Vancouver Canucks 2 - 3 Winnipeg Jets</div>
-                    </div>
-                    <span class="badge rounded-pill badge-high px-3 py-2">High</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Winnipeg Jets -1.5</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">-105</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence High</span>
-                    <span class="stat-pill">Edge +28.8%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model cover estimate exceeds market by 28.8%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-vancouver-canucks__winnipeg-jets">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-vancouver-canucks__winnipeg-jets" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-vancouver-canucks__winnipeg-jets" class="accordion-collapse collapse" data-bs-parent="#accordion-vancouver-canucks__winnipeg-jets">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">80.0%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">51.2%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 80.0% vs market 51.2%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">Winnipeg Jets ML (-278)</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 11.3%, B 88.7%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">Buffalo Sabres vs Nashville Predators</h3>
-                      <div class="muted-note">Projected Score: Buffalo Sabres 2 - 3 Nashville Predators</div>
-                    </div>
-                    <span class="badge rounded-pill badge-medium px-3 py-2">Medium</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Nashville Predators ML</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+154</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence Medium</span>
-                    <span class="stat-pill">Edge +25.0%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model win probability exceeds market by 25.0%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-buffalo-sabres__nashville-predators">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-buffalo-sabres__nashville-predators" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-buffalo-sabres__nashville-predators" class="accordion-collapse collapse" data-bs-parent="#accordion-buffalo-sabres__nashville-predators">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">64.4%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">39.4%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 64.4% vs market 39.4%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">None</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 35.6%, B 64.4%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">New York Islanders vs San Jose Sharks</h3>
-                      <div class="muted-note">Projected Score: New York Islanders 2 - 3 San Jose Sharks</div>
-                    </div>
-                    <span class="badge rounded-pill badge-low px-3 py-2">Low</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">San Jose Sharks ML</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">+114</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence Low</span>
-                    <span class="stat-pill">Edge +11.4%</span>
-                    <span class="stat-pill">Strong Value</span>
-                  </div>
-                  <p class="mb-3">Model win probability exceeds market by 11.4%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-new-york-islanders__san-jose-sharks">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-new-york-islanders__san-jose-sharks" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-new-york-islanders__san-jose-sharks" class="accordion-collapse collapse" data-bs-parent="#accordion-new-york-islanders__san-jose-sharks">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">58.1%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">46.7%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 58.1% vs market 46.7%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">None</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 41.9%, B 58.1%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="col-12 col-xl-6">
-                <article class="pick-card h-100 p-4">
-                  <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                    <div>
-                      <h3 class="h4 mb-1">Columbus Blue Jackets vs Utah Mammoth</h3>
-                      <div class="muted-note">Projected Score: Columbus Blue Jackets 2 - 3 Utah Mammoth</div>
-                    </div>
-                    <span class="badge rounded-pill badge-low px-3 py-2">Low</span>
-                  </div>
-                  <div class="row g-3 align-items-end mb-3">
-                    <div class="col-sm-8">
-                      <div class="muted-note small">Pick</div>
-                      <div class="pick-line">Utah Mammoth ML</div>
-                    </div>
-                    <div class="col-sm-4 text-sm-end">
-                      <div class="muted-note small">Odds</div>
-                      <div class="pick-odds">-115</div>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="stat-pill">Confidence Low</span>
-                    <span class="stat-pill">Edge +4.1%</span>
-                    <span class="stat-pill">Good Value</span>
-                  </div>
-                  <p class="mb-3">Model win probability exceeds market by 4.1%.</p>
-                  <div class="accordion accordion-flush mb-3" id="accordion-columbus-blue-jackets__utah-mammoth">
-                    <div class="accordion-item border rounded-4 overflow-hidden">
-                      <h4 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#details-columbus-blue-jackets__utah-mammoth" aria-expanded="false">
-                          Details
-                        </button>
-                      </h4>
-                      <div id="details-columbus-blue-jackets__utah-mammoth" class="accordion-collapse collapse" data-bs-parent="#accordion-columbus-blue-jackets__utah-mammoth">
-                        <div class="accordion-body">
-                          <dl class="row mb-0 details-list">
-                            <dt class="col-6">Model Probability</dt>
-                            <dd class="col-6">57.5%</dd>
-                            <dt class="col-6">Implied Probability</dt>
-                            <dd class="col-6">53.5%</dd>
-                            <dt class="col-6">Market Comparison</dt>
-                            <dd class="col-6">Model 57.5% vs market 53.5%.</dd>
-                            <dt class="col-6">Alternate Bet</dt>
-                            <dd class="col-6">Utah Mammoth -1.5 (+210)</dd>
-                            <dt class="col-6">Internal Model View</dt>
-                            <dd class="col-6">A 42.5%, B 57.5%</dd>
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-        </div>
-      </section>
-
-      <section class="tab-pane fade" id="pass-picks-pane" role="tabpanel" aria-labelledby="pass-tab">
-        <div class="d-flex justify-content-between align-items-end mb-3">
+      </article>
+      <article class="game-card" id="st_louis_blues_anaheim_ducks">
+        <div class="pick-grid">
           <div>
-            <div class="eyebrow">PASS Picks</div>
-            <h2 class="section-heading h3 mb-0">Games without a recommended play</h2>
+            <div class="label">Matchup</div>
+            <div class="value">St Louis Blues at Anaheim Ducks</div>
+            <div class="reason">Sun 08:10 PM CT</div>
+          </div>
+          <div>
+            <div class="label">Feature Edge</div>
+            <div class="value">0.00</div>
+          </div>
+          <div>
+            <div class="label">Total Pressure</div>
+            <div class="value">0.00</div>
           </div>
         </div>
-        <div class="accordion" id="pass-accordion">
-              <div class="accordion-item border rounded-4 mb-3 overflow-hidden">
-                <h3 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pass-details-boston-bruins__washington-capitals" aria-expanded="false">
-                    Boston Bruins vs Washington Capitals
-                  </button>
-                </h3>
-                <div id="pass-details-boston-bruins__washington-capitals" class="accordion-collapse collapse" data-bs-parent="#pass-accordion">
-                  <div class="accordion-body">
-                    <p class="mb-2"><strong>Status:</strong> PASS (small core edge)</p>
-                    <p class="mb-2"><strong>Projected Score:</strong> Boston Bruins 2 - 3 Washington Capitals</p>
-                    <p class="mb-0">Edge did not clear the threshold for a recommended play.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item border rounded-4 mb-3 overflow-hidden">
-                <h3 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pass-details-los-angeles-kings__montreal-canadiens" aria-expanded="false">
-                    Los Angeles Kings vs Montreal Canadiens
-                  </button>
-                </h3>
-                <div id="pass-details-los-angeles-kings__montreal-canadiens" class="accordion-collapse collapse" data-bs-parent="#pass-accordion">
-                  <div class="accordion-body">
-                    <p class="mb-2"><strong>Status:</strong> PASS (small core edge)</p>
-                    <p class="mb-2"><strong>Projected Score:</strong> Los Angeles Kings 3 - 2 Montreal Canadiens</p>
-                    <p class="mb-0">Edge did not clear the threshold for a recommended play.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item border rounded-4 mb-3 overflow-hidden">
-                <h3 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pass-details-new-jersey-devils__new-york-rangers" aria-expanded="false">
-                    New Jersey Devils vs New York Rangers
-                  </button>
-                </h3>
-                <div id="pass-details-new-jersey-devils__new-york-rangers" class="accordion-collapse collapse" data-bs-parent="#pass-accordion">
-                  <div class="accordion-body">
-                    <p class="mb-2"><strong>Status:</strong> PASS (price not favorable)</p>
-                    <p class="mb-2"><strong>Projected Score:</strong> New Jersey Devils 3 - 2 New York Rangers</p>
-                    <p class="mb-0">Edge did not clear the threshold for a recommended play.</p>
-                  </div>
-                </div>
-              </div>
+        <div class="game-grid">
+          <div>
+            <div class="label">Moneyline</div>
+            <table class="stat-table">
+              <tr><td>St Louis Blues</td><td>39.0%</td></tr>
+              <tr><td>Anaheim Ducks</td><td>61.0%</td></tr>
+            </table>
+            <div class="label" style="margin-top:12px;">Market Prior</div>
+            <table class="stat-table">
+              <tr><td>St Louis Blues</td><td>39.0%</td></tr>
+              <tr><td>Anaheim Ducks</td><td>61.0%</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="label">Puck Line</div>
+            <table class="stat-table">
+              <tr><td>Main line</td><td>-1.5</td></tr>
+              <tr><td>Anaheim Ducks cover</td><td>37.5%</td></tr>
+              <tr><td>St Louis Blues cover</td><td>62.5%</td></tr>
+            </table>
+            <div class="label" style="margin-top:12px;">Total</div>
+            <table class="stat-table">
+              <tr><td>Main line</td><td>6.5</td></tr>
+              <tr><td>Expected total</td><td>6.50</td></tr>
+              <tr><td>Over</td><td>47.3%</td></tr>
+              <tr><td>Under</td><td>52.7%</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="label">Recommended Bets</div>
+              <div class="reason">No positive-EV recommendation passed the threshold.</div>
+            <div class="label" style="margin-top:12px;">Best Positive-EV Lines</div>
+            <div class="edge-list">
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
+      </article>
+      <article class="game-card" id="edmonton_oilers_vegas_golden_knights">
+        <div class="pick-grid">
+          <div>
+            <div class="label">Matchup</div>
+            <div class="value">Edmonton Oilers at Vegas Golden Knights</div>
+            <div class="reason">Sun 08:40 PM CT</div>
+          </div>
+          <div>
+            <div class="label">Feature Edge</div>
+            <div class="value">0.00</div>
+          </div>
+          <div>
+            <div class="label">Total Pressure</div>
+            <div class="value">0.00</div>
+          </div>
+        </div>
+        <div class="game-grid">
+          <div>
+            <div class="label">Moneyline</div>
+            <table class="stat-table">
+              <tr><td>Edmonton Oilers</td><td>50.0%</td></tr>
+              <tr><td>Vegas Golden Knights</td><td>50.0%</td></tr>
+            </table>
+            <div class="label" style="margin-top:12px;">Market Prior</div>
+            <table class="stat-table">
+              <tr><td>Edmonton Oilers</td><td>50.0%</td></tr>
+              <tr><td>Vegas Golden Knights</td><td>50.0%</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="label">Puck Line</div>
+            <table class="stat-table">
+              <tr><td>Main line</td><td>-1.5</td></tr>
+              <tr><td>Vegas Golden Knights cover</td><td>27.3%</td></tr>
+              <tr><td>Edmonton Oilers cover</td><td>72.7%</td></tr>
+            </table>
+            <div class="label" style="margin-top:12px;">Total</div>
+            <table class="stat-table">
+              <tr><td>Main line</td><td>6.5</td></tr>
+              <tr><td>Expected total</td><td>6.50</td></tr>
+              <tr><td>Over</td><td>47.3%</td></tr>
+              <tr><td>Under</td><td>52.7%</td></tr>
+            </table>
+          </div>
+          <div>
+            <div class="label">Recommended Bets</div>
+              <div class="recommendation">
+                <div class="value">Under +6.5 @ DraftKings 124</div>
+                <div class="reason">Edge 9.86% | EV 17.94% | High</div>
+              </div>
+              <div class="recommendation">
+                <div class="value">Edmonton Oilers +1.5 @ DraftKings -250</div>
+                <div class="reason">Edge 4.14% | EV 1.76% | Low</div>
+              </div>
+            <div class="label" style="margin-top:12px;">Best Positive-EV Lines</div>
+            <div class="edge-list">
+              <div class="edge-row">
+                <div>
+                  <div class="value" style="font-size:15px;">Under +6.5</div>
+                  <div class="reason">DraftKings 124</div>
+                </div>
+                <div style="text-align:right;">
+                  <div class="value" style="font-size:15px;">17.94%</div>
+                  <div class="reason">EV</div>
+                </div>
+              </div>
+              <div class="edge-row">
+                <div>
+                  <div class="value" style="font-size:15px;">Under +6.5</div>
+                  <div class="reason">FanDuel 120</div>
+                </div>
+                <div style="text-align:right;">
+                  <div class="value" style="font-size:15px;">15.84%</div>
+                  <div class="reason">EV</div>
+                </div>
+              </div>
+              <div class="edge-row">
+                <div>
+                  <div class="value" style="font-size:15px;">Edmonton Oilers +1.5</div>
+                  <div class="reason">DraftKings -250</div>
+                </div>
+                <div style="text-align:right;">
+                  <div class="value" style="font-size:15px;">1.76%</div>
+                  <div class="reason">EV</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
 
-    <footer class="pt-4 mt-4 border-top small">
-      <div>Last updated 2026-03-07 05:31 PM CT</div>
-      <div>Static page generated for GitHub Pages.</div>
-    </footer>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="footer">Static page generated for GitHub Pages from the NHL3.0 morning pipeline.</div>
+  </div>
 </body>
 </html>
