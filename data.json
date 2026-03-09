@@ -1,18 +1,8 @@
 {
   "generated_at": "Sunday, March 08, 2026 09:15 PM CT",
   "run_summary": {
-    "latest_current_odds_request_id": 10,
-    "preview_context_count": 1,
     "matched_game_count": 1,
-    "market_consensus_count": 1,
-    "model_prediction_count": 1,
-    "market_edge_count": 12,
-    "recommendation_count": 1,
-    "model_run_id": null,
-    "formula_version": "phase3_market_anchor_v1",
-    "market_anchor_version": "current_odds_dk_fd_v1",
-    "output_dir": "outputs\\predictions_site_refresh_v5",
-    "wrote_db": false
+    "recommendation_count": 1
   },
   "top_picks": [
     {
