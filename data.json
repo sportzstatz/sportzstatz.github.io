@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-08 08:44 PM CT",
+  "generated_at": "Sunday, March 08, 2026 08:50 PM CT",
   "run_summary": {
     "latest_current_odds_request_id": 10,
     "preview_context_count": 1,
@@ -11,7 +11,7 @@
     "model_run_id": null,
     "formula_version": "phase3_market_anchor_v1",
     "market_anchor_version": "current_odds_dk_fd_v1",
-    "output_dir": "outputs\\predictions_site_refresh",
+    "output_dir": "outputs\\predictions_site_refresh_v2",
     "wrote_db": false
   },
   "top_picks": [
@@ -43,6 +43,7 @@
       "ev_text": "24.26%",
       "line_text": "6.5",
       "status": "Pass",
+      "confidence_class": "high",
       "explanation": "Model likes this line better than the market after removing bookmaker juice."
     }
   ],
@@ -62,15 +63,225 @@
     {
       "term": "Bet or Pass",
       "meaning": "Bet means the line cleared the current positive-value thresholds. Pass means the model does not see enough value at that price."
+    },
+    {
+      "term": "Confidence",
+      "meaning": "Confidence runs Low, Medium-Low, Medium, Medium-High, and High. Higher confidence means the model sees a stronger gap between its number and the listed odds."
     }
   ],
+  "card_tabs": {
+    "recommendations": [
+      {
+        "preview_page_id": 13,
+        "html_id": "edmonton_oilers_vegas_golden_knights_totals",
+        "game_label": "Edmonton Oilers at Vegas Golden Knights",
+        "commence_time_text": "Sun Mar 08, 08:40 PM CT",
+        "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
+        "bookmaker_key": "draftkings",
+        "bookmaker_title": "DraftKings",
+        "market_key": "totals",
+        "outcome_name": "Under",
+        "outcome_description": null,
+        "point": 6.5,
+        "price": 136,
+        "no_vig_prob": 0.4066302458405761,
+        "model_prob": 0.5265239956470665,
+        "edge_pct": 0.11989374980649042,
+        "ev_pct": 0.24259662972707718,
+        "is_main_line": true,
+        "is_positive_ev": true,
+        "model_run_id": null,
+        "market_title": "Total",
+        "bet_label": "Under 6.5",
+        "price_text": "+136",
+        "model_prob_text": "52.65%",
+        "market_prob_text": "40.66%",
+        "edge_text": "11.99%",
+        "ev_text": "24.26%",
+        "line_text": "6.5",
+        "status": "Bet",
+        "confidence": "High",
+        "confidence_class": "high",
+        "explanation": "Model likes this line better than the market after removing bookmaker juice."
+      }
+    ],
+    "passes": [
+      {
+        "preview_page_id": 13,
+        "html_id": "edmonton_oilers_vegas_golden_knights_spreads",
+        "game_label": "Edmonton Oilers at Vegas Golden Knights",
+        "commence_time_text": "Sun Mar 08, 08:40 PM CT",
+        "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
+        "bookmaker_key": "draftkings",
+        "bookmaker_title": "DraftKings",
+        "market_key": "spreads",
+        "outcome_name": "Edmonton Oilers",
+        "outcome_description": null,
+        "point": 1.5,
+        "price": -250,
+        "no_vig_prob": 0.6853932584269663,
+        "model_prob": 0.7235784645560595,
+        "edge_pct": 0.03818520612909315,
+        "ev_pct": 0.013009850378483234,
+        "is_main_line": true,
+        "is_positive_ev": false,
+        "model_run_id": null,
+        "market_title": "Puck Line",
+        "bet_label": "Edmonton Oilers +1.5",
+        "price_text": "-250",
+        "model_prob_text": "72.36%",
+        "market_prob_text": "68.54%",
+        "edge_text": "3.82%",
+        "ev_text": "1.30%",
+        "line_text": "+1.5",
+        "status": "Pass",
+        "confidence": "Low",
+        "confidence_class": "low",
+        "explanation": "Model likes this line better than the market after removing bookmaker juice."
+      },
+      {
+        "preview_page_id": 13,
+        "html_id": "edmonton_oilers_vegas_golden_knights_h2h",
+        "game_label": "Edmonton Oilers at Vegas Golden Knights",
+        "commence_time_text": "Sun Mar 08, 08:40 PM CT",
+        "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
+        "bookmaker_key": "fanduel",
+        "bookmaker_title": "FanDuel",
+        "market_key": "h2h",
+        "outcome_name": "Edmonton Oilers",
+        "outcome_description": null,
+        "point": null,
+        "price": -106,
+        "no_vig_prob": 0.4923674110258199,
+        "model_prob": 0.49618370551291,
+        "edge_pct": 0.003816294487090144,
+        "ev_pct": -0.035718459097552224,
+        "is_main_line": true,
+        "is_positive_ev": false,
+        "model_run_id": null,
+        "market_title": "Moneyline",
+        "bet_label": "Edmonton Oilers",
+        "price_text": "-106",
+        "model_prob_text": "49.62%",
+        "market_prob_text": "49.24%",
+        "edge_text": "0.38%",
+        "ev_text": "-3.57%",
+        "line_text": "",
+        "status": "Pass",
+        "confidence": "Low",
+        "confidence_class": "low",
+        "explanation": "Model does not see enough value at this price right now."
+      }
+    ],
+    "all": [
+      {
+        "preview_page_id": 13,
+        "html_id": "edmonton_oilers_vegas_golden_knights_totals",
+        "game_label": "Edmonton Oilers at Vegas Golden Knights",
+        "commence_time_text": "Sun Mar 08, 08:40 PM CT",
+        "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
+        "bookmaker_key": "draftkings",
+        "bookmaker_title": "DraftKings",
+        "market_key": "totals",
+        "outcome_name": "Under",
+        "outcome_description": null,
+        "point": 6.5,
+        "price": 136,
+        "no_vig_prob": 0.4066302458405761,
+        "model_prob": 0.5265239956470665,
+        "edge_pct": 0.11989374980649042,
+        "ev_pct": 0.24259662972707718,
+        "is_main_line": true,
+        "is_positive_ev": true,
+        "model_run_id": null,
+        "market_title": "Total",
+        "bet_label": "Under 6.5",
+        "price_text": "+136",
+        "model_prob_text": "52.65%",
+        "market_prob_text": "40.66%",
+        "edge_text": "11.99%",
+        "ev_text": "24.26%",
+        "line_text": "6.5",
+        "status": "Bet",
+        "confidence": "High",
+        "confidence_class": "high",
+        "explanation": "Model likes this line better than the market after removing bookmaker juice."
+      },
+      {
+        "preview_page_id": 13,
+        "html_id": "edmonton_oilers_vegas_golden_knights_spreads",
+        "game_label": "Edmonton Oilers at Vegas Golden Knights",
+        "commence_time_text": "Sun Mar 08, 08:40 PM CT",
+        "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
+        "bookmaker_key": "draftkings",
+        "bookmaker_title": "DraftKings",
+        "market_key": "spreads",
+        "outcome_name": "Edmonton Oilers",
+        "outcome_description": null,
+        "point": 1.5,
+        "price": -250,
+        "no_vig_prob": 0.6853932584269663,
+        "model_prob": 0.7235784645560595,
+        "edge_pct": 0.03818520612909315,
+        "ev_pct": 0.013009850378483234,
+        "is_main_line": true,
+        "is_positive_ev": false,
+        "model_run_id": null,
+        "market_title": "Puck Line",
+        "bet_label": "Edmonton Oilers +1.5",
+        "price_text": "-250",
+        "model_prob_text": "72.36%",
+        "market_prob_text": "68.54%",
+        "edge_text": "3.82%",
+        "ev_text": "1.30%",
+        "line_text": "+1.5",
+        "status": "Pass",
+        "confidence": "Low",
+        "confidence_class": "low",
+        "explanation": "Model likes this line better than the market after removing bookmaker juice."
+      },
+      {
+        "preview_page_id": 13,
+        "html_id": "edmonton_oilers_vegas_golden_knights_h2h",
+        "game_label": "Edmonton Oilers at Vegas Golden Knights",
+        "commence_time_text": "Sun Mar 08, 08:40 PM CT",
+        "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
+        "bookmaker_key": "fanduel",
+        "bookmaker_title": "FanDuel",
+        "market_key": "h2h",
+        "outcome_name": "Edmonton Oilers",
+        "outcome_description": null,
+        "point": null,
+        "price": -106,
+        "no_vig_prob": 0.4923674110258199,
+        "model_prob": 0.49618370551291,
+        "edge_pct": 0.003816294487090144,
+        "ev_pct": -0.035718459097552224,
+        "is_main_line": true,
+        "is_positive_ev": false,
+        "model_run_id": null,
+        "market_title": "Moneyline",
+        "bet_label": "Edmonton Oilers",
+        "price_text": "-106",
+        "model_prob_text": "49.62%",
+        "market_prob_text": "49.24%",
+        "edge_text": "0.38%",
+        "ev_text": "-3.57%",
+        "line_text": "",
+        "status": "Pass",
+        "confidence": "Low",
+        "confidence_class": "low",
+        "explanation": "Model does not see enough value at this price right now."
+      }
+    ]
+  },
   "games": [
     {
       "preview_page_id": 13,
       "html_id": "edmonton_oilers_vegas_golden_knights",
       "away_team": "Edmonton Oilers",
       "home_team": "Vegas Golden Knights",
-      "commence_time_text": "Sun 08:40 PM CT",
+      "commence_time_text": "Sun Mar 08, 08:40 PM CT",
       "consensus": {
         "moneyline_home": "50.38%",
         "moneyline_away": "49.62%",
@@ -105,6 +316,7 @@
           "ev_text": "24.26%",
           "line_text": "6.5",
           "status": "Pass",
+          "confidence_class": "high",
           "explanation": "Model likes this line better than the market after removing bookmaker juice."
         }
       ],
@@ -135,6 +347,8 @@
           "ev_text": "24.26%",
           "line_text": "6.5",
           "status": "Bet",
+          "confidence": "High",
+          "confidence_class": "high",
           "explanation": "Model likes this line better than the market after removing bookmaker juice."
         },
         {
@@ -163,6 +377,8 @@
           "ev_text": "20.05%",
           "line_text": "6.5",
           "status": "Bet",
+          "confidence": "High",
+          "confidence_class": "high",
           "explanation": "Model likes this line better than the market after removing bookmaker juice."
         }
       ],
@@ -196,6 +412,8 @@
             "ev_text": "-3.57%",
             "line_text": "",
             "status": "Pass",
+            "confidence": "Low",
+            "confidence_class": "low",
             "explanation": "Model does not see enough value at this price right now."
           },
           "rows": [
@@ -225,6 +443,8 @@
               "ev_text": "-3.57%",
               "line_text": "",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             },
             {
@@ -253,6 +473,8 @@
               "ev_text": "-3.82%",
               "line_text": "",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             },
             {
@@ -281,6 +503,8 @@
               "ev_text": "-5.03%",
               "line_text": "",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             },
             {
@@ -309,6 +533,8 @@
               "ev_text": "-5.27%",
               "line_text": "",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             }
           ]
@@ -342,6 +568,8 @@
             "ev_text": "1.30%",
             "line_text": "+1.5",
             "status": "Pass",
+            "confidence": "Low",
+            "confidence_class": "low",
             "explanation": "Model likes this line better than the market after removing bookmaker juice."
           },
           "rows": [
@@ -371,6 +599,8 @@
               "ev_text": "1.30%",
               "line_text": "+1.5",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model likes this line better than the market after removing bookmaker juice."
             },
             {
@@ -399,6 +629,8 @@
               "ev_text": "0.19%",
               "line_text": "+1.5",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model likes this line better than the market after removing bookmaker juice."
             },
             {
@@ -427,6 +659,8 @@
               "ev_text": "-15.69%",
               "line_text": "-1.5",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             },
             {
@@ -455,6 +689,8 @@
               "ev_text": "-15.69%",
               "line_text": "-1.5",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             }
           ]
@@ -488,6 +724,8 @@
             "ev_text": "24.26%",
             "line_text": "6.5",
             "status": "Bet",
+            "confidence": "High",
+            "confidence_class": "high",
             "explanation": "Model likes this line better than the market after removing bookmaker juice."
           },
           "rows": [
@@ -517,6 +755,8 @@
               "ev_text": "24.26%",
               "line_text": "6.5",
               "status": "Bet",
+              "confidence": "High",
+              "confidence_class": "high",
               "explanation": "Model likes this line better than the market after removing bookmaker juice."
             },
             {
@@ -545,6 +785,8 @@
               "ev_text": "20.05%",
               "line_text": "6.5",
               "status": "Bet",
+              "confidence": "High",
+              "confidence_class": "high",
               "explanation": "Model likes this line better than the market after removing bookmaker juice."
             },
             {
@@ -573,6 +815,8 @@
               "ev_text": "-22.69%",
               "line_text": "6.5",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             },
             {
@@ -601,6 +845,8 @@
               "ev_text": "-23.43%",
               "line_text": "6.5",
               "status": "Pass",
+              "confidence": "Low",
+              "confidence_class": "low",
               "explanation": "Model does not see enough value at this price right now."
             }
           ]
