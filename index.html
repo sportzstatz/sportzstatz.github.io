@@ -65,6 +65,18 @@
       display: grid;
       gap: 16px;
     }
+    .quick-guide {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .quick-guide-card {
+      background: #fcfcfd;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
     .section-title {
       margin: 24px 0 8px;
       font-size: 17px;
@@ -247,6 +259,7 @@
       font-size: 13px;
     }
     @media (max-width: 900px) {
+      .quick-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .best-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .game-tile-grid { grid-template-columns: 1fr; }
       .dropdown-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -258,11 +271,30 @@
     <section class="header">
       <h1>NHL3.0 Morning Board</h1>
       <div class="meta">
-        <div class="pill">Generated Sunday, March 08, 2026 09:09 PM CT</div>
+        <div class="pill">Generated Sunday, March 08, 2026 09:15 PM CT</div>
         <div class="pill">Matched games 1</div>
         <div class="pill">Recommended bets 1</div>
       </div>
     </section>
+
+    <div class="quick-guide">
+      <article class="quick-guide-card">
+        <div class="label">Model</div>
+        <div class="reason" style="margin-top:4px;">NHL3.0's estimated chance the bet wins.</div>
+      </article>
+      <article class="quick-guide-card">
+        <div class="label">Market</div>
+        <div class="reason" style="margin-top:4px;">The sportsbook's fair win chance after removing juice.</div>
+      </article>
+      <article class="quick-guide-card">
+        <div class="label">Edge</div>
+        <div class="reason" style="margin-top:4px;">Model minus Market. Positive means the number favors the bet.</div>
+      </article>
+      <article class="quick-guide-card">
+        <div class="label">EV</div>
+        <div class="reason" style="margin-top:4px;">Expected value at the listed odds. Positive is bettable, negative is pass.</div>
+      </article>
+    </div>
 
     <div class="section-title">Game Board</div>
     <section class="games">
