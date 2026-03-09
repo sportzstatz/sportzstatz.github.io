@@ -72,13 +72,13 @@
       letter-spacing: 0.08em;
       color: var(--muted);
     }
-    .guide-grid, .summary-grid, .market-grid, .tab-card-grid {
+    .guide-grid, .summary-grid, .tab-card-grid, .game-tile-grid {
       display: grid;
       gap: 14px;
     }
     .guide-grid, .summary-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-    .market-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     .tab-card-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .game-tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .guide-card, .pick-card, .game-card, .market-card {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -155,10 +155,6 @@
       border-top: 1px solid #eaecf0;
       padding-top: 8px;
     }
-    .market-card h3 {
-      margin: 0 0 12px;
-      font-size: 18px;
-    }
     .tabs {
       display: flex;
       flex-wrap: wrap;
@@ -227,6 +223,78 @@
       font-size: 14px;
       font-weight: 700;
     }
+    .game-tile {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .game-tile.bet { border-color: #b7dfc4; }
+    .game-tile.pass { border-color: #f0c7c2; }
+    .tile-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+    .tile-best {
+      border: 1px solid #eaecf0;
+      background: #fcfcfd;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .dropdown-stack {
+      display: grid;
+      gap: 10px;
+    }
+    .market-dropdown {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fcfcfd;
+    }
+    .market-dropdown summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+    .market-dropdown summary::-webkit-details-marker { display: none; }
+    .market-dropdown summary::after {
+      content: '+';
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1;
+    }
+    .market-dropdown[open] summary::after { content: '−'; }
+    .dropdown-body {
+      padding: 0 14px 14px;
+      border-top: 1px solid #eaecf0;
+    }
+    .dropdown-line {
+      padding: 10px 0;
+      border-bottom: 1px solid #eaecf0;
+    }
+    .dropdown-line:last-child { border-bottom: none; }
+    .dropdown-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+    .dropdown-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+    }
     .footer {
       margin-top: 36px;
       color: var(--muted);
@@ -236,7 +304,8 @@
       .game-head { grid-template-columns: 1fr; }
       .summary-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .mini-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .market-table { font-size: 13px; }
+      .game-tile-grid { grid-template-columns: 1fr; }
+      .dropdown-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
@@ -246,7 +315,7 @@
       <h1>NHL3.0 Morning Board</h1>
       <div class="subtitle">A scan-first board built to help you compare sportsbook prices against the model. Check the listed American odds first, then use Edge and EV to decide whether the price is worth betting.</div>
       <div class="meta">
-        <div class="pill">Generated Sunday, March 08, 2026 08:50 PM CT</div>
+        <div class="pill">Generated Sunday, March 08, 2026 08:55 PM CT</div>
         <div class="pill">Matched games 1</div>
         <div class="pill">Recommended bets 1</div>
       </div>
@@ -511,296 +580,474 @@
 
     <div class="section-title">Game Board</div>
     <section class="games">
-      <article class="game-card" id="edmonton_oilers_vegas_golden_knights">
-        <div class="game-head">
-          <div>
-            <div class="label">Matchup</div>
-            <div class="value">Edmonton Oilers at Vegas Golden Knights</div>
-            <div class="reason">Sun Mar 08, 08:40 PM CT</div>
-          </div>
-          <div>
-            <div class="label">Market Moneyline</div>
-            <div class="reason">Edmonton Oilers 49.62% | Vegas Golden Knights 50.38%</div>
-          </div>
-          <div>
-            <div class="label">Main Lines</div>
-            <div class="reason">Puck line -1.5 | Total 6.5</div>
-          </div>
-        </div>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="game-recommendations">Recommendation Games 1</button>
+        <button class="tab-button" data-tab="game-passes">Pass Games 0</button>
+        <button class="tab-button" data-tab="game-all">All Games 1</button>
+      </div>
 
-        <div class="section-title" style="margin-top:20px;">Best Read By Market</div>
-        <div class="summary-grid">
-          <div class="summary-card pass">
-            <div class="summary-top">
-              <div>
-                <div class="label">Moneyline</div>
-                <div class="value">Edmonton Oilers</div>
+      <div class="tab-panel active" data-panel="game-recommendations">
+        <div class="game-tile-grid">
+            <article class="game-tile bet" id="edmonton_oilers_vegas_golden_knights">
+              <div class="tile-top">
+                <div>
+                  <div class="label">Matchup</div>
+                  <div class="value">Edmonton Oilers at Vegas Golden Knights</div>
+                  <div class="reason">Sun Mar 08, 08:40 PM CT</div>
+                </div>
+                <div class="value status-bet">Recommendation</div>
               </div>
-              <div class="value status-pass">Pass</div>
-            </div>
-            <div class="reason">FanDuel -106</div>
-            <div class="reason" style="margin-top:8px;">Model does not see enough value at this price right now.</div>
-            <div class="summary-metrics" style="margin-top:12px;">
-              <div class="metric">
-                <div class="label">Model</div>
-                <div class="value" style="font-size:16px;">49.62%</div>
-              </div>
-              <div class="metric">
-                <div class="label">Market</div>
-                <div class="value" style="font-size:16px;">49.24%</div>
-              </div>
-              <div class="metric">
-                <div class="label">Edge</div>
-                <div class="value" style="font-size:16px;">0.38%</div>
-              </div>
-              <div class="metric">
-                <div class="label">EV</div>
-                <div class="value" style="font-size:16px;">-3.57%</div>
-              </div>
-            </div>
-          </div>
-          <div class="summary-card pass">
-            <div class="summary-top">
-              <div>
-                <div class="label">Puck Line</div>
-                <div class="value">Edmonton Oilers +1.5</div>
-              </div>
-              <div class="value status-pass">Pass</div>
-            </div>
-            <div class="reason">DraftKings -250</div>
-            <div class="reason" style="margin-top:8px;">Model likes this line better than the market after removing bookmaker juice.</div>
-            <div class="summary-metrics" style="margin-top:12px;">
-              <div class="metric">
-                <div class="label">Model</div>
-                <div class="value" style="font-size:16px;">72.36%</div>
-              </div>
-              <div class="metric">
-                <div class="label">Market</div>
-                <div class="value" style="font-size:16px;">68.54%</div>
-              </div>
-              <div class="metric">
-                <div class="label">Edge</div>
-                <div class="value" style="font-size:16px;">3.82%</div>
-              </div>
-              <div class="metric">
-                <div class="label">EV</div>
-                <div class="value" style="font-size:16px;">1.30%</div>
-              </div>
-            </div>
-          </div>
-          <div class="summary-card bet">
-            <div class="summary-top">
-              <div>
-                <div class="label">Total</div>
+              <div class="tile-best">
+                <div class="label">Best Available Bet</div>
                 <div class="value">Under 6.5</div>
+                <div class="reason">DraftKings +136 | Confidence <span class="confidence-high"><strong>High</strong></span></div>
+                <div class="reason" style="margin-top:6px;">Model 52.65% | Market 40.66% | Edge 11.99% | EV 24.26%</div>
               </div>
-              <div class="value status-bet">Bet</div>
-            </div>
-            <div class="reason">DraftKings +136</div>
-            <div class="reason" style="margin-top:8px;">Model likes this line better than the market after removing bookmaker juice.</div>
-            <div class="summary-metrics" style="margin-top:12px;">
-              <div class="metric">
-                <div class="label">Model</div>
-                <div class="value" style="font-size:16px;">52.65%</div>
+              <div class="dropdown-stack">
+                <details class="market-dropdown" open>
+                  <summary>
+                    <span>Moneyline</span>
+                    <span class="reason">Edmonton Oilers</span>
+                  </summary>
+                  <div class="dropdown-body">
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Edmonton Oilers</div>
+                          <div class="reason">FanDuel -106 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">49.62%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">49.24%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">0.38%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-3.57%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Vegas Golden Knights</div>
+                          <div class="reason">DraftKings -110 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">50.38%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">50.00%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">0.38%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-3.82%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Vegas Golden Knights</div>
+                          <div class="reason">FanDuel -113 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">50.38%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">50.76%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">-0.38%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-5.03%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Edmonton Oilers</div>
+                          <div class="reason">DraftKings -110 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">49.62%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">50.00%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">-0.38%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-5.27%</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+                <details class="market-dropdown" >
+                  <summary>
+                    <span>Puck Line</span>
+                    <span class="reason">Edmonton Oilers +1.5</span>
+                  </summary>
+                  <div class="dropdown-body">
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Edmonton Oilers +1.5</div>
+                          <div class="reason">DraftKings -250 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">72.36%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">68.54%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">3.82%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">1.30%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Edmonton Oilers +1.5</div>
+                          <div class="reason">FanDuel -260 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">72.36%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">68.78%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">3.58%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">0.19%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Vegas Golden Knights -1.5</div>
+                          <div class="reason">FanDuel +205 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">27.64%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">31.22%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">-3.58%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-15.69%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Vegas Golden Knights -1.5</div>
+                          <div class="reason">DraftKings +205 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">27.64%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">31.46%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">-3.82%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-15.69%</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+                <details class="market-dropdown" >
+                  <summary>
+                    <span>Total</span>
+                    <span class="reason">Under 6.5</span>
+                  </summary>
+                  <div class="dropdown-body">
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Under 6.5</div>
+                          <div class="reason">DraftKings +136 | <span class="status-bet">Bet</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">52.65%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">40.66%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">11.99%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">24.26%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Under 6.5</div>
+                          <div class="reason">FanDuel +128 | <span class="status-bet">Bet</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">52.65%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">41.73%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">10.92%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">20.05%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Over 6.5</div>
+                          <div class="reason">FanDuel -158 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">47.35%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">58.27%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">-10.92%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-22.69%</div></div>
+                      </div>
+                    </div>
+                    <div class="dropdown-line">
+                      <div class="dropdown-head">
+                        <div>
+                          <div class="value" style="font-size:16px;">Over 6.5</div>
+                          <div class="reason">DraftKings -162 | <span class="status-pass">Pass</span></div>
+                        </div>
+                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                      </div>
+                      <div class="dropdown-metrics">
+                        <div><div class="label">Model</div><div class="mini-metric-value">47.35%</div></div>
+                        <div><div class="label">Market</div><div class="mini-metric-value">59.34%</div></div>
+                        <div><div class="label">Edge</div><div class="mini-metric-value">-11.99%</div></div>
+                        <div><div class="label">EV</div><div class="mini-metric-value">-23.43%</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
               </div>
-              <div class="metric">
-                <div class="label">Market</div>
-                <div class="value" style="font-size:16px;">40.66%</div>
-              </div>
-              <div class="metric">
-                <div class="label">Edge</div>
-                <div class="value" style="font-size:16px;">11.99%</div>
-              </div>
-              <div class="metric">
-                <div class="label">EV</div>
-                <div class="value" style="font-size:16px;">24.26%</div>
-              </div>
-            </div>
-          </div>
+            </article>
         </div>
+      </div>
 
-        <div class="game-grid">
-          <div class="market-grid">
-            <article class="market-card">
-              <h3>Moneyline</h3>
-              <table class="market-table">
-                <thead>
-                  <tr>
-                    <th>Bet</th>
-                    <th>Book</th>
-                    <th>Odds</th>
-                    <th>Model</th>
-                    <th>Market</th>
-                    <th>Edge</th>
-                    <th>EV</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Edmonton Oilers</td>
-                    <td>FanDuel</td>
-                    <td>-106</td>
-                    <td>49.62%</td>
-                    <td>49.24%</td>
-                    <td>0.38%</td>
-                    <td>-3.57%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                  <tr>
-                    <td>Vegas Golden Knights</td>
-                    <td>DraftKings</td>
-                    <td>-110</td>
-                    <td>50.38%</td>
-                    <td>50.00%</td>
-                    <td>0.38%</td>
-                    <td>-3.82%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                  <tr>
-                    <td>Vegas Golden Knights</td>
-                    <td>FanDuel</td>
-                    <td>-113</td>
-                    <td>50.38%</td>
-                    <td>50.76%</td>
-                    <td>-0.38%</td>
-                    <td>-5.03%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                  <tr>
-                    <td>Edmonton Oilers</td>
-                    <td>DraftKings</td>
-                    <td>-110</td>
-                    <td>49.62%</td>
-                    <td>50.00%</td>
-                    <td>-0.38%</td>
-                    <td>-5.27%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                </tbody>
-              </table>
+      <div class="tab-panel" data-panel="game-passes">
+        <div class="game-tile-grid">
+            <article class="game-tile bet">
+              <div class="value">No pass games right now.</div>
+              <div class="reason" style="margin-top:8px;">Every current game has at least one recommendation.</div>
             </article>
-            <article class="market-card">
-              <h3>Puck Line</h3>
-              <table class="market-table">
-                <thead>
-                  <tr>
-                    <th>Bet</th>
-                    <th>Book</th>
-                    <th>Odds</th>
-                    <th>Model</th>
-                    <th>Market</th>
-                    <th>Edge</th>
-                    <th>EV</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Edmonton Oilers +1.5</td>
-                    <td>DraftKings</td>
-                    <td>-250</td>
-                    <td>72.36%</td>
-                    <td>68.54%</td>
-                    <td>3.82%</td>
-                    <td>1.30%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                  <tr>
-                    <td>Edmonton Oilers +1.5</td>
-                    <td>FanDuel</td>
-                    <td>-260</td>
-                    <td>72.36%</td>
-                    <td>68.78%</td>
-                    <td>3.58%</td>
-                    <td>0.19%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                  <tr>
-                    <td>Vegas Golden Knights -1.5</td>
-                    <td>FanDuel</td>
-                    <td>+205</td>
-                    <td>27.64%</td>
-                    <td>31.22%</td>
-                    <td>-3.58%</td>
-                    <td>-15.69%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                  <tr>
-                    <td>Vegas Golden Knights -1.5</td>
-                    <td>DraftKings</td>
-                    <td>+205</td>
-                    <td>27.64%</td>
-                    <td>31.46%</td>
-                    <td>-3.82%</td>
-                    <td>-15.69%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                </tbody>
-              </table>
-            </article>
-            <article class="market-card">
-              <h3>Total</h3>
-              <table class="market-table">
-                <thead>
-                  <tr>
-                    <th>Bet</th>
-                    <th>Book</th>
-                    <th>Odds</th>
-                    <th>Model</th>
-                    <th>Market</th>
-                    <th>Edge</th>
-                    <th>EV</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Under 6.5</td>
-                    <td>DraftKings</td>
-                    <td>+136</td>
-                    <td>52.65%</td>
-                    <td>40.66%</td>
-                    <td>11.99%</td>
-                    <td>24.26%</td>
-                    <td class="status-bet">Bet</td>
-                  </tr>
-                  <tr>
-                    <td>Under 6.5</td>
-                    <td>FanDuel</td>
-                    <td>+128</td>
-                    <td>52.65%</td>
-                    <td>41.73%</td>
-                    <td>10.92%</td>
-                    <td>20.05%</td>
-                    <td class="status-bet">Bet</td>
-                  </tr>
-                  <tr>
-                    <td>Over 6.5</td>
-                    <td>FanDuel</td>
-                    <td>-158</td>
-                    <td>47.35%</td>
-                    <td>58.27%</td>
-                    <td>-10.92%</td>
-                    <td>-22.69%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                  <tr>
-                    <td>Over 6.5</td>
-                    <td>DraftKings</td>
-                    <td>-162</td>
-                    <td>47.35%</td>
-                    <td>59.34%</td>
-                    <td>-11.99%</td>
-                    <td>-23.43%</td>
-                    <td class="status-pass">Pass</td>
-                  </tr>
-                </tbody>
-              </table>
-            </article>
-          </div>
         </div>
-      </article>
+      </div>
+
+      <div class="tab-panel" data-panel="game-all">
+        <div class="game-tile-grid">
+          <article class="game-tile bet" id="edmonton_oilers_vegas_golden_knights-all">
+            <div class="tile-top">
+              <div>
+                <div class="label">Matchup</div>
+                <div class="value">Edmonton Oilers at Vegas Golden Knights</div>
+                <div class="reason">Sun Mar 08, 08:40 PM CT</div>
+              </div>
+              <div class="value status-bet">Recommendation</div>
+            </div>
+            <div class="tile-best">
+              <div class="label">Best Read</div>
+              <div class="value">Under 6.5</div>
+              <div class="reason">DraftKings +136 | Confidence <span class="confidence-high"><strong>High</strong></span></div>
+              <div class="reason" style="margin-top:6px;">Model 52.65% | Market 40.66% | Edge 11.99% | EV 24.26%</div>
+            </div>
+            <div class="dropdown-stack">
+              <details class="market-dropdown" open>
+                <summary>
+                  <span>Moneyline</span>
+                  <span class="reason">Edmonton Oilers</span>
+                </summary>
+                <div class="dropdown-body">
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Edmonton Oilers</div>
+                        <div class="reason">FanDuel -106 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">49.62%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">49.24%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">0.38%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-3.57%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Vegas Golden Knights</div>
+                        <div class="reason">DraftKings -110 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">50.38%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">50.00%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">0.38%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-3.82%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Vegas Golden Knights</div>
+                        <div class="reason">FanDuel -113 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">50.38%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">50.76%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">-0.38%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-5.03%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Edmonton Oilers</div>
+                        <div class="reason">DraftKings -110 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">49.62%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">50.00%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">-0.38%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-5.27%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="market-dropdown" >
+                <summary>
+                  <span>Puck Line</span>
+                  <span class="reason">Edmonton Oilers +1.5</span>
+                </summary>
+                <div class="dropdown-body">
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Edmonton Oilers +1.5</div>
+                        <div class="reason">DraftKings -250 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">72.36%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">68.54%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">3.82%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">1.30%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Edmonton Oilers +1.5</div>
+                        <div class="reason">FanDuel -260 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">72.36%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">68.78%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">3.58%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">0.19%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Vegas Golden Knights -1.5</div>
+                        <div class="reason">FanDuel +205 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">27.64%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">31.22%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">-3.58%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-15.69%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Vegas Golden Knights -1.5</div>
+                        <div class="reason">DraftKings +205 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">27.64%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">31.46%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">-3.82%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-15.69%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <details class="market-dropdown" >
+                <summary>
+                  <span>Total</span>
+                  <span class="reason">Under 6.5</span>
+                </summary>
+                <div class="dropdown-body">
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Under 6.5</div>
+                        <div class="reason">DraftKings +136 | <span class="status-bet">Bet</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">52.65%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">40.66%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">11.99%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">24.26%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Under 6.5</div>
+                        <div class="reason">FanDuel +128 | <span class="status-bet">Bet</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">52.65%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">41.73%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">10.92%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">20.05%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Over 6.5</div>
+                        <div class="reason">FanDuel -158 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">47.35%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">58.27%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">-10.92%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-22.69%</div></div>
+                    </div>
+                  </div>
+                  <div class="dropdown-line">
+                    <div class="dropdown-head">
+                      <div>
+                        <div class="value" style="font-size:16px;">Over 6.5</div>
+                        <div class="reason">DraftKings -162 | <span class="status-pass">Pass</span></div>
+                      </div>
+                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
+                    </div>
+                    <div class="dropdown-metrics">
+                      <div><div class="label">Model</div><div class="mini-metric-value">47.35%</div></div>
+                      <div><div class="label">Market</div><div class="mini-metric-value">59.34%</div></div>
+                      <div><div class="label">Edge</div><div class="mini-metric-value">-11.99%</div></div>
+                      <div><div class="label">EV</div><div class="mini-metric-value">-23.43%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <div class="footer">Static page generated for GitHub Pages from the NHL3.0 morning pipeline.</div>
