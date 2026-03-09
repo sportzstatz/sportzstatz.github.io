@@ -1,43 +1,23 @@
 {
-  "generated_at": "2026-03-08 08:24 PM CT",
+  "generated_at": "2026-03-08 08:29 PM CT",
   "run_summary": {
-    "latest_current_odds_request_id": 8,
-    "preview_context_count": 3,
-    "matched_game_count": 3,
-    "market_consensus_count": 3,
-    "model_prediction_count": 3,
-    "market_edge_count": 36,
-    "recommendation_count": 3,
-    "model_run_id": 4,
+    "latest_current_odds_request_id": 10,
+    "preview_context_count": 1,
+    "matched_game_count": 1,
+    "market_consensus_count": 1,
+    "model_prediction_count": 1,
+    "market_edge_count": 12,
+    "recommendation_count": 1,
+    "model_run_id": 5,
     "formula_version": "phase3_market_anchor_v1",
     "market_anchor_version": "current_odds_dk_fd_v1",
-    "output_dir": "outputs\\predictions_publish_dry",
+    "output_dir": "outputs\\predictions",
     "wrote_db": true
   },
   "top_picks": [
     {
-      "game": "Detroit Red Wings at New Jersey Devils",
-      "preview_page_id": 8,
-      "event_id": "a76475f4f0361a7b171974069c026e66",
-      "market_key": "totals",
-      "outcome_name": "Under",
-      "outcome_description": null,
-      "point": 6.5,
-      "bookmaker_key": "fanduel",
-      "bookmaker_title": "FanDuel",
-      "price": -106,
-      "model_prob": 0.5293619044399106,
-      "market_prob": 0.483560743054414,
-      "edge_pct": 0.045801161385496614,
-      "ev_pct": 0.028759927496430082,
-      "confidence": "Medium",
-      "reason": "Expected total moved modestly off the market line after preview offense/defense and special-teams pressure.",
-      "is_top_pick": true,
-      "model_run_id": 4
-    },
-    {
       "game": "Edmonton Oilers at Vegas Golden Knights",
-      "preview_page_id": 12,
+      "preview_page_id": 13,
       "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
       "market_key": "totals",
       "outcome_name": "Under",
@@ -45,144 +25,47 @@
       "point": 6.5,
       "bookmaker_key": "draftkings",
       "bookmaker_title": "DraftKings",
-      "price": 124,
-      "model_prob": 0.526523995230518,
-      "market_prob": 0.42794036443953615,
-      "edge_pct": 0.09858363079098181,
-      "ev_pct": 0.17941374931636034,
+      "price": 136,
+      "model_prob": 0.5265239956470665,
+      "market_prob": 0.4066302458405761,
+      "edge_pct": 0.11989374980649042,
+      "ev_pct": 0.24259662972707718,
       "confidence": "High",
       "reason": "Expected total moved modestly off the market line after preview offense/defense and special-teams pressure.",
       "is_top_pick": true,
-      "model_run_id": 4
+      "model_run_id": 5
     }
   ],
   "games": [
     {
-      "preview_page_id": 8,
-      "html_id": "detroit_red_wings_new_jersey_devils",
-      "away_team": "Detroit Red Wings",
-      "home_team": "New Jersey Devils",
-      "commence_time_text": "Sun 06:09 PM CT",
-      "moneyline": {
-        "away_prob": 0.6822732499148434,
-        "home_prob": 0.3177267500851566,
-        "market_away_prob": 0.6744186046511629,
-        "market_home_prob": 0.32558139534883723
-      },
-      "puck_line": {
-        "line": 1.5,
-        "away_cover_prob": 0.4506811505510699,
-        "home_cover_prob": 0.5493188494489301
-      },
-      "total": {
-        "line": 6.5,
-        "expected_total": 6.482,
-        "over_prob": 0.47063809556008934,
-        "under_prob": 0.5293619044399106
-      },
-      "feature_edge_score": -0.2,
-      "total_pressure_score": -0.1,
-      "schedule_edge_score": -0.2,
-      "recommendations": [
-        {
-          "preview_page_id": 8,
-          "event_id": "a76475f4f0361a7b171974069c026e66",
-          "market_key": "totals",
-          "outcome_name": "Under",
-          "outcome_description": null,
-          "point": 6.5,
-          "bookmaker_key": "fanduel",
-          "bookmaker_title": "FanDuel",
-          "price": -106,
-          "model_prob": 0.5293619044399106,
-          "market_prob": 0.483560743054414,
-          "edge_pct": 0.045801161385496614,
-          "ev_pct": 0.028759927496430082,
-          "confidence": "Medium",
-          "reason": "Expected total moved modestly off the market line after preview offense/defense and special-teams pressure.",
-          "is_top_pick": true,
-          "model_run_id": 4
-        }
-      ],
-      "top_edges": [
-        {
-          "preview_page_id": 8,
-          "event_id": "a76475f4f0361a7b171974069c026e66",
-          "bookmaker_key": "fanduel",
-          "bookmaker_title": "FanDuel",
-          "market_key": "totals",
-          "outcome_name": "Under",
-          "outcome_description": null,
-          "point": 6.5,
-          "price": -106,
-          "no_vig_prob": 0.483560743054414,
-          "model_prob": 0.5293619044399106,
-          "edge_pct": 0.045801161385496614,
-          "ev_pct": 0.028759927496430082,
-          "is_main_line": true,
-          "is_positive_ev": true,
-          "model_run_id": 4
-        }
-      ]
-    },
-    {
-      "preview_page_id": 11,
-      "html_id": "st_louis_blues_anaheim_ducks",
-      "away_team": "St Louis Blues",
-      "home_team": "Anaheim Ducks",
-      "commence_time_text": "Sun 08:10 PM CT",
-      "moneyline": {
-        "away_prob": 0.38954850287479836,
-        "home_prob": 0.6104514971252016,
-        "market_away_prob": 0.38954850287479836,
-        "market_home_prob": 0.6104514971252016
-      },
-      "puck_line": {
-        "line": -1.5,
-        "away_cover_prob": 0.6247741568322511,
-        "home_cover_prob": 0.3752258431677489
-      },
-      "total": {
-        "line": 6.5,
-        "expected_total": 6.5,
-        "over_prob": 0.47347561129945953,
-        "under_prob": 0.5265243887005406
-      },
-      "feature_edge_score": 0.0,
-      "total_pressure_score": 0.0,
-      "schedule_edge_score": 0.0,
-      "recommendations": [],
-      "top_edges": []
-    },
-    {
-      "preview_page_id": 12,
+      "preview_page_id": 13,
       "html_id": "edmonton_oilers_vegas_golden_knights",
       "away_team": "Edmonton Oilers",
       "home_team": "Vegas Golden Knights",
       "commence_time_text": "Sun 08:40 PM CT",
       "moneyline": {
-        "away_prob": 0.5,
-        "home_prob": 0.5,
-        "market_away_prob": 0.5,
-        "market_home_prob": 0.5
+        "away_prob": 0.49618370551291,
+        "home_prob": 0.50381629448709,
+        "market_away_prob": 0.4961837055129099,
+        "market_home_prob": 0.50381629448709
       },
       "puck_line": {
         "line": -1.5,
-        "away_cover_prob": 0.7268412308070693,
-        "home_cover_prob": 0.2731587691929305
+        "away_cover_prob": 0.7235784645560595,
+        "home_cover_prob": 0.27642153544394077
       },
       "total": {
         "line": 6.5,
         "expected_total": 6.5,
-        "over_prob": 0.47347600476948204,
-        "under_prob": 0.526523995230518
+        "over_prob": 0.47347600435293347,
+        "under_prob": 0.5265239956470665
       },
       "feature_edge_score": 0.0,
       "total_pressure_score": 0.0,
       "schedule_edge_score": 0.0,
       "recommendations": [
         {
-          "preview_page_id": 12,
+          "preview_page_id": 13,
           "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
           "market_key": "totals",
           "outcome_name": "Under",
@@ -190,39 +73,20 @@
           "point": 6.5,
           "bookmaker_key": "draftkings",
           "bookmaker_title": "DraftKings",
-          "price": 124,
-          "model_prob": 0.526523995230518,
-          "market_prob": 0.42794036443953615,
-          "edge_pct": 0.09858363079098181,
-          "ev_pct": 0.17941374931636034,
+          "price": 136,
+          "model_prob": 0.5265239956470665,
+          "market_prob": 0.4066302458405761,
+          "edge_pct": 0.11989374980649042,
+          "ev_pct": 0.24259662972707718,
           "confidence": "High",
           "reason": "Expected total moved modestly off the market line after preview offense/defense and special-teams pressure.",
           "is_top_pick": true,
-          "model_run_id": 4
-        },
-        {
-          "preview_page_id": 12,
-          "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
-          "market_key": "spreads",
-          "outcome_name": "Edmonton Oilers",
-          "outcome_description": null,
-          "point": 1.5,
-          "bookmaker_key": "draftkings",
-          "bookmaker_title": "DraftKings",
-          "price": -250,
-          "model_prob": 0.7268412308070693,
-          "market_prob": 0.6853932584269663,
-          "edge_pct": 0.041447972380103004,
-          "ev_pct": 0.017577723129897027,
-          "confidence": "Low",
-          "reason": "Unified score model gives the side a better cover probability than the current book price.",
-          "is_top_pick": false,
-          "model_run_id": 4
+          "model_run_id": 5
         }
       ],
       "top_edges": [
         {
-          "preview_page_id": 12,
+          "preview_page_id": 13,
           "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
           "bookmaker_key": "draftkings",
           "bookmaker_title": "DraftKings",
@@ -230,17 +94,17 @@
           "outcome_name": "Under",
           "outcome_description": null,
           "point": 6.5,
-          "price": 124,
-          "no_vig_prob": 0.42794036443953615,
-          "model_prob": 0.526523995230518,
-          "edge_pct": 0.09858363079098181,
-          "ev_pct": 0.17941374931636034,
+          "price": 136,
+          "no_vig_prob": 0.4066302458405761,
+          "model_prob": 0.5265239956470665,
+          "edge_pct": 0.11989374980649042,
+          "ev_pct": 0.24259662972707718,
           "is_main_line": true,
           "is_positive_ev": true,
-          "model_run_id": 4
+          "model_run_id": 5
         },
         {
-          "preview_page_id": 12,
+          "preview_page_id": 13,
           "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
           "bookmaker_key": "fanduel",
           "bookmaker_title": "FanDuel",
@@ -248,32 +112,14 @@
           "outcome_name": "Under",
           "outcome_description": null,
           "point": 6.5,
-          "price": 120,
-          "no_vig_prob": 0.43235704323570434,
-          "model_prob": 0.526523995230518,
-          "edge_pct": 0.09416695199481362,
-          "ev_pct": 0.1583527895071397,
+          "price": 128,
+          "no_vig_prob": 0.4173136645962733,
+          "model_prob": 0.5265239956470665,
+          "edge_pct": 0.10921033105079325,
+          "ev_pct": 0.20047471007531192,
           "is_main_line": true,
           "is_positive_ev": true,
-          "model_run_id": 4
-        },
-        {
-          "preview_page_id": 12,
-          "event_id": "a396d2bcc52b4ef3ccba5c801939533f",
-          "bookmaker_key": "draftkings",
-          "bookmaker_title": "DraftKings",
-          "market_key": "spreads",
-          "outcome_name": "Edmonton Oilers",
-          "outcome_description": null,
-          "point": 1.5,
-          "price": -250,
-          "no_vig_prob": 0.6853932584269663,
-          "model_prob": 0.7268412308070693,
-          "edge_pct": 0.041447972380103004,
-          "ev_pct": 0.017577723129897027,
-          "is_main_line": true,
-          "is_positive_ev": true,
-          "model_run_id": 4
+          "model_run_id": 5
         }
       ]
     }
