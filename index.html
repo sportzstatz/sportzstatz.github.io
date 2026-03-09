@@ -34,8 +34,28 @@
     }
     .header {
       display: grid;
-      gap: 10px;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
       margin-bottom: 14px;
+      align-items: start;
+    }
+    .header-main {
+      display: grid;
+      gap: 10px;
+    }
+    .header-performance {
+      min-width: 220px;
+      background: #fcfcfd;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow);
+    }
+    .performance-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 8px;
     }
     h1 {
       margin: 0;
@@ -259,6 +279,7 @@
       font-size: 13px;
     }
     @media (max-width: 900px) {
+      .header { grid-template-columns: 1fr; }
       .quick-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .best-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .game-tile-grid { grid-template-columns: 1fr; }
@@ -269,12 +290,27 @@
 <body>
   <div class="wrap">
     <section class="header">
-      <h1>NHL3.0 Morning Board</h1>
-      <div class="meta">
-        <div class="pill">Generated Sunday, March 08, 2026 09:15 PM CT</div>
-        <div class="pill">Matched games 1</div>
-        <div class="pill">Recommended bets 1</div>
+      <div class="header-main">
+        <h1>NHL3.0 Morning Board</h1>
+        <div class="meta">
+          <div class="pill">Generated Sunday, March 08, 2026 09:15 PM CT</div>
+          <div class="pill">Matched games 1</div>
+          <div class="pill">Recommended bets 1</div>
+        </div>
       </div>
+      <aside class="header-performance">
+        <div class="label">Current Performance</div>
+        <div class="performance-grid">
+          <div>
+            <div class="label">Record</div>
+            <div class="value">0-0</div>
+          </div>
+          <div>
+            <div class="label">Units</div>
+            <div class="value">+0.00</div>
+          </div>
+        </div>
+      </aside>
     </section>
 
     <div class="quick-guide">
