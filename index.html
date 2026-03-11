@@ -5,44 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SportzStatz</title>
   <style>
-    :root { --bg:#f7f7f5; --panel:#ffffff; --ink:#101828; --muted:#667085; --line:#d0d5dd; --accent:#0f4c81; --shadow:0 10px 24px rgba(16,24,40,.07); }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif; background:var(--bg); color:var(--ink); }
-    .wrap { max-width:1080px; margin:0 auto; padding:28px 18px 48px; }
-    .hero, .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); }
-    .hero { padding:24px; background:linear-gradient(135deg,#ffffff 0%,#eef4ff 100%); }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:22px; }
-    .card { padding:20px; display:grid; gap:12px; }
-    .pill { display:inline-flex; border:1px solid var(--line); background:var(--panel); border-radius:999px; padding:8px 12px; color:var(--muted); font-size:13px; margin-right:8px; margin-top:10px; }
-    .button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 16px; border-radius:999px; text-decoration:none; font-weight:700; border:1px solid var(--accent); background:var(--accent); color:#fff; }
-    h1 { margin:0 0 10px; font-size:clamp(30px,4vw,48px); line-height:1.05; }
-    .label { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
-    .title { font-size:26px; font-weight:800; line-height:1.1; }
-    .body { color:var(--muted); line-height:1.5; }
-    @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
+    :root {
+      --bg: #f7f7f5;
+      --panel: #ffffff;
+      --ink: #101828;
+      --muted: #667085;
+      --line: #d0d5dd;
+      --accent: #0f4c81;
+      --shadow: 0 10px 24px rgba(16, 24, 40, 0.07);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 72ch;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .card {
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .label {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .title {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .body {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fcfcfd;
+    }
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
       <h1>SportzStatz</h1>
-      <div class="body">Shared home for the NHL and NCAAMB morning boards.</div>
-      <div class="pill">Generated 2026-03-11 12:06 AM Central Daylight Time</div>
-      <div class="pill">NHL board preserved</div>
-      <div class="pill">NCAAMB board ready</div>
+      <p class="subtitle">Shared home for the NHL and NCAAMB morning boards, keeping the sport-specific outputs under one Pages destination.</p>
+      <div class="pill-row">
+        <div class="pill">Generated 2026-03-11 07:23 AM Central Daylight Time</div>
+        <div class="pill">NHL board ready</div>
+        <div class="pill">NCAAMB board ready</div>
+      </div>
     </section>
+
     <section class="grid">
       <article class="card">
         <div class="label">NHL</div>
         <div class="title">Morning Board</div>
-        <div class="body">Current NHL page content with only navigation changes.</div>
-        <div><a class="button" href="nhl/index.html">Open NHL Board</a></div>
+        <div class="body">Current NHL styling and pipeline output, published under the shared Pages structure.</div>
+        <div class="actions">
+          <a class="button primary" href="nhl/index.html">Open NHL Board</a>
+        </div>
       </article>
+
       <article class="card">
         <div class="label">NCAAMB</div>
         <div class="title">Morning Board</div>
-        <div class="body">College basketball recommendations and matchup context in the same shared Pages structure.</div>
-        <div><a class="button" href="ncaamb/index.html">Open NCAAMB Board</a></div>
+        <div class="body">College basketball recommendations rendered as one long, confidence-ranked list using the existing prediction outputs and a matching presentation layer.</div>
+        <div class="actions">
+          <a class="button primary" href="ncaamb/index.html">Open NCAAMB Board</a>
+        </div>
       </article>
     </section>
   </div>
