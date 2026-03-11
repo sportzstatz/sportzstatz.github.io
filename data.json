@@ -1,5 +1,5 @@
 {
-  "generated_at": "Tuesday, March 10, 2026 08:14 PM CT",
+  "generated_at": "Tuesday, March 10, 2026 08:22 PM CT",
   "run_summary": {
     "matched_game_count": 12,
     "recommendation_count": 15
@@ -7,20 +7,22 @@
   "performance_summary": {
     "key": "high",
     "title": "High Confidence",
-    "subtitle": "High and medium-high bets",
-    "record": "2-2",
-    "units": "-0.58",
+    "subtitle": "High bets only",
+    "show_units": true,
+    "record": "2-1",
+    "units": "+0.42",
     "wins": 2,
-    "losses": 2,
+    "losses": 1,
     "pushes": 0,
-    "graded_bet_count": 4,
-    "units_net": -0.5815,
+    "graded_bet_count": 3,
+    "units_net": 0.4185,
     "active_index": 1,
     "views": [
       {
         "key": "all",
         "title": "All Bets",
         "subtitle": "All settled recommendations",
+        "show_units": true,
         "record": "3-3",
         "units": "-0.91",
         "wins": 3,
@@ -32,31 +34,34 @@
       {
         "key": "high",
         "title": "High Confidence",
-        "subtitle": "High and medium-high bets",
-        "record": "2-2",
-        "units": "-0.58",
+        "subtitle": "High bets only",
+        "show_units": true,
+        "record": "2-1",
+        "units": "+0.42",
         "wins": 2,
-        "losses": 2,
+        "losses": 1,
         "pushes": 0,
-        "graded_bet_count": 4,
-        "units_net": -0.5815
+        "graded_bet_count": 3,
+        "units_net": 0.4185
       },
       {
         "key": "medium",
         "title": "Medium Confidence",
-        "subtitle": "Medium and medium-low bets",
-        "record": "1-1",
-        "units": "-0.32",
+        "subtitle": "Medium-high, medium, and medium-low bets",
+        "show_units": true,
+        "record": "1-2",
+        "units": "-1.32",
         "wins": 1,
-        "losses": 1,
+        "losses": 2,
         "pushes": 0,
-        "graded_bet_count": 2,
-        "units_net": -0.3243
+        "graded_bet_count": 3,
+        "units_net": -1.3243
       },
       {
         "key": "passed",
         "title": "Passed Markets",
         "subtitle": "Settled pass lines that were left alone",
+        "show_units": false,
         "record": "6-3",
         "units": "+2.86",
         "wins": 6,
