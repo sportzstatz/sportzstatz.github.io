@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-03-10 11:34 PM Central Daylight Time",
+  "snapshot_date": "demo-static",
+  "season": 2026,
+  "tile_count": 1,
+  "recommendation_count": 1,
+  "tiles": [
+    {
+      "event_id": "demo-duke-houston-001",
+      "game_label": "Duke at Houston",
+      "home_team": "Houston",
+      "away_team": "Duke",
+      "commence_time": "Static Demo Game | No live or API data",
+      "projected_score_text": "Houston 74.8, Duke 71.9",
+      "win_prob_text": "Houston 58.4%",
+      "spread_text": "Houston -2.9",
+      "total_text": "146.7",
+      "best_market_title": "Spread",
+      "best_bet_label": "Houston -2.5",
+      "best_price_text": "-110",
+      "best_ev_text": "4.10%",
+      "best_edge_text": "3.20%",
+      "confidence_label": "Medium",
+      "bookmaker_title": "DemoBook",
+      "rows": [
+        {
+          "bet_label": "Houston -2.5",
+          "market_title": "Spread",
+          "bookmaker_title": "DemoBook",
+          "price_text": "-110",
+          "ev_text": "4.10%",
+          "edge_text": "3.20%",
+          "confidence_label": "Medium"
+        },
+        {
+          "bet_label": "Under 146.5",
+          "market_title": "Total",
+          "bookmaker_title": "DemoBook",
+          "price_text": "+100",
+          "ev_text": "2.40%",
+          "edge_text": "1.90%",
+          "confidence_label": "Medium-Low"
+        },
+        {
+          "bet_label": "Houston ML",
+          "market_title": "Moneyline",
+          "bookmaker_title": "DemoBook",
+          "price_text": "-135",
+          "ev_text": "1.10%",
+          "edge_text": "0.90%",
+          "confidence_label": "Low"
+        }
+      ]
+    }
+  ]
+}
