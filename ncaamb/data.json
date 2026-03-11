@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-03-10 11:34 PM Central Daylight Time",
-  "snapshot_date": "demo-static",
+  "generated_at": "2026-03-10 11:57 PM Central Daylight Time",
+  "snapshot_date": "2026-03-10",
   "season": 2026,
-  "tile_count": 1,
-  "recommendation_count": 1,
+  "tile_count": 2,
+  "recommendation_count": 2,
   "tiles": [
     {
       "event_id": "demo-duke-houston-001",
       "game_label": "Duke at Houston",
       "home_team": "Houston",
       "away_team": "Duke",
-      "commence_time": "Static Demo Game | No live or API data",
+      "commence_time": "Tuesday, Mar 10 | 8:00 PM CT",
       "projected_score_text": "Houston 74.8, Duke 71.9",
       "win_prob_text": "Houston 58.4%",
       "spread_text": "Houston -2.9",
@@ -21,6 +21,7 @@
       "best_ev_text": "4.10%",
       "best_edge_text": "3.20%",
       "confidence_label": "Medium",
+      "confidence_class": "medium",
       "bookmaker_title": "DemoBook",
       "rows": [
         {
@@ -30,7 +31,8 @@
           "price_text": "-110",
           "ev_text": "4.10%",
           "edge_text": "3.20%",
-          "confidence_label": "Medium"
+          "confidence_label": "Medium",
+          "confidence_class": "medium"
         },
         {
           "bet_label": "Under 146.5",
@@ -39,7 +41,8 @@
           "price_text": "+100",
           "ev_text": "2.40%",
           "edge_text": "1.90%",
-          "confidence_label": "Medium-Low"
+          "confidence_label": "Medium-Low",
+          "confidence_class": "medium_low"
         },
         {
           "bet_label": "Houston ML",
@@ -48,7 +51,59 @@
           "price_text": "-135",
           "ev_text": "1.10%",
           "edge_text": "0.90%",
-          "confidence_label": "Low"
+          "confidence_label": "Low",
+          "confidence_class": "low"
+        }
+      ]
+    },
+    {
+      "event_id": "demo-gonzaga-arizona-002",
+      "game_label": "Gonzaga at Arizona",
+      "home_team": "Arizona",
+      "away_team": "Gonzaga",
+      "commence_time": "Tuesday, Mar 10 | 10:30 PM CT",
+      "projected_score_text": "Arizona 79.1, Gonzaga 76.0",
+      "win_prob_text": "Arizona 61.7%",
+      "spread_text": "Arizona -3.1",
+      "total_text": "155.1",
+      "best_market_title": "Total",
+      "best_bet_label": "Over 153.5",
+      "best_price_text": "-105",
+      "best_ev_text": "5.20%",
+      "best_edge_text": "3.90%",
+      "confidence_label": "High",
+      "confidence_class": "high",
+      "bookmaker_title": "DemoBook",
+      "rows": [
+        {
+          "bet_label": "Over 153.5",
+          "market_title": "Total",
+          "bookmaker_title": "DemoBook",
+          "price_text": "-105",
+          "ev_text": "5.20%",
+          "edge_text": "3.90%",
+          "confidence_label": "High",
+          "confidence_class": "high"
+        },
+        {
+          "bet_label": "Arizona -3.0",
+          "market_title": "Spread",
+          "bookmaker_title": "DemoBook",
+          "price_text": "-110",
+          "ev_text": "3.30%",
+          "edge_text": "2.50%",
+          "confidence_label": "Medium",
+          "confidence_class": "medium"
+        },
+        {
+          "bet_label": "Arizona ML",
+          "market_title": "Moneyline",
+          "bookmaker_title": "DemoBook",
+          "price_text": "-145",
+          "ev_text": "1.40%",
+          "edge_text": "1.10%",
+          "confidence_label": "Low",
+          "confidence_class": "low"
         }
       ]
     }

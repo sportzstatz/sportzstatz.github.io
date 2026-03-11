@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NCAAMB Morning Board</title>
   <style>
-    :root { --bg:#f7f7f5; --panel:#ffffff; --ink:#101828; --muted:#667085; --line:#d0d5dd; --accent:#0f4c81; --good:#156f3c; --warn:#b54708; --bad:#b42318; --shadow:0 10px 24px rgba(16,24,40,.07); }
+    :root { --bg:#f7f7f5; --panel:#ffffff; --ink:#101828; --muted:#667085; --line:#d0d5dd; --accent:#0f4c81; --good:#156f3c; --bad:#b42318; --good-soft:#edf9f0; --accent-soft:#eef4ff; --bad-soft:#fff1f1; --shadow:0 10px 24px rgba(16,24,40,.07); }
     * { box-sizing:border-box; }
     body { margin:0; font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif; color:var(--ink); background:var(--bg); }
     .wrap { max-width:1220px; margin:0 auto; padding:24px 18px 48px; }
@@ -15,16 +15,28 @@
     .meta,.nav-row { display:flex; flex-wrap:wrap; gap:8px; }
     .pill,.nav-link { border:1px solid var(--line); background:var(--panel); padding:8px 12px; border-radius:999px; font-size:13px; text-decoration:none; color:var(--muted); }
     .nav-link { color:var(--ink); font-weight:700; }
-    .tile { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow); }
+    .quick-guide { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:18px; }
+    .quick-guide-card { background:#fcfcfd; border:1px solid var(--line); border-radius:12px; padding:10px 12px; }
+    .tile-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .tile { background:var(--panel); border:1px solid var(--line); border-left-width:6px; border-radius:18px; padding:18px; box-shadow:var(--shadow); }
+    .tile.high { border-left-color:var(--good); }
+    .tile.medium_high,.tile.medium { border-left-color:var(--accent); }
+    .tile.medium_low,.tile.low { border-left-color:var(--bad); }
     .tile-top { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; margin-bottom:12px; }
     .game-label { font-size:24px; font-weight:800; line-height:1.1; }
     .game-time { margin-top:4px; color:var(--muted); font-size:14px; }
-    .confidence { text-align:right; font-size:14px; font-weight:800; color:var(--accent); }
+    .confidence { text-align:right; font-size:14px; font-weight:800; }
+    .confidence.high { color:var(--good); }
+    .confidence.medium_high,.confidence.medium { color:var(--accent); }
+    .confidence.medium_low,.confidence.low { color:var(--bad); }
     .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin:14px 0; }
     .stat { border:1px solid #eaecf0; border-radius:12px; padding:12px; background:#fcfcfd; }
     .stat-label { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
     .stat-value { margin-top:4px; font-size:16px; font-weight:800; }
     .best-bet { border:1px solid #eaecf0; border-radius:14px; padding:14px; background:#fcfcfd; margin-bottom:14px; }
+    .best-bet.high { background:linear-gradient(135deg,var(--good-soft) 0%,#ffffff 100%); border-color:rgba(21,111,60,.28); }
+    .best-bet.medium_high,.best-bet.medium { background:linear-gradient(135deg,var(--accent-soft) 0%,#ffffff 100%); border-color:rgba(15,76,129,.28); }
+    .best-bet.medium_low,.best-bet.low { background:linear-gradient(135deg,var(--bad-soft) 0%,#ffffff 100%); border-color:rgba(180,35,24,.22); }
     .best-bet-title { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
     .best-bet-line { margin-top:4px; font-size:22px; font-weight:900; line-height:1.1; }
     .best-bet-meta { margin-top:6px; color:var(--muted); font-size:14px; line-height:1.45; }
@@ -32,8 +44,12 @@
     .market-row { display:grid; grid-template-columns:1.2fr 1fr .8fr .8fr .7fr; gap:10px; border-top:1px solid #eaecf0; padding-top:10px; align-items:center; font-size:14px; }
     .market-row:first-child { border-top:none; padding-top:0; }
     .market-meta { color:var(--muted); }
-    @media (max-width:980px) { .stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .market-row { grid-template-columns:1fr 1fr; } }
-    @media (max-width:720px) { .tile-top { display:grid; } .confidence { text-align:left; } .stats { grid-template-columns:1fr; } .market-row { grid-template-columns:1fr; } }
+    .market-confidence { justify-self:start; padding:6px 10px; border-radius:999px; font-weight:700; border:1px solid transparent; }
+    .market-confidence.high { color:var(--good); background:var(--good-soft); border-color:rgba(21,111,60,.2); }
+    .market-confidence.medium_high,.market-confidence.medium { color:var(--accent); background:var(--accent-soft); border-color:rgba(15,76,129,.18); }
+    .market-confidence.medium_low,.market-confidence.low { color:var(--bad); background:var(--bad-soft); border-color:rgba(180,35,24,.16); }
+    @media (max-width:980px) { .quick-guide { grid-template-columns:repeat(2,minmax(0,1fr)); } .stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .market-row { grid-template-columns:1fr 1fr; } }
+    @media (max-width:720px) { .tile-top { display:grid; } .confidence { text-align:left; } .quick-guide { grid-template-columns:1fr; } .tile-list { grid-template-columns:1fr; } .stats { grid-template-columns:1fr; } .market-row { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -44,35 +60,41 @@
         <a class="nav-link" href="../nhl/index.html">NHL Board</a>
       </div>
       <h1>NCAAMB Morning Board</h1>
-      <div class="subtitle">Static demo board. This page uses fake game data only and contains no live or sensitive information.</div>
+      <div class="subtitle">College basketball recommendations ranked by confidence, EV, and edge, with matchup context and best-market detail on each game tile.</div>
       <div class="meta">
-        <div class="pill">Generated 2026-03-10 11:34 PM Central Daylight Time</div>
-        <div class="pill">Snapshot demo-static</div>
+        <div class="pill">Generated 2026-03-10 11:57 PM Central Daylight Time</div>
         <div class="pill">Season 2026</div>
-        <div class="pill">Games 1</div>
-        <div class="pill">Recommendations 1</div>
+        <div class="pill">Games 2</div>
+        <div class="pill">Recommendations 2</div>
       </div>
     </section>
-    <article class="tile">
-      <div class="tile-top">
-        <div>
-          <div class="game-label">Duke at Houston</div>
-          <div class="game-time">Static Demo Game | No live or API data</div>
+    <section class="quick-guide">
+      <article class="quick-guide-card"><div class="stat-label">Projected Score</div><div class="best-bet-meta">Model expected final score for the matchup.</div></article>
+      <article class="quick-guide-card"><div class="stat-label">Win Probability</div><div class="best-bet-meta">Estimated chance the home team wins outright.</div></article>
+      <article class="quick-guide-card"><div class="stat-label">Edge</div><div class="best-bet-meta">Difference between the model number and the market's implied number.</div></article>
+      <article class="quick-guide-card"><div class="stat-label">Confidence</div><div class="best-bet-meta">Green is strongest, blue is solid, red is weaker or pass-level.</div></article>
+    </section>
+    <section class="tile-list">
+      <article class="tile medium">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Duke at Houston</div>
+            <div class="game-time">Tuesday, Mar 10 | 8:00 PM CT</div>
+          </div>
+          <div class="confidence medium">Medium Confidence</div>
         </div>
-        <div class="confidence">Medium Confidence</div>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="stat-label">Projected Score</div><div class="stat-value">Houston 74.8, Duke 71.9</div></div>
-        <div class="stat"><div class="stat-label">Home Win Probability</div><div class="stat-value">Houston 58.4%</div></div>
-        <div class="stat"><div class="stat-label">Projected Spread</div><div class="stat-value">Houston -2.9</div></div>
-        <div class="stat"><div class="stat-label">Projected Total</div><div class="stat-value">146.7</div></div>
-      </div>
-      <div class="best-bet">
-        <div class="best-bet-title">Top Recommendation</div>
-        <div class="best-bet-line">Houston -2.5</div>
-        <div class="best-bet-meta">Spread at DemoBook | -110 | EV 4.10% | Edge 3.20%</div>
-      </div>
-      <div class="market-list">
+        <div class="stats">
+          <div class="stat"><div class="stat-label">Projected Score</div><div class="stat-value">Houston 74.8, Duke 71.9</div></div>
+          <div class="stat"><div class="stat-label">Home Win Probability</div><div class="stat-value">Houston 58.4%</div></div>
+          <div class="stat"><div class="stat-label">Projected Spread</div><div class="stat-value">Houston -2.9</div></div>
+          <div class="stat"><div class="stat-label">Projected Total</div><div class="stat-value">146.7</div></div>
+        </div>
+        <div class="best-bet medium">
+          <div class="best-bet-title">Top Recommendation</div>
+          <div class="best-bet-line">Houston -2.5</div>
+          <div class="best-bet-meta">Spread at DemoBook | -110 | EV 4.10% | Edge 3.20%</div>
+        </div>
+        <div class="market-list">
           <div class="market-row">
             <div>
               <strong>Houston -2.5</strong>
@@ -81,7 +103,7 @@
             <div>-110</div>
             <div>EV 4.10%</div>
             <div>Edge 3.20%</div>
-            <div>Medium</div>
+            <div class="market-confidence medium">Medium</div>
           </div>
         
           <div class="market-row">
@@ -92,7 +114,7 @@
             <div>+100</div>
             <div>EV 2.40%</div>
             <div>Edge 1.90%</div>
-            <div>Medium-Low</div>
+            <div class="market-confidence medium_low">Medium-Low</div>
           </div>
         
           <div class="market-row">
@@ -103,10 +125,66 @@
             <div>-135</div>
             <div>EV 1.10%</div>
             <div>Edge 0.90%</div>
-            <div>Low</div>
+            <div class="market-confidence low">Low</div>
           </div>
         </div>
-    </article>
+      </article>
+    
+      <article class="tile high">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Gonzaga at Arizona</div>
+            <div class="game-time">Tuesday, Mar 10 | 10:30 PM CT</div>
+          </div>
+          <div class="confidence high">High Confidence</div>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat-label">Projected Score</div><div class="stat-value">Arizona 79.1, Gonzaga 76.0</div></div>
+          <div class="stat"><div class="stat-label">Home Win Probability</div><div class="stat-value">Arizona 61.7%</div></div>
+          <div class="stat"><div class="stat-label">Projected Spread</div><div class="stat-value">Arizona -3.1</div></div>
+          <div class="stat"><div class="stat-label">Projected Total</div><div class="stat-value">155.1</div></div>
+        </div>
+        <div class="best-bet high">
+          <div class="best-bet-title">Top Recommendation</div>
+          <div class="best-bet-line">Over 153.5</div>
+          <div class="best-bet-meta">Total at DemoBook | -105 | EV 5.20% | Edge 3.90%</div>
+        </div>
+        <div class="market-list">
+          <div class="market-row">
+            <div>
+              <strong>Over 153.5</strong>
+              <div class="market-meta">Total | DemoBook</div>
+            </div>
+            <div>-105</div>
+            <div>EV 5.20%</div>
+            <div>Edge 3.90%</div>
+            <div class="market-confidence high">High</div>
+          </div>
+        
+          <div class="market-row">
+            <div>
+              <strong>Arizona -3.0</strong>
+              <div class="market-meta">Spread | DemoBook</div>
+            </div>
+            <div>-110</div>
+            <div>EV 3.30%</div>
+            <div>Edge 2.50%</div>
+            <div class="market-confidence medium">Medium</div>
+          </div>
+        
+          <div class="market-row">
+            <div>
+              <strong>Arizona ML</strong>
+              <div class="market-meta">Moneyline | DemoBook</div>
+            </div>
+            <div>-145</div>
+            <div>EV 1.40%</div>
+            <div>Edge 1.10%</div>
+            <div class="market-confidence low">Low</div>
+          </div>
+        </div>
+      </article>
+    </section>
   </div>
 </body>
 </html>
