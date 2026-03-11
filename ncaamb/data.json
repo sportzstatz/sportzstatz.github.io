@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11 07:33 AM Central Daylight Time",
+  "generated_at": "2026-03-11 07:36 AM Central Daylight Time",
   "season": 2026,
   "snapshot_date": "2026-03-11",
   "tile_count": 33,
@@ -562,7 +562,7 @@
           "edge_text": "18.5%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Spread",
@@ -572,7 +572,7 @@
           "edge_text": "18.5%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Moneyline",
@@ -667,7 +667,7 @@
           "edge_text": "15.8%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
@@ -677,7 +677,7 @@
           "edge_text": "15.8%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         }
       ],
       "has_recommendation": true,
@@ -802,9 +802,9 @@
         {
           "market_title": "Total",
           "bet_label": "Over 137.5",
-          "price_text": "-115",
-          "ev_text": "53.3%",
-          "edge_text": "30.9%",
+          "price_text": "-110",
+          "ev_text": "56.5%",
+          "edge_text": "32.0%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
@@ -842,9 +842,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Stephen F. Austin",
-          "price_text": "+100",
-          "ev_text": "6.5%",
-          "edge_text": "5.5%",
+          "price_text": "+105",
+          "ev_text": "9.2%",
+          "edge_text": "6.6%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
@@ -1281,6 +1281,91 @@
       "probability_edge": 0.2700843979057592
     },
     {
+      "event_id": "e6e26557b7e9986eda5f30cdc5a2ac97",
+      "game_label": "BYU at West Virginia",
+      "home_team": "West Virginia",
+      "away_team": "BYU",
+      "commence_time": "2026-03-11T23:00:00Z",
+      "projected_score_text": "West Virginia 72.8, BYU 77.8",
+      "win_prob_text": "West Virginia 24.4%",
+      "spread_text": "BYU -5.0",
+      "total_text": "150.6",
+      "best_market_title": "Total",
+      "best_bet_label": "Over 141.5",
+      "best_price_text": "-110",
+      "best_ev_text": "45.8%",
+      "best_edge_text": "26.4%",
+      "confidence_label": "High",
+      "confidence_class": "high",
+      "bookmaker_title": "DraftKings",
+      "rows": [
+        {
+          "market_title": "Total",
+          "bet_label": "Over 141.5",
+          "price_text": "-110",
+          "ev_text": "45.8%",
+          "edge_text": "26.4%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 143.5",
+          "price_text": "-106",
+          "ev_text": "37.9%",
+          "edge_text": "21.9%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "BYU",
+          "price_text": "-208",
+          "ev_text": "11.9%",
+          "edge_text": "10.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "BYU",
+          "price_text": "-217",
+          "ev_text": "10.4%",
+          "edge_text": "9.9%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "BYU -4.5",
+          "price_text": "-110",
+          "ev_text": "6.0%",
+          "edge_text": "5.5%",
+          "confidence_label": "Medium-High",
+          "confidence_class": "medium_high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "BYU -4.5",
+          "price_text": "-115",
+          "ev_text": "3.7%",
+          "edge_text": "4.4%",
+          "confidence_label": "Medium",
+          "confidence_class": "medium",
+          "bookmaker_title": "DraftKings"
+        }
+      ],
+      "has_recommendation": true,
+      "confidence_rank": 5,
+      "expected_value_per_unit": 0.4583996,
+      "probability_edge": 0.26356
+    },
+    {
       "event_id": "036cc56bd34246e00639e8cd81b209c1",
       "game_label": "South Carolina at Oklahoma",
       "home_team": "Oklahoma",
@@ -1364,91 +1449,6 @@
       "confidence_rank": 5,
       "expected_value_per_unit": 0.42103999999999997,
       "probability_edge": 0.244
-    },
-    {
-      "event_id": "e6e26557b7e9986eda5f30cdc5a2ac97",
-      "game_label": "BYU at West Virginia",
-      "home_team": "West Virginia",
-      "away_team": "BYU",
-      "commence_time": "2026-03-11T23:00:00Z",
-      "projected_score_text": "West Virginia 72.8, BYU 77.8",
-      "win_prob_text": "West Virginia 24.4%",
-      "spread_text": "BYU -5.0",
-      "total_text": "150.6",
-      "best_market_title": "Total",
-      "best_bet_label": "Over 142.5",
-      "best_price_text": "-110",
-      "best_ev_text": "41.1%",
-      "best_edge_text": "23.9%",
-      "confidence_label": "High",
-      "confidence_class": "high",
-      "bookmaker_title": "DraftKings",
-      "rows": [
-        {
-          "market_title": "Total",
-          "bet_label": "Over 142.5",
-          "price_text": "-110",
-          "ev_text": "41.1%",
-          "edge_text": "23.9%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Total",
-          "bet_label": "Over 143.5",
-          "price_text": "-106",
-          "ev_text": "37.9%",
-          "edge_text": "21.9%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "BYU",
-          "price_text": "-208",
-          "ev_text": "11.9%",
-          "edge_text": "10.8%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "BYU",
-          "price_text": "-217",
-          "ev_text": "10.4%",
-          "edge_text": "9.9%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "BYU -4.5",
-          "price_text": "-110",
-          "ev_text": "6.0%",
-          "edge_text": "5.5%",
-          "confidence_label": "Medium-High",
-          "confidence_class": "medium_high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "BYU -4.5",
-          "price_text": "-115",
-          "ev_text": "3.7%",
-          "edge_text": "4.4%",
-          "confidence_label": "Medium",
-          "confidence_class": "medium",
-          "bookmaker_title": "DraftKings"
-        }
-      ],
-      "has_recommendation": true,
-      "confidence_rank": 5,
-      "expected_value_per_unit": 0.4109552,
-      "probability_edge": 0.23872000000000004
     },
     {
       "event_id": "399c858e378cceb1df0189c2d2e12e45",
@@ -2017,7 +2017,7 @@
           "edge_text": "17.7%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
@@ -2027,7 +2027,7 @@
           "edge_text": "17.7%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Spread",
@@ -2677,7 +2677,7 @@
           "edge_text": "0.1%",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
@@ -2687,7 +2687,7 @@
           "edge_text": "0.1%",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         }
       ],
       "has_recommendation": true,
@@ -2707,23 +2707,13 @@
       "total_text": "154.9",
       "best_market_title": "Moneyline",
       "best_bet_label": "Marquette",
-      "best_price_text": "-192",
-      "best_ev_text": "11.1%",
-      "best_edge_text": "10.0%",
+      "best_price_text": "-196",
+      "best_ev_text": "10.3%",
+      "best_edge_text": "9.4%",
       "confidence_label": "High",
       "confidence_class": "high",
-      "bookmaker_title": "FanDuel",
+      "bookmaker_title": "DraftKings",
       "rows": [
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Marquette",
-          "price_text": "-192",
-          "ev_text": "11.1%",
-          "edge_text": "10.0%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
         {
           "market_title": "Moneyline",
           "bet_label": "Marquette",
@@ -2735,13 +2725,13 @@
           "bookmaker_title": "DraftKings"
         },
         {
-          "market_title": "Spread",
-          "bet_label": "Marquette -4.5",
-          "price_text": "-110",
-          "ev_text": "3.0%",
-          "edge_text": "3.9%",
-          "confidence_label": "Medium",
-          "confidence_class": "medium",
+          "market_title": "Moneyline",
+          "bet_label": "Marquette",
+          "price_text": "-204",
+          "ev_text": "8.9%",
+          "edge_text": "8.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
           "bookmaker_title": "FanDuel"
         },
         {
@@ -2755,13 +2745,23 @@
           "bookmaker_title": "DraftKings"
         },
         {
+          "market_title": "Spread",
+          "bet_label": "Marquette -4.5",
+          "price_text": "-110",
+          "ev_text": "3.0%",
+          "edge_text": "3.9%",
+          "confidence_label": "Medium",
+          "confidence_class": "medium",
+          "bookmaker_title": "FanDuel"
+        },
+        {
           "market_title": "Total",
           "bet_label": "Over 153.5",
-          "price_text": "-115",
-          "ev_text": "0.6%",
-          "edge_text": "2.7%",
-          "confidence_label": "Low",
-          "confidence_class": "low",
+          "price_text": "-110",
+          "ev_text": "2.7%",
+          "edge_text": "3.8%",
+          "confidence_label": "Medium",
+          "confidence_class": "medium",
           "bookmaker_title": "FanDuel"
         },
         {
@@ -2777,8 +2777,8 @@
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.11057279999999997,
-      "probability_edge": 0.09957203883495136
+      "expected_value_per_unit": 0.10326639999999992,
+      "probability_edge": 0.09449542168674685
     }
   ]
 }
