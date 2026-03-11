@@ -1,17 +1,71 @@
 {
-  "generated_at": "Tuesday, March 10, 2026 08:09 PM CT",
+  "generated_at": "Tuesday, March 10, 2026 08:14 PM CT",
   "run_summary": {
     "matched_game_count": 12,
     "recommendation_count": 15
   },
   "performance_summary": {
-    "record": "3-3",
-    "units": "-0.91",
-    "wins": 3,
-    "losses": 3,
+    "key": "high",
+    "title": "High Confidence",
+    "subtitle": "High and medium-high bets",
+    "record": "2-2",
+    "units": "-0.58",
+    "wins": 2,
+    "losses": 2,
     "pushes": 0,
-    "graded_bet_count": 6,
-    "units_net": -0.9058
+    "graded_bet_count": 4,
+    "units_net": -0.5815,
+    "active_index": 1,
+    "views": [
+      {
+        "key": "all",
+        "title": "All Bets",
+        "subtitle": "All settled recommendations",
+        "record": "3-3",
+        "units": "-0.91",
+        "wins": 3,
+        "losses": 3,
+        "pushes": 0,
+        "graded_bet_count": 6,
+        "units_net": -0.9058
+      },
+      {
+        "key": "high",
+        "title": "High Confidence",
+        "subtitle": "High and medium-high bets",
+        "record": "2-2",
+        "units": "-0.58",
+        "wins": 2,
+        "losses": 2,
+        "pushes": 0,
+        "graded_bet_count": 4,
+        "units_net": -0.5815
+      },
+      {
+        "key": "medium",
+        "title": "Medium Confidence",
+        "subtitle": "Medium and medium-low bets",
+        "record": "1-1",
+        "units": "-0.32",
+        "wins": 1,
+        "losses": 1,
+        "pushes": 0,
+        "graded_bet_count": 2,
+        "units_net": -0.3243
+      },
+      {
+        "key": "passed",
+        "title": "Passed Markets",
+        "subtitle": "Settled pass lines that were left alone",
+        "record": "6-3",
+        "units": "+2.86",
+        "wins": 6,
+        "losses": 3,
+        "pushes": 0,
+        "graded_bet_count": 9,
+        "units_net": 2.8628
+      }
+    ]
   },
   "top_picks": [
     {
