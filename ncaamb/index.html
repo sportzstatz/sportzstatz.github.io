@@ -40,7 +40,13 @@
     .best-bet-title { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
     .best-bet-line { margin-top:4px; font-size:22px; font-weight:900; line-height:1.1; }
     .best-bet-meta { margin-top:6px; color:var(--muted); font-size:14px; line-height:1.45; }
-    .market-list { display:grid; gap:10px; }
+    .market-dropdown { border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#fcfcfd; }
+    .market-dropdown summary { list-style:none; cursor:pointer; padding:12px 14px; display:flex; justify-content:space-between; align-items:center; gap:12px; font-weight:700; }
+    .market-dropdown summary::-webkit-details-marker { display:none; }
+    .market-dropdown summary::after { content:'+'; color:var(--muted); font-size:20px; line-height:1; }
+    .market-dropdown[open] summary::after { content:'-'; }
+    .dropdown-body { padding:0 14px 14px; border-top:1px solid #eaecf0; }
+    .market-list { display:grid; gap:10px; padding-top:10px; }
     .market-row { display:grid; grid-template-columns:1.2fr 1fr .8fr .8fr .7fr; gap:10px; border-top:1px solid #eaecf0; padding-top:10px; align-items:center; font-size:14px; }
     .market-row:first-child { border-top:none; padding-top:0; }
     .market-meta { color:var(--muted); }
@@ -62,7 +68,7 @@
       <h1>NCAAMB Morning Board</h1>
       <div class="subtitle">College basketball recommendations ranked by confidence, EV, and edge, with matchup context and best-market detail on each game tile.</div>
       <div class="meta">
-        <div class="pill">Generated 2026-03-10 11:57 PM Central Daylight Time</div>
+        <div class="pill">Generated 2026-03-11 12:03 AM Central Daylight Time</div>
         <div class="pill">Season 2026</div>
         <div class="pill">Games 2</div>
         <div class="pill">Recommendations 2</div>
@@ -84,17 +90,23 @@
           <div class="confidence medium">Medium Confidence</div>
         </div>
         <div class="stats">
-          <div class="stat"><div class="stat-label">Projected Score</div><div class="stat-value">Houston 74.8, Duke 71.9</div></div>
           <div class="stat"><div class="stat-label">Home Win Probability</div><div class="stat-value">Houston 58.4%</div></div>
           <div class="stat"><div class="stat-label">Projected Spread</div><div class="stat-value">Houston -2.9</div></div>
           <div class="stat"><div class="stat-label">Projected Total</div><div class="stat-value">146.7</div></div>
+          <div class="stat"><div class="stat-label">Projected Score</div><div class="stat-value">Houston 74.8, Duke 71.9</div></div>
         </div>
         <div class="best-bet medium">
           <div class="best-bet-title">Top Recommendation</div>
           <div class="best-bet-line">Houston -2.5</div>
           <div class="best-bet-meta">Spread at DemoBook | -110 | EV 4.10% | Edge 3.20%</div>
         </div>
-        <div class="market-list">
+        <details class="market-dropdown">
+          <summary>
+            <span>Recommendation Details</span>
+            <span class="market-confidence medium">Medium</span>
+          </summary>
+          <div class="dropdown-body">
+            <div class="market-list">
           <div class="market-row">
             <div>
               <strong>Houston -2.5</strong>
@@ -128,6 +140,8 @@
             <div class="market-confidence low">Low</div>
           </div>
         </div>
+          </div>
+        </details>
       </article>
     
       <article class="tile high">
@@ -139,17 +153,23 @@
           <div class="confidence high">High Confidence</div>
         </div>
         <div class="stats">
-          <div class="stat"><div class="stat-label">Projected Score</div><div class="stat-value">Arizona 79.1, Gonzaga 76.0</div></div>
           <div class="stat"><div class="stat-label">Home Win Probability</div><div class="stat-value">Arizona 61.7%</div></div>
           <div class="stat"><div class="stat-label">Projected Spread</div><div class="stat-value">Arizona -3.1</div></div>
           <div class="stat"><div class="stat-label">Projected Total</div><div class="stat-value">155.1</div></div>
+          <div class="stat"><div class="stat-label">Projected Score</div><div class="stat-value">Arizona 79.1, Gonzaga 76.0</div></div>
         </div>
         <div class="best-bet high">
           <div class="best-bet-title">Top Recommendation</div>
           <div class="best-bet-line">Over 153.5</div>
           <div class="best-bet-meta">Total at DemoBook | -105 | EV 5.20% | Edge 3.90%</div>
         </div>
-        <div class="market-list">
+        <details class="market-dropdown">
+          <summary>
+            <span>Recommendation Details</span>
+            <span class="market-confidence high">High</span>
+          </summary>
+          <div class="dropdown-body">
+            <div class="market-list">
           <div class="market-row">
             <div>
               <strong>Over 153.5</strong>
@@ -183,6 +203,8 @@
             <div class="market-confidence low">Low</div>
           </div>
         </div>
+          </div>
+        </details>
       </article>
     </section>
   </div>
