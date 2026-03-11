@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-11 07:23 AM Central Daylight Time",
+  "generated_at": "2026-03-11 07:33 AM Central Daylight Time",
   "season": 2026,
   "snapshot_date": "2026-03-11",
-  "tile_count": 31,
-  "recommendation_count": 176,
+  "tile_count": 33,
+  "recommendation_count": 188,
   "tiles": [
     {
       "event_id": "70e740a1d8083b08e7650929e8d160ec",
@@ -16,27 +16,17 @@
       "spread_text": "UCF -7.1",
       "total_text": "154.0",
       "best_market_title": "Moneyline",
-      "best_bet_label": "UCF Knights",
+      "best_bet_label": "UCF",
       "best_price_text": "+130",
       "best_ev_text": "87.3%",
-      "best_edge_text": "40.1%",
+      "best_edge_text": "39.7%",
       "confidence_label": "High",
       "confidence_class": "high",
-      "bookmaker_title": "FanDuel",
+      "bookmaker_title": "DraftKings",
       "rows": [
         {
           "market_title": "Moneyline",
-          "bet_label": "UCF Knights",
-          "price_text": "+130",
-          "ev_text": "87.3%",
-          "edge_text": "40.1%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "UCF Knights",
+          "bet_label": "UCF",
           "price_text": "+130",
           "ev_text": "87.3%",
           "edge_text": "39.7%",
@@ -45,8 +35,18 @@
           "bookmaker_title": "DraftKings"
         },
         {
+          "market_title": "Moneyline",
+          "bet_label": "UCF",
+          "price_text": "+125",
+          "ev_text": "83.2%",
+          "edge_text": "38.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
           "market_title": "Spread",
-          "bet_label": "UCF Knights +2.5",
+          "bet_label": "UCF +2.5",
           "price_text": "-105",
           "ev_text": "68.7%",
           "edge_text": "37.6%",
@@ -56,10 +56,10 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "UCF Knights +3.5",
-          "price_text": "-120",
-          "ev_text": "62.7%",
-          "edge_text": "36.9%",
+          "bet_label": "UCF +2.5",
+          "price_text": "-105",
+          "ev_text": "68.7%",
+          "edge_text": "37.6%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
@@ -88,7 +88,7 @@
       "has_recommendation": true,
       "confidence_rank": 5,
       "expected_value_per_unit": 0.8730279999999997,
-      "probability_edge": 0.401094693877551
+      "probability_edge": 0.3966384810126582
     },
     {
       "event_id": "2f99a4b03ee320187c19eeca4b78179d",
@@ -101,7 +101,7 @@
       "spread_text": "UC Davis -2.0",
       "total_text": "152.2",
       "best_market_title": "Moneyline",
-      "best_bet_label": "UC Davis Aggies",
+      "best_bet_label": "UC Davis",
       "best_price_text": "+198",
       "best_ev_text": "79.9%",
       "best_edge_text": "28.3%",
@@ -111,7 +111,7 @@
       "rows": [
         {
           "market_title": "Moneyline",
-          "bet_label": "UC Davis Aggies",
+          "bet_label": "UC Davis",
           "price_text": "+198",
           "ev_text": "79.9%",
           "edge_text": "28.3%",
@@ -121,7 +121,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "UC Davis Aggies",
+          "bet_label": "UC Davis",
           "price_text": "+195",
           "ev_text": "78.1%",
           "edge_text": "27.9%",
@@ -131,7 +131,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "UC Davis Aggies +5.5",
+          "bet_label": "UC Davis +5.5",
           "price_text": "-110",
           "ev_text": "52.8%",
           "edge_text": "30.0%",
@@ -141,7 +141,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "UC Davis Aggies +5.5",
+          "bet_label": "UC Davis +5.5",
           "price_text": "-118",
           "ev_text": "48.0%",
           "edge_text": "28.3%",
@@ -186,7 +186,7 @@
       "spread_text": "Auburn -15.2",
       "total_text": "159.6",
       "best_market_title": "Spread",
-      "best_bet_label": "Auburn Tigers -7.5",
+      "best_bet_label": "Auburn -7.5",
       "best_price_text": "-110",
       "best_ev_text": "70.1%",
       "best_edge_text": "39.1%",
@@ -196,7 +196,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Auburn Tigers -7.5",
+          "bet_label": "Auburn -7.5",
           "price_text": "-110",
           "ev_text": "70.1%",
           "edge_text": "39.1%",
@@ -206,7 +206,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Auburn Tigers -7.5",
+          "bet_label": "Auburn -7.5",
           "price_text": "-112",
           "ev_text": "68.3%",
           "edge_text": "38.5%",
@@ -216,17 +216,17 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Auburn Tigers",
-          "price_text": "-312",
-          "ev_text": "30.5%",
-          "edge_text": "26.2%",
+          "bet_label": "Auburn",
+          "price_text": "-323",
+          "ev_text": "29.5%",
+          "edge_text": "25.8%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Auburn Tigers",
+          "bet_label": "Auburn",
           "price_text": "-323",
           "ev_text": "29.5%",
           "edge_text": "25.5%",
@@ -237,11 +237,11 @@
         {
           "market_title": "Total",
           "bet_label": "Over 158.5",
-          "price_text": "-110",
-          "ev_text": "2.5%",
-          "edge_text": "3.7%",
-          "confidence_label": "Medium",
-          "confidence_class": "medium",
+          "price_text": "-115",
+          "ev_text": "0.4%",
+          "edge_text": "2.6%",
+          "confidence_label": "Low",
+          "confidence_class": "low",
           "bookmaker_title": "FanDuel"
         },
         {
@@ -271,7 +271,7 @@
       "spread_text": "Morgan St. -11.7",
       "total_text": "133.1",
       "best_market_title": "Spread",
-      "best_bet_label": "Morgan St Bears -2.5",
+      "best_bet_label": "Morgan St. -2.5",
       "best_price_text": "-108",
       "best_ev_text": "64.2%",
       "best_edge_text": "35.6%",
@@ -281,7 +281,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Morgan St Bears -2.5",
+          "bet_label": "Morgan St. -2.5",
           "price_text": "-108",
           "ev_text": "64.2%",
           "edge_text": "35.6%",
@@ -291,7 +291,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Morgan St Bears -3.5",
+          "bet_label": "Morgan St. -3.5",
           "price_text": "-104",
           "ev_text": "61.5%",
           "edge_text": "33.8%",
@@ -321,7 +321,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Morgan St Bears",
+          "bet_label": "Morgan St.",
           "price_text": "-147",
           "ev_text": "50.1%",
           "edge_text": "32.2%",
@@ -331,7 +331,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Morgan St Bears",
+          "bet_label": "Morgan St.",
           "price_text": "-156",
           "ev_text": "46.5%",
           "edge_text": "30.9%",
@@ -356,7 +356,7 @@
       "spread_text": "Liberty -11.8",
       "total_text": "154.5",
       "best_market_title": "Spread",
-      "best_bet_label": "Liberty Flames -5.5",
+      "best_bet_label": "Liberty -5.5",
       "best_price_text": "-108",
       "best_ev_text": "62.3%",
       "best_edge_text": "34.6%",
@@ -366,7 +366,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Liberty Flames -5.5",
+          "bet_label": "Liberty -5.5",
           "price_text": "-108",
           "ev_text": "62.3%",
           "edge_text": "34.6%",
@@ -386,7 +386,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Liberty Flames -5.5",
+          "bet_label": "Liberty -5.5",
           "price_text": "-114",
           "ev_text": "58.1%",
           "edge_text": "33.3%",
@@ -397,16 +397,16 @@
         {
           "market_title": "Total",
           "bet_label": "Over 144.5",
-          "price_text": "-115",
-          "ev_text": "51.1%",
-          "edge_text": "29.7%",
+          "price_text": "-110",
+          "ev_text": "54.3%",
+          "edge_text": "30.8%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Liberty Flames",
+          "bet_label": "Liberty",
           "price_text": "-233",
           "ev_text": "36.3%",
           "edge_text": "28.4%",
@@ -416,7 +416,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Liberty Flames",
+          "bet_label": "Liberty",
           "price_text": "-244",
           "ev_text": "34.4%",
           "edge_text": "27.5%",
@@ -431,6 +431,91 @@
       "probability_edge": 0.34619560209424094
     },
     {
+      "event_id": "1289f3b328208ed3652def7bd2f079a4",
+      "game_label": "Ole Miss at Texas",
+      "home_team": "Texas",
+      "away_team": "Ole Miss",
+      "commence_time": "2026-03-11T23:00:07Z",
+      "projected_score_text": "Texas 83.7, Ole Miss 71.1",
+      "win_prob_text": "Texas 95.9%",
+      "spread_text": "Texas -12.6",
+      "total_text": "154.8",
+      "best_market_title": "Spread",
+      "best_bet_label": "Texas -6.5",
+      "best_price_text": "-106",
+      "best_ev_text": "60.8%",
+      "best_edge_text": "33.7%",
+      "confidence_label": "High",
+      "confidence_class": "high",
+      "bookmaker_title": "FanDuel",
+      "rows": [
+        {
+          "market_title": "Spread",
+          "bet_label": "Texas -6.5",
+          "price_text": "-106",
+          "ev_text": "60.8%",
+          "edge_text": "33.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "Texas -6.5",
+          "price_text": "-108",
+          "ev_text": "60.0%",
+          "edge_text": "33.4%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 145.5",
+          "price_text": "-108",
+          "ev_text": "51.6%",
+          "edge_text": "29.1%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 145.5",
+          "price_text": "-110",
+          "ev_text": "50.0%",
+          "edge_text": "28.6%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Texas",
+          "price_text": "-250",
+          "ev_text": "34.2%",
+          "edge_text": "27.3%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Texas",
+          "price_text": "-278",
+          "ev_text": "30.4%",
+          "edge_text": "25.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        }
+      ],
+      "has_recommendation": true,
+      "confidence_rank": 5,
+      "expected_value_per_unit": 0.6079496,
+      "probability_edge": 0.3366934031413612
+    },
+    {
       "event_id": "1248ce40387f0db577eacd46b62c5039",
       "game_label": "Northwestern at Indiana",
       "home_team": "Indiana",
@@ -442,23 +527,13 @@
       "total_text": "154.5",
       "best_market_title": "Total",
       "best_bet_label": "Over 142.5",
-      "best_price_text": "-108",
-      "best_ev_text": "61.9%",
-      "best_edge_text": "34.4%",
+      "best_price_text": "-110",
+      "best_ev_text": "60.2%",
+      "best_edge_text": "33.9%",
       "confidence_label": "High",
       "confidence_class": "high",
-      "bookmaker_title": "DraftKings",
+      "bookmaker_title": "FanDuel",
       "rows": [
-        {
-          "market_title": "Total",
-          "bet_label": "Over 142.5",
-          "price_text": "-108",
-          "ev_text": "61.9%",
-          "edge_text": "34.4%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
-        },
         {
           "market_title": "Total",
           "bet_label": "Over 142.5",
@@ -470,18 +545,18 @@
           "bookmaker_title": "FanDuel"
         },
         {
-          "market_title": "Spread",
-          "bet_label": "Indiana Hoosiers -4.5",
-          "price_text": "-110",
-          "ev_text": "30.9%",
-          "edge_text": "18.5%",
+          "market_title": "Total",
+          "bet_label": "Over 141.5",
+          "price_text": "-115",
+          "ev_text": "60.1%",
+          "edge_text": "34.5%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Spread",
-          "bet_label": "Indiana Hoosiers -4.5",
+          "bet_label": "Indiana -4.5",
           "price_text": "-110",
           "ev_text": "30.9%",
           "edge_text": "18.5%",
@@ -490,30 +565,40 @@
           "bookmaker_title": "FanDuel"
         },
         {
-          "market_title": "Moneyline",
-          "bet_label": "Indiana Hoosiers",
-          "price_text": "-192",
-          "ev_text": "28.1%",
-          "edge_text": "21.2%",
+          "market_title": "Spread",
+          "bet_label": "Indiana -4.5",
+          "price_text": "-110",
+          "ev_text": "30.9%",
+          "edge_text": "18.5%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Indiana Hoosiers",
+          "bet_label": "Indiana",
           "price_text": "-196",
           "ev_text": "27.2%",
           "edge_text": "20.8%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Indiana",
+          "price_text": "-196",
+          "ev_text": "27.2%",
+          "edge_text": "20.6%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
         }
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.6188068,
-      "probability_edge": 0.34399560209424085
+      "expected_value_per_unit": 0.6020315999999999,
+      "probability_edge": 0.33875999999999995
     },
     {
       "event_id": "8ae8a6e1ce042a49310a23bc5775defb",
@@ -526,7 +611,7 @@
       "spread_text": "Minnesota -11.8",
       "total_text": "141.0",
       "best_market_title": "Spread",
-      "best_bet_label": "Minnesota Golden Gophers -5.5",
+      "best_bet_label": "Minnesota -5.5",
       "best_price_text": "-105",
       "best_ev_text": "58.4%",
       "best_edge_text": "32.3%",
@@ -536,7 +621,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Minnesota Golden Gophers -5.5",
+          "bet_label": "Minnesota -5.5",
           "price_text": "-105",
           "ev_text": "58.4%",
           "edge_text": "32.3%",
@@ -546,7 +631,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Minnesota Golden Gophers -4.5",
+          "bet_label": "Minnesota -4.5",
           "price_text": "-120",
           "ev_text": "54.6%",
           "edge_text": "32.5%",
@@ -556,7 +641,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Minnesota Golden Gophers",
+          "bet_label": "Minnesota",
           "price_text": "-204",
           "ev_text": "40.1%",
           "edge_text": "29.6%",
@@ -566,7 +651,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Minnesota Golden Gophers",
+          "bet_label": "Minnesota",
           "price_text": "-208",
           "ev_text": "39.1%",
           "edge_text": "29.3%",
@@ -582,7 +667,7 @@
           "edge_text": "15.8%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Total",
@@ -592,7 +677,7 @@
           "edge_text": "15.8%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         }
       ],
       "has_recommendation": true,
@@ -611,7 +696,7 @@
       "spread_text": "Colorado St. -13.8",
       "total_text": "149.2",
       "best_market_title": "Spread",
-      "best_bet_label": "Colorado St Rams -7.5",
+      "best_bet_label": "Colorado St. -7.5",
       "best_price_text": "-102",
       "best_ev_text": "57.6%",
       "best_edge_text": "31.3%",
@@ -621,7 +706,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Colorado St Rams -7.5",
+          "bet_label": "Colorado St. -7.5",
           "price_text": "-102",
           "ev_text": "57.6%",
           "edge_text": "31.3%",
@@ -631,7 +716,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Colorado St Rams -6.5",
+          "bet_label": "Colorado St. -6.5",
           "price_text": "-120",
           "ev_text": "54.1%",
           "edge_text": "32.2%",
@@ -641,7 +726,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Colorado St Rams",
+          "bet_label": "Colorado St.",
           "price_text": "-278",
           "ev_text": "29.6%",
           "edge_text": "24.8%",
@@ -651,7 +736,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Colorado St Rams",
+          "bet_label": "Colorado St.",
           "price_text": "-323",
           "ev_text": "24.9%",
           "edge_text": "22.3%",
@@ -726,7 +811,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Stephen F. Austin Lumberjacks",
+          "bet_label": "Stephen F. Austin",
           "price_text": "+110",
           "ev_text": "11.8%",
           "edge_text": "7.5%",
@@ -736,7 +821,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Stephen F. Austin Lumberjacks +1.5",
+          "bet_label": "Stephen F. Austin +1.5",
           "price_text": "-110",
           "ev_text": "9.2%",
           "edge_text": "7.2%",
@@ -746,7 +831,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Stephen F. Austin Lumberjacks +1.5",
+          "bet_label": "Stephen F. Austin +1.5",
           "price_text": "-110",
           "ev_text": "9.2%",
           "edge_text": "7.2%",
@@ -756,7 +841,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Stephen F. Austin Lumberjacks",
+          "bet_label": "Stephen F. Austin",
           "price_text": "+100",
           "ev_text": "6.5%",
           "edge_text": "5.5%",
@@ -781,7 +866,7 @@
       "spread_text": "Sam Houston St. -10.7",
       "total_text": "156.8",
       "best_market_title": "Spread",
-      "best_bet_label": "Sam Houston St Bearkats -4.5",
+      "best_bet_label": "Sam Houston St. -4.5",
       "best_price_text": "-110",
       "best_ev_text": "53.2%",
       "best_edge_text": "30.2%",
@@ -791,7 +876,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Sam Houston St Bearkats -4.5",
+          "bet_label": "Sam Houston St. -4.5",
           "price_text": "-110",
           "ev_text": "53.2%",
           "edge_text": "30.2%",
@@ -801,7 +886,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Sam Houston St Bearkats -4.5",
+          "bet_label": "Sam Houston St. -4.5",
           "price_text": "-120",
           "ev_text": "46.7%",
           "edge_text": "28.2%",
@@ -811,7 +896,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Sam Houston St Bearkats",
+          "bet_label": "Sam Houston St.",
           "price_text": "-196",
           "ev_text": "37.5%",
           "edge_text": "27.4%",
@@ -821,7 +906,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Sam Houston St Bearkats",
+          "bet_label": "Sam Houston St.",
           "price_text": "-227",
           "ev_text": "31.1%",
           "edge_text": "24.7%",
@@ -896,7 +981,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "DePaul Blue Demons -0.5",
+          "bet_label": "DePaul -0.5",
           "price_text": "-118",
           "ev_text": "6.0%",
           "edge_text": "5.8%",
@@ -906,7 +991,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "DePaul Blue Demons",
+          "bet_label": "DePaul",
           "price_text": "-118",
           "ev_text": "6.0%",
           "edge_text": "5.6%",
@@ -916,7 +1001,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "DePaul Blue Demons",
+          "bet_label": "DePaul",
           "price_text": "-122",
           "ev_text": "4.3%",
           "edge_text": "4.7%",
@@ -926,7 +1011,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "DePaul Blue Demons -1.5",
+          "bet_label": "DePaul -1.5",
           "price_text": "-108",
           "ev_text": "0.9%",
           "edge_text": "2.8%",
@@ -939,6 +1024,176 @@
       "confidence_rank": 5,
       "expected_value_per_unit": 0.5215816,
       "probability_edge": 0.3032087958115183
+    },
+    {
+      "event_id": "c9a77b1612e9387f286dfd66bfd33f89",
+      "game_label": "Pittsburgh at NC State",
+      "home_team": "NC State",
+      "away_team": "Pittsburgh",
+      "commence_time": "2026-03-11T16:00:00Z",
+      "projected_score_text": "NC State 82.7, Pittsburgh 68.3",
+      "win_prob_text": "NC State 96.9%",
+      "spread_text": "NC State -14.4",
+      "total_text": "151.0",
+      "best_market_title": "Spread",
+      "best_bet_label": "NC State -8.5",
+      "best_price_text": "-110",
+      "best_ev_text": "50.3%",
+      "best_edge_text": "28.7%",
+      "confidence_label": "High",
+      "confidence_class": "high",
+      "bookmaker_title": "DraftKings",
+      "rows": [
+        {
+          "market_title": "Spread",
+          "bet_label": "NC State -8.5",
+          "price_text": "-110",
+          "ev_text": "50.3%",
+          "edge_text": "28.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "NC State -8.5",
+          "price_text": "-120",
+          "ev_text": "44.0%",
+          "edge_text": "26.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 144.5",
+          "price_text": "-112",
+          "ev_text": "32.2%",
+          "edge_text": "19.4%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 144.5",
+          "price_text": "-115",
+          "ev_text": "30.8%",
+          "edge_text": "18.9%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "NC State",
+          "price_text": "-417",
+          "ev_text": "20.1%",
+          "edge_text": "19.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "NC State",
+          "price_text": "-417",
+          "ev_text": "20.1%",
+          "edge_text": "19.2%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        }
+      ],
+      "has_recommendation": true,
+      "confidence_rank": 5,
+      "expected_value_per_unit": 0.5033228,
+      "probability_edge": 0.28708
+    },
+    {
+      "event_id": "f4a6cec11aee06e23e568970ecf96e92",
+      "game_label": "Arizona St. at Iowa St.",
+      "home_team": "Iowa St.",
+      "away_team": "Arizona St.",
+      "commence_time": "2026-03-11T16:30:49Z",
+      "projected_score_text": "Iowa St. 84.9, Arizona St. 68.6",
+      "win_prob_text": "Iowa St. 98.8%",
+      "spread_text": "Iowa St. -16.2",
+      "total_text": "153.5",
+      "best_market_title": "Spread",
+      "best_bet_label": "Iowa St. -10.5",
+      "best_price_text": "-118",
+      "best_ev_text": "47.4%",
+      "best_edge_text": "28.0%",
+      "confidence_label": "High",
+      "confidence_class": "high",
+      "bookmaker_title": "DraftKings",
+      "rows": [
+        {
+          "market_title": "Spread",
+          "bet_label": "Iowa St. -10.5",
+          "price_text": "-118",
+          "ev_text": "47.4%",
+          "edge_text": "28.0%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "Iowa St. -11.5",
+          "price_text": "-110",
+          "ev_text": "43.7%",
+          "edge_text": "25.3%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 147.5",
+          "price_text": "-110",
+          "ev_text": "33.1%",
+          "edge_text": "19.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 147.5",
+          "price_text": "-110",
+          "ev_text": "33.1%",
+          "edge_text": "19.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Iowa St.",
+          "price_text": "-714",
+          "ev_text": "12.7%",
+          "edge_text": "14.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Iowa St.",
+          "price_text": "-833",
+          "ev_text": "10.7%",
+          "edge_text": "13.1%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        }
+      ],
+      "has_recommendation": true,
+      "confidence_rank": 5,
+      "expected_value_per_unit": 0.47400600000000015,
+      "probability_edge": 0.27978872062663196
     },
     {
       "event_id": "daef3355fb8f85e845859021ae08187d",
@@ -981,7 +1236,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Florida Atlantic Owls",
+          "bet_label": "Florida Atlantic",
           "price_text": "-125",
           "ev_text": "34.5%",
           "edge_text": "21.5%",
@@ -991,7 +1246,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Florida Atlantic Owls -1.5",
+          "bet_label": "Florida Atlantic -1.5",
           "price_text": "-112",
           "ev_text": "32.8%",
           "edge_text": "19.7%",
@@ -1001,7 +1256,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Florida Atlantic Owls",
+          "bet_label": "Florida Atlantic",
           "price_text": "-130",
           "ev_text": "32.2%",
           "edge_text": "20.7%",
@@ -1011,7 +1266,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Florida Atlantic Owls -1.5",
+          "bet_label": "Florida Atlantic -1.5",
           "price_text": "-114",
           "ev_text": "32.1%",
           "edge_text": "19.5%",
@@ -1036,7 +1291,7 @@
       "spread_text": "Oklahoma -12.2",
       "total_text": "153.9",
       "best_market_title": "Spread",
-      "best_bet_label": "Oklahoma Sooners -7.5",
+      "best_bet_label": "Oklahoma -7.5",
       "best_price_text": "-110",
       "best_ev_text": "42.1%",
       "best_edge_text": "24.4%",
@@ -1046,7 +1301,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Oklahoma Sooners -7.5",
+          "bet_label": "Oklahoma -7.5",
           "price_text": "-110",
           "ev_text": "42.1%",
           "edge_text": "24.4%",
@@ -1056,7 +1311,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Oklahoma Sooners -7.5",
+          "bet_label": "Oklahoma -7.5",
           "price_text": "-112",
           "ev_text": "40.6%",
           "edge_text": "23.9%",
@@ -1066,7 +1321,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Oklahoma Sooners",
+          "bet_label": "Oklahoma",
           "price_text": "-294",
           "ev_text": "26.3%",
           "edge_text": "22.6%",
@@ -1076,7 +1331,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Oklahoma Sooners",
+          "bet_label": "Oklahoma",
           "price_text": "-333",
           "ev_text": "22.6%",
           "edge_text": "20.8%",
@@ -1151,7 +1406,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "BYU Cougars",
+          "bet_label": "BYU",
           "price_text": "-208",
           "ev_text": "11.9%",
           "edge_text": "10.8%",
@@ -1161,7 +1416,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "BYU Cougars",
+          "bet_label": "BYU",
           "price_text": "-217",
           "ev_text": "10.4%",
           "edge_text": "9.9%",
@@ -1171,7 +1426,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "BYU Cougars -4.5",
+          "bet_label": "BYU -4.5",
           "price_text": "-110",
           "ev_text": "6.0%",
           "edge_text": "5.5%",
@@ -1181,7 +1436,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "BYU Cougars -4.5",
+          "bet_label": "BYU -4.5",
           "price_text": "-115",
           "ev_text": "3.7%",
           "edge_text": "4.4%",
@@ -1196,6 +1451,91 @@
       "probability_edge": 0.23872000000000004
     },
     {
+      "event_id": "399c858e378cceb1df0189c2d2e12e45",
+      "game_label": "SMU at Louisville",
+      "home_team": "Louisville",
+      "away_team": "SMU",
+      "commence_time": "2026-03-11T18:30:00Z",
+      "projected_score_text": "Louisville 89.3, SMU 82.1",
+      "win_prob_text": "Louisville 82.8%",
+      "spread_text": "Louisville -7.2",
+      "total_text": "171.4",
+      "best_market_title": "Total",
+      "best_bet_label": "Over 163.5",
+      "best_price_text": "-110",
+      "best_ev_text": "40.6%",
+      "best_edge_text": "23.6%",
+      "confidence_label": "High",
+      "confidence_class": "high",
+      "bookmaker_title": "FanDuel",
+      "rows": [
+        {
+          "market_title": "Total",
+          "bet_label": "Over 163.5",
+          "price_text": "-110",
+          "ev_text": "40.6%",
+          "edge_text": "23.6%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 163.5",
+          "price_text": "-112",
+          "ev_text": "39.1%",
+          "edge_text": "23.1%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Louisville",
+          "price_text": "-263",
+          "ev_text": "14.2%",
+          "edge_text": "13.2%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Louisville",
+          "price_text": "-270",
+          "ev_text": "13.4%",
+          "edge_text": "12.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "Louisville -6.5",
+          "price_text": "-110",
+          "ev_text": "12.2%",
+          "edge_text": "8.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "Louisville -6.5",
+          "price_text": "-110",
+          "ev_text": "12.2%",
+          "edge_text": "8.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        }
+      ],
+      "has_recommendation": true,
+      "confidence_rank": 5,
+      "expected_value_per_unit": 0.4062184,
+      "probability_edge": 0.23624
+    },
+    {
       "event_id": "aad1811b51c5b25c3e698704729fabac",
       "game_label": "Air Force at Nevada",
       "home_team": "Nevada",
@@ -1206,7 +1546,7 @@
       "spread_text": "Nevada -25.2",
       "total_text": "136.8",
       "best_market_title": "Spread",
-      "best_bet_label": "Nevada Wolf Pack -20.5",
+      "best_bet_label": "Nevada -20.5",
       "best_price_text": "-110",
       "best_ev_text": "39.4%",
       "best_edge_text": "23.0%",
@@ -1216,7 +1556,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Nevada Wolf Pack -20.5",
+          "bet_label": "Nevada -20.5",
           "price_text": "-110",
           "ev_text": "39.4%",
           "edge_text": "23.0%",
@@ -1226,7 +1566,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Nevada Wolf Pack -20.5",
+          "bet_label": "Nevada -20.5",
           "price_text": "-110",
           "ev_text": "39.4%",
           "edge_text": "23.0%",
@@ -1256,7 +1596,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Nevada Wolf Pack",
+          "bet_label": "Nevada",
           "price_text": "-5000",
           "ev_text": "1.9%",
           "edge_text": "5.2%",
@@ -1266,7 +1606,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Nevada Wolf Pack",
+          "bet_label": "Nevada",
           "price_text": "-10000",
           "ev_text": "0.9%",
           "edge_text": "4.5%",
@@ -1321,7 +1661,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Clemson Tigers",
+          "bet_label": "Clemson",
           "price_text": "-222",
           "ev_text": "14.6%",
           "edge_text": "13.2%",
@@ -1331,7 +1671,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Clemson Tigers",
+          "bet_label": "Clemson",
           "price_text": "-233",
           "ev_text": "13.0%",
           "edge_text": "12.1%",
@@ -1341,7 +1681,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Clemson Tigers -4.5",
+          "bet_label": "Clemson -4.5",
           "price_text": "-120",
           "ev_text": "10.8%",
           "edge_text": "8.6%",
@@ -1351,7 +1691,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Clemson Tigers -5.5",
+          "bet_label": "Clemson -5.5",
           "price_text": "-102",
           "ev_text": "10.3%",
           "edge_text": "7.4%",
@@ -1366,91 +1706,6 @@
       "probability_edge": 0.22872000000000003
     },
     {
-      "event_id": "399c858e378cceb1df0189c2d2e12e45",
-      "game_label": "SMU at Louisville",
-      "home_team": "Louisville",
-      "away_team": "SMU",
-      "commence_time": "2026-03-11T18:30:00Z",
-      "projected_score_text": "Louisville 89.3, SMU 82.1",
-      "win_prob_text": "Louisville 82.8%",
-      "spread_text": "Louisville -7.2",
-      "total_text": "171.4",
-      "best_market_title": "Total",
-      "best_bet_label": "Over 163.5",
-      "best_price_text": "-112",
-      "best_ev_text": "39.1%",
-      "best_edge_text": "23.1%",
-      "confidence_label": "High",
-      "confidence_class": "high",
-      "bookmaker_title": "DraftKings",
-      "rows": [
-        {
-          "market_title": "Total",
-          "bet_label": "Over 163.5",
-          "price_text": "-112",
-          "ev_text": "39.1%",
-          "edge_text": "23.1%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Total",
-          "bet_label": "Over 163.5",
-          "price_text": "-115",
-          "ev_text": "37.7%",
-          "edge_text": "22.6%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Louisville Cardinals",
-          "price_text": "-263",
-          "ev_text": "14.2%",
-          "edge_text": "13.2%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Louisville Cardinals",
-          "price_text": "-270",
-          "ev_text": "13.4%",
-          "edge_text": "12.8%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "Louisville Cardinals -6.5",
-          "price_text": "-110",
-          "ev_text": "12.2%",
-          "edge_text": "8.8%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "Louisville Cardinals -6.5",
-          "price_text": "-110",
-          "ev_text": "12.2%",
-          "edge_text": "8.8%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        }
-      ],
-      "has_recommendation": true,
-      "confidence_rank": 5,
-      "expected_value_per_unit": 0.3914935999999999,
-      "probability_edge": 0.23100439790575922
-    },
-    {
       "event_id": "73a50c4d0be9dbcd9ac957e0fad4ee9c",
       "game_label": "Maryland at Iowa",
       "home_team": "Iowa",
@@ -1461,7 +1716,7 @@
       "spread_text": "Iowa -16.1",
       "total_text": "142.5",
       "best_market_title": "Spread",
-      "best_bet_label": "Iowa Hawkeyes -11.5",
+      "best_bet_label": "Iowa -11.5",
       "best_price_text": "-112",
       "best_ev_text": "37.6%",
       "best_edge_text": "22.3%",
@@ -1471,7 +1726,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "Iowa Hawkeyes -11.5",
+          "bet_label": "Iowa -11.5",
           "price_text": "-112",
           "ev_text": "37.6%",
           "edge_text": "22.3%",
@@ -1481,7 +1736,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Iowa Hawkeyes -11.5",
+          "bet_label": "Iowa -11.5",
           "price_text": "-114",
           "ev_text": "36.8%",
           "edge_text": "22.0%",
@@ -1501,33 +1756,33 @@
         },
         {
           "market_title": "Total",
-          "bet_label": "Over 137.5",
-          "price_text": "-106",
-          "ev_text": "27.3%",
-          "edge_text": "16.4%",
+          "bet_label": "Over 136.5",
+          "price_text": "-110",
+          "ev_text": "31.2%",
+          "edge_text": "18.7%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Iowa Hawkeyes",
-          "price_text": "-769",
-          "ev_text": "10.9%",
-          "edge_text": "13.5%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Iowa Hawkeyes",
+          "bet_label": "Iowa",
           "price_text": "-769",
           "ev_text": "10.9%",
           "edge_text": "13.4%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Iowa",
+          "price_text": "-833",
+          "ev_text": "9.9%",
+          "edge_text": "12.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
         }
       ],
       "has_recommendation": true,
@@ -1576,7 +1831,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Florida A&M Rattlers",
+          "bet_label": "Florida A&M",
           "price_text": "-185",
           "ev_text": "19.4%",
           "edge_text": "15.5%",
@@ -1586,7 +1841,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Florida A&M Rattlers -4.5",
+          "bet_label": "Florida A&M -4.5",
           "price_text": "-102",
           "ev_text": "18.0%",
           "edge_text": "11.3%",
@@ -1596,7 +1851,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Florida A&M Rattlers -4.5",
+          "bet_label": "Florida A&M -4.5",
           "price_text": "-105",
           "ev_text": "16.3%",
           "edge_text": "10.7%",
@@ -1606,7 +1861,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Florida A&M Rattlers",
+          "bet_label": "Florida A&M",
           "price_text": "-204",
           "ev_text": "15.5%",
           "edge_text": "13.1%",
@@ -1619,61 +1874,6 @@
       "confidence_rank": 5,
       "expected_value_per_unit": 0.3651000000000001,
       "probability_edge": 0.2195287958115183
-    },
-    {
-      "event_id": "1f1d78a09bab2af45d2274aa492c5226",
-      "game_label": "St. Bonaventure at La Salle",
-      "home_team": "La Salle",
-      "away_team": "St. Bonaventure",
-      "commence_time": "2026-03-11T15:30:00Z",
-      "projected_score_text": "La Salle 72.0, St. Bonaventure 73.1",
-      "win_prob_text": "La Salle 45.5%",
-      "spread_text": "St. Bonaventure -1.1",
-      "total_text": "145.2",
-      "best_market_title": "Moneyline",
-      "best_bet_label": "La Salle Explorers",
-      "best_price_text": "+198",
-      "best_ev_text": "35.7%",
-      "best_edge_text": "13.4%",
-      "confidence_label": "High",
-      "confidence_class": "high",
-      "bookmaker_title": "FanDuel",
-      "rows": [
-        {
-          "market_title": "Moneyline",
-          "bet_label": "La Salle Explorers",
-          "price_text": "+198",
-          "ev_text": "35.7%",
-          "edge_text": "13.4%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "La Salle Explorers +5.5",
-          "price_text": "-110",
-          "ev_text": "25.5%",
-          "edge_text": "15.7%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Total",
-          "bet_label": "Over 144.5",
-          "price_text": "-110",
-          "ev_text": "-1.8%",
-          "edge_text": "1.4%",
-          "confidence_label": "Low",
-          "confidence_class": "low",
-          "bookmaker_title": "FanDuel"
-        }
-      ],
-      "has_recommendation": true,
-      "confidence_rank": 5,
-      "expected_value_per_unit": 0.35721120000000006,
-      "probability_edge": 0.13425548974943052
     },
     {
       "event_id": "d2c6949e419ae660d36f799ac205332d",
@@ -1716,7 +1916,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Memphis Tigers -3.5",
+          "bet_label": "Memphis -3.5",
           "price_text": "-110",
           "ev_text": "25.5%",
           "edge_text": "15.7%",
@@ -1726,7 +1926,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Memphis Tigers",
+          "bet_label": "Memphis",
           "price_text": "-175",
           "ev_text": "23.4%",
           "edge_text": "17.7%",
@@ -1736,7 +1936,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Memphis Tigers",
+          "bet_label": "Memphis",
           "price_text": "-175",
           "ev_text": "23.4%",
           "edge_text": "17.6%",
@@ -1746,7 +1946,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Memphis Tigers -4.5",
+          "bet_label": "Memphis -4.5",
           "price_text": "-104",
           "ev_text": "19.5%",
           "edge_text": "12.4%",
@@ -1771,7 +1971,7 @@
       "spread_text": "Montana -2.9",
       "total_text": "151.8",
       "best_market_title": "Moneyline",
-      "best_bet_label": "Montana Grizzlies",
+      "best_bet_label": "Montana",
       "best_price_text": "+112",
       "best_ev_text": "35.0%",
       "best_edge_text": "18.5%",
@@ -1781,7 +1981,7 @@
       "rows": [
         {
           "market_title": "Moneyline",
-          "bet_label": "Montana Grizzlies",
+          "bet_label": "Montana",
           "price_text": "+112",
           "ev_text": "35.0%",
           "edge_text": "18.5%",
@@ -1791,7 +1991,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Montana Grizzlies",
+          "bet_label": "Montana",
           "price_text": "+110",
           "ev_text": "33.8%",
           "edge_text": "18.0%",
@@ -1801,7 +2001,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Montana Grizzlies +2.5",
+          "bet_label": "Montana +2.5",
           "price_text": "-120",
           "ev_text": "30.0%",
           "edge_text": "19.1%",
@@ -1817,7 +2017,7 @@
           "edge_text": "17.7%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Total",
@@ -1827,11 +2027,11 @@
           "edge_text": "17.7%",
           "confidence_label": "High",
           "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Spread",
-          "bet_label": "Montana Grizzlies +1.5",
+          "bet_label": "Montana +1.5",
           "price_text": "-110",
           "ev_text": "28.4%",
           "edge_text": "17.2%",
@@ -1844,6 +2044,61 @@
       "confidence_rank": 5,
       "expected_value_per_unit": 0.3502704000000002,
       "probability_edge": 0.18472361757105948
+    },
+    {
+      "event_id": "1f1d78a09bab2af45d2274aa492c5226",
+      "game_label": "St. Bonaventure at La Salle",
+      "home_team": "La Salle",
+      "away_team": "St. Bonaventure",
+      "commence_time": "2026-03-11T15:30:00Z",
+      "projected_score_text": "La Salle 72.0, St. Bonaventure 73.1",
+      "win_prob_text": "La Salle 45.5%",
+      "spread_text": "St. Bonaventure -1.1",
+      "total_text": "145.2",
+      "best_market_title": "Moneyline",
+      "best_bet_label": "La Salle",
+      "best_price_text": "+195",
+      "best_ev_text": "34.4%",
+      "best_edge_text": "13.0%",
+      "confidence_label": "High",
+      "confidence_class": "high",
+      "bookmaker_title": "FanDuel",
+      "rows": [
+        {
+          "market_title": "Moneyline",
+          "bet_label": "La Salle",
+          "price_text": "+195",
+          "ev_text": "34.4%",
+          "edge_text": "13.0%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "La Salle +5.5",
+          "price_text": "-110",
+          "ev_text": "25.5%",
+          "edge_text": "15.7%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Total",
+          "bet_label": "Over 144.5",
+          "price_text": "-112",
+          "ev_text": "-2.8%",
+          "edge_text": "0.9%",
+          "confidence_label": "Low",
+          "confidence_class": "low",
+          "bookmaker_title": "FanDuel"
+        }
+      ],
+      "has_recommendation": true,
+      "confidence_rank": 5,
+      "expected_value_per_unit": 0.3435480000000002,
+      "probability_edge": 0.13049720823798627
     },
     {
       "event_id": "3c39d112cc501a7881c46410f9407968",
@@ -1877,16 +2132,16 @@
         {
           "market_title": "Total",
           "bet_label": "Over 162.5",
-          "price_text": "-115",
-          "ev_text": "28.7%",
-          "edge_text": "17.8%",
+          "price_text": "-110",
+          "ev_text": "31.5%",
+          "edge_text": "18.8%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Butler Bulldogs",
+          "bet_label": "Butler",
           "price_text": "+102",
           "ev_text": "18.4%",
           "edge_text": "11.2%",
@@ -1895,8 +2150,18 @@
           "bookmaker_title": "DraftKings"
         },
         {
+          "market_title": "Moneyline",
+          "bet_label": "Butler",
+          "price_text": "+100",
+          "ev_text": "17.2%",
+          "edge_text": "10.8%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "bookmaker_title": "FanDuel"
+        },
+        {
           "market_title": "Spread",
-          "bet_label": "Butler Bulldogs +1.5",
+          "bet_label": "Butler +1.5",
           "price_text": "-118",
           "ev_text": "16.2%",
           "edge_text": "11.3%",
@@ -1906,23 +2171,13 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Butler Bulldogs +1.5",
+          "bet_label": "Butler +1.5",
           "price_text": "-118",
           "ev_text": "16.2%",
           "edge_text": "11.1%",
           "confidence_label": "High",
           "confidence_class": "high",
           "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Butler Bulldogs",
-          "price_text": "-102",
-          "ev_text": "16.1%",
-          "edge_text": "10.3%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
         }
       ],
       "has_recommendation": true,
@@ -1971,7 +2226,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Kentucky Wildcats -7.5",
+          "bet_label": "Kentucky -7.5",
           "price_text": "-110",
           "ev_text": "20.2%",
           "edge_text": "12.9%",
@@ -1981,7 +2236,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Kentucky Wildcats",
+          "bet_label": "Kentucky",
           "price_text": "-345",
           "ev_text": "17.7%",
           "edge_text": "16.8%",
@@ -1991,7 +2246,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Kentucky Wildcats",
+          "bet_label": "Kentucky",
           "price_text": "-370",
           "ev_text": "15.9%",
           "edge_text": "15.8%",
@@ -2001,7 +2256,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Kentucky Wildcats -8.5",
+          "bet_label": "Kentucky -8.5",
           "price_text": "-110",
           "ev_text": "7.4%",
           "edge_text": "6.2%",
@@ -2026,7 +2281,7 @@
       "spread_text": "UC San Diego -9.5",
       "total_text": "155.4",
       "best_market_title": "Spread",
-      "best_bet_label": "UC San Diego Tritons -5.5",
+      "best_bet_label": "UC San Diego -5.5",
       "best_price_text": "-110",
       "best_ev_text": "32.3%",
       "best_edge_text": "19.2%",
@@ -2036,7 +2291,7 @@
       "rows": [
         {
           "market_title": "Spread",
-          "bet_label": "UC San Diego Tritons -5.5",
+          "bet_label": "UC San Diego -5.5",
           "price_text": "-110",
           "ev_text": "32.3%",
           "edge_text": "19.2%",
@@ -2046,7 +2301,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "UC San Diego Tritons -5.5",
+          "bet_label": "UC San Diego -5.5",
           "price_text": "-114",
           "ev_text": "30.2%",
           "edge_text": "18.5%",
@@ -2056,7 +2311,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "UC San Diego Tritons",
+          "bet_label": "UC San Diego",
           "price_text": "-238",
           "ev_text": "21.4%",
           "edge_text": "18.0%",
@@ -2066,7 +2321,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "UC San Diego Tritons",
+          "bet_label": "UC San Diego",
           "price_text": "-250",
           "ev_text": "19.7%",
           "edge_text": "16.9%",
@@ -2141,7 +2396,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "UNLV Rebels",
+          "bet_label": "UNLV",
           "price_text": "-169",
           "ev_text": "15.5%",
           "edge_text": "12.3%",
@@ -2151,7 +2406,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "UNLV Rebels",
+          "bet_label": "UNLV",
           "price_text": "-175",
           "ev_text": "14.1%",
           "edge_text": "11.6%",
@@ -2161,7 +2416,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "UNLV Rebels -3.5",
+          "bet_label": "UNLV -3.5",
           "price_text": "-110",
           "ev_text": "12.0%",
           "edge_text": "8.6%",
@@ -2171,7 +2426,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "UNLV Rebels -3.5",
+          "bet_label": "UNLV -3.5",
           "price_text": "-112",
           "ev_text": "10.8%",
           "edge_text": "8.1%",
@@ -2196,7 +2451,7 @@
       "spread_text": "Florida St. -6.8",
       "total_text": "154.7",
       "best_market_title": "Moneyline",
-      "best_bet_label": "Florida St Seminoles",
+      "best_bet_label": "Florida St.",
       "best_price_text": "-175",
       "best_ev_text": "22.3%",
       "best_edge_text": "17.0%",
@@ -2206,7 +2461,7 @@
       "rows": [
         {
           "market_title": "Moneyline",
-          "bet_label": "Florida St Seminoles",
+          "bet_label": "Florida St.",
           "price_text": "-175",
           "ev_text": "22.3%",
           "edge_text": "17.0%",
@@ -2216,7 +2471,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Florida St Seminoles -3.5",
+          "bet_label": "Florida St. -3.5",
           "price_text": "-120",
           "ev_text": "21.5%",
           "edge_text": "14.4%",
@@ -2226,7 +2481,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Florida St Seminoles -4.5",
+          "bet_label": "Florida St. -4.5",
           "price_text": "-105",
           "ev_text": "21.4%",
           "edge_text": "13.3%",
@@ -2236,7 +2491,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Florida St Seminoles",
+          "bet_label": "Florida St.",
           "price_text": "-185",
           "ev_text": "20.0%",
           "edge_text": "15.9%",
@@ -2281,7 +2536,7 @@
       "spread_text": "TCU -5.9",
       "total_text": "156.3",
       "best_market_title": "Moneyline",
-      "best_bet_label": "TCU Horned Frogs",
+      "best_bet_label": "TCU",
       "best_price_text": "-192",
       "best_ev_text": "18.2%",
       "best_edge_text": "14.8%",
@@ -2291,7 +2546,7 @@
       "rows": [
         {
           "market_title": "Moneyline",
-          "bet_label": "TCU Horned Frogs",
+          "bet_label": "TCU",
           "price_text": "-192",
           "ev_text": "18.2%",
           "edge_text": "14.8%",
@@ -2301,7 +2556,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "TCU Horned Frogs",
+          "bet_label": "TCU",
           "price_text": "-204",
           "ev_text": "15.8%",
           "edge_text": "13.3%",
@@ -2311,7 +2566,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "TCU Horned Frogs -4.5",
+          "bet_label": "TCU -4.5",
           "price_text": "-110",
           "ev_text": "13.8%",
           "edge_text": "9.6%",
@@ -2321,7 +2576,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "TCU Horned Frogs -5.5",
+          "bet_label": "TCU -5.5",
           "price_text": "-105",
           "ev_text": "6.9%",
           "edge_text": "5.9%",
@@ -2356,91 +2611,6 @@
       "probability_edge": 0.14821170731707312
     },
     {
-      "event_id": "f4a6cec11aee06e23e568970ecf96e92",
-      "game_label": "Arizona St. at Iowa",
-      "home_team": "Iowa",
-      "away_team": "Arizona St.",
-      "commence_time": "2026-03-11T16:30:49Z",
-      "projected_score_text": "Iowa 80.6, Arizona St. 70.3",
-      "win_prob_text": "Iowa 93.1%",
-      "spread_text": "Iowa -10.3",
-      "total_text": "151.0",
-      "best_market_title": "Total",
-      "best_bet_label": "Over 147.5",
-      "best_price_text": "-110",
-      "best_ev_text": "15.6%",
-      "best_edge_text": "10.5%",
-      "confidence_label": "High",
-      "confidence_class": "high",
-      "bookmaker_title": "DraftKings",
-      "rows": [
-        {
-          "market_title": "Total",
-          "bet_label": "Over 147.5",
-          "price_text": "-110",
-          "ev_text": "15.6%",
-          "edge_text": "10.5%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Total",
-          "bet_label": "Over 147.5",
-          "price_text": "-110",
-          "ev_text": "15.6%",
-          "edge_text": "10.5%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "Arizona St Sun Devils +11.5",
-          "price_text": "-110",
-          "ev_text": "9.3%",
-          "edge_text": "7.2%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Iowa State Cyclones",
-          "price_text": "-714",
-          "ev_text": "6.1%",
-          "edge_text": "9.0%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Iowa State Cyclones",
-          "price_text": "-833",
-          "ev_text": "4.2%",
-          "edge_text": "7.3%",
-          "confidence_label": "Medium-High",
-          "confidence_class": "medium_high",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "Arizona St Sun Devils +10.5",
-          "price_text": "-102",
-          "ev_text": "1.9%",
-          "edge_text": "3.2%",
-          "confidence_label": "Medium-Low",
-          "confidence_class": "medium_low",
-          "bookmaker_title": "DraftKings"
-        }
-      ],
-      "has_recommendation": true,
-      "confidence_rank": 5,
-      "expected_value_per_unit": 0.15585559999999993,
-      "probability_edge": 0.10516000000000003
-    },
-    {
       "event_id": "be164ab3e31569cb7077302ea8fe5bbd",
       "game_label": "USC at Washington",
       "home_team": "Washington",
@@ -2451,7 +2621,7 @@
       "spread_text": "Washington -6.5",
       "total_text": "153.1",
       "best_market_title": "Moneyline",
-      "best_bet_label": "Washington Huskies",
+      "best_bet_label": "Washington",
       "best_price_text": "-227",
       "best_ev_text": "12.5%",
       "best_edge_text": "11.7%",
@@ -2461,7 +2631,7 @@
       "rows": [
         {
           "market_title": "Moneyline",
-          "bet_label": "Washington Huskies",
+          "bet_label": "Washington",
           "price_text": "-227",
           "ev_text": "12.5%",
           "edge_text": "11.7%",
@@ -2471,7 +2641,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Washington Huskies",
+          "bet_label": "Washington",
           "price_text": "-233",
           "ev_text": "11.7%",
           "edge_text": "11.3%",
@@ -2481,7 +2651,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Washington Huskies -5.5",
+          "bet_label": "Washington -5.5",
           "price_text": "-110",
           "ev_text": "9.1%",
           "edge_text": "7.1%",
@@ -2491,7 +2661,7 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Washington Huskies -5.5",
+          "bet_label": "Washington -5.5",
           "price_text": "-110",
           "ev_text": "9.1%",
           "edge_text": "7.1%",
@@ -2507,7 +2677,7 @@
           "edge_text": "0.1%",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Total",
@@ -2517,7 +2687,7 @@
           "edge_text": "0.1%",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         }
       ],
       "has_recommendation": true,
@@ -2536,7 +2706,7 @@
       "spread_text": "Marquette -4.8",
       "total_text": "154.9",
       "best_market_title": "Moneyline",
-      "best_bet_label": "Marquette Golden Eagles",
+      "best_bet_label": "Marquette",
       "best_price_text": "-192",
       "best_ev_text": "11.1%",
       "best_edge_text": "10.0%",
@@ -2546,7 +2716,7 @@
       "rows": [
         {
           "market_title": "Moneyline",
-          "bet_label": "Marquette Golden Eagles",
+          "bet_label": "Marquette",
           "price_text": "-192",
           "ev_text": "11.1%",
           "edge_text": "10.0%",
@@ -2556,7 +2726,7 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Marquette Golden Eagles",
+          "bet_label": "Marquette",
           "price_text": "-196",
           "ev_text": "10.3%",
           "edge_text": "9.4%",
@@ -2566,23 +2736,23 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Marquette Golden Eagles -4.5",
-          "price_text": "-110",
-          "ev_text": "3.0%",
-          "edge_text": "3.9%",
-          "confidence_label": "Medium",
-          "confidence_class": "medium",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "Marquette Golden Eagles -4.5",
+          "bet_label": "Marquette -4.5",
           "price_text": "-110",
           "ev_text": "3.0%",
           "edge_text": "3.9%",
           "confidence_label": "Medium",
           "confidence_class": "medium",
           "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Spread",
+          "bet_label": "Marquette -4.5",
+          "price_text": "-110",
+          "ev_text": "3.0%",
+          "edge_text": "3.9%",
+          "confidence_label": "Medium",
+          "confidence_class": "medium",
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
