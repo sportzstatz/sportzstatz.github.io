@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-13 06:37 AM Central Daylight Time",
+  "generated_at": "2026-03-13 07:27 AM Central Daylight Time",
   "season": 2026,
   "snapshot_date": "2026-03-13",
   "tile_count": 27,
-  "recommendation_count": 118,
+  "recommendation_count": 117,
   "tiles": [
     {
       "event_id": "70fd5b6f92ff2fb6c91da8291dba95c3",
@@ -84,19 +84,19 @@
           "confidence_class": "medium",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
           "bet_label": "Over 154.5",
-          "price_text": "-115",
-          "ev_text": "1.6%",
-          "edge_text": "3.3%",
-          "confidence_label": "Low",
-          "confidence_class": "low",
-          "status_label": "Value Only",
-          "status_class": "value_only",
-          "bookmaker_title": "DraftKings"
+          "price_text": "-110",
+          "ev_text": "3.8%",
+          "edge_text": "4.3%",
+          "confidence_label": "Medium",
+          "confidence_class": "medium",
+          "status_label": "Official",
+          "status_class": "official",
+          "bookmaker_title": "FanDuel"
         }
       ],
       "has_recommendation": true,
@@ -118,9 +118,9 @@
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Spread",
       "best_bet_label": "Charlotte +5.5",
-      "best_price_text": "-110",
-      "best_ev_text": "32.5%",
-      "best_edge_text": "19.3%",
+      "best_price_text": "-115",
+      "best_ev_text": "29.7%",
+      "best_edge_text": "18.3%",
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
@@ -129,9 +129,9 @@
         {
           "market_title": "Spread",
           "bet_label": "Charlotte +5.5",
-          "price_text": "-110",
-          "ev_text": "32.5%",
-          "edge_text": "19.3%",
+          "price_text": "-115",
+          "ev_text": "29.7%",
+          "edge_text": "18.3%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -153,9 +153,9 @@
         {
           "market_title": "Total",
           "bet_label": "Over 145.5",
-          "price_text": "-108",
-          "ev_text": "22.6%",
-          "edge_text": "14.1%",
+          "price_text": "-112",
+          "ev_text": "20.1%",
+          "edge_text": "13.0%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -177,6 +177,18 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Charlotte",
+          "price_text": "+180",
+          "ev_text": "32.8%",
+          "edge_text": "13.1%",
+          "confidence_label": "Low",
+          "confidence_class": "low",
+          "status_label": "Value Only",
+          "status_class": "value_only",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Charlotte",
           "price_text": "+176",
           "ev_text": "30.9%",
           "edge_text": "12.7%",
@@ -185,24 +197,12 @@
           "status_label": "Value Only",
           "status_class": "value_only",
           "bookmaker_title": "FanDuel"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Charlotte",
-          "price_text": "+164",
-          "ev_text": "25.2%",
-          "edge_text": "11.0%",
-          "confidence_label": "Low",
-          "confidence_class": "low",
-          "status_label": "Value Only",
-          "status_class": "value_only",
-          "bookmaker_title": "DraftKings"
         }
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.3245467999999999,
-      "probability_edge": 0.19347999999999999,
+      "expected_value_per_unit": 0.29680760000000006,
+      "probability_edge": 0.1830087958115183,
       "commence_sort_key": 1773419400.0
     },
     {
@@ -360,19 +360,19 @@
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Total",
           "bet_label": "Over 159.5",
-          "price_text": "-110",
-          "ev_text": "12.2%",
-          "edge_text": "8.8%",
+          "price_text": "-115",
+          "ev_text": "9.9%",
+          "edge_text": "7.7%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Moneyline",
@@ -482,9 +482,9 @@
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Total",
       "best_bet_label": "Over 156.5",
-      "best_price_text": "-110",
-      "best_ev_text": "59.9%",
-      "best_edge_text": "33.7%",
+      "best_price_text": "-115",
+      "best_ev_text": "56.6%",
+      "best_edge_text": "32.7%",
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
@@ -493,9 +493,9 @@
         {
           "market_title": "Total",
           "bet_label": "Over 156.5",
-          "price_text": "-110",
-          "ev_text": "59.9%",
-          "edge_text": "33.7%",
+          "price_text": "-115",
+          "ev_text": "56.6%",
+          "edge_text": "32.7%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -517,18 +517,6 @@
         {
           "market_title": "Spread",
           "bet_label": "Wisconsin +7.5",
-          "price_text": "-105",
-          "ev_text": "21.5%",
-          "edge_text": "13.4%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "status_label": "Official",
-          "status_class": "official",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Spread",
-          "bet_label": "Wisconsin +7.5",
           "price_text": "-106",
           "ev_text": "20.9%",
           "edge_text": "13.1%",
@@ -539,15 +527,27 @@
           "bookmaker_title": "FanDuel"
         },
         {
+          "market_title": "Spread",
+          "bet_label": "Wisconsin +7.5",
+          "price_text": "-108",
+          "ev_text": "20.3%",
+          "edge_text": "12.9%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "status_label": "Official",
+          "status_class": "official",
+          "bookmaker_title": "DraftKings"
+        },
+        {
           "market_title": "Moneyline",
           "bet_label": "Illinois",
-          "price_text": "-312",
-          "ev_text": "0.2%",
-          "edge_text": "3.3%",
+          "price_text": "-323",
+          "ev_text": "-0.5%",
+          "edge_text": "2.6%",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "status_label": "Value Only",
-          "status_class": "value_only",
+          "status_label": "Pass",
+          "status_class": "pass",
           "bookmaker_title": "DraftKings"
         },
         {
@@ -565,8 +565,8 @@
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.5992048,
-      "probability_edge": 0.33728,
+      "expected_value_per_unit": 0.5657136000000001,
+      "probability_edge": 0.32680879581151834,
       "commence_sort_key": 1773426600.0
     },
     {
@@ -580,28 +580,16 @@
       "spread_text": "Sam Houston St. -3.2",
       "total_text": "163.7",
       "recommendation_title": "Top Recommendation",
-      "best_market_title": "Moneyline",
-      "best_bet_label": "Sam Houston St.",
-      "best_price_text": "-175",
-      "best_ev_text": "2.7%",
-      "best_edge_text": "4.5%",
+      "best_market_title": "Total",
+      "best_bet_label": "Over 161.5",
+      "best_price_text": "-110",
+      "best_ev_text": "6.9%",
+      "best_edge_text": "6.0%",
       "best_status_label": "Official",
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "bookmaker_title": "DraftKings",
       "rows": [
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Sam Houston St.",
-          "price_text": "-175",
-          "ev_text": "2.7%",
-          "edge_text": "4.5%",
-          "confidence_label": "Medium",
-          "confidence_class": "medium",
-          "status_label": "Official",
-          "status_class": "official",
-          "bookmaker_title": "DraftKings"
-        },
         {
           "market_title": "Total",
           "bet_label": "Over 161.5",
@@ -639,6 +627,18 @@
           "bookmaker_title": "FanDuel"
         },
         {
+          "market_title": "Moneyline",
+          "bet_label": "Sam Houston St.",
+          "price_text": "-185",
+          "ev_text": "0.8%",
+          "edge_text": "3.2%",
+          "confidence_label": "Low",
+          "confidence_class": "low",
+          "status_label": "Value Only",
+          "status_class": "value_only",
+          "bookmaker_title": "DraftKings"
+        },
+        {
           "market_title": "Spread",
           "bet_label": "Kennesaw St. +4.5",
           "price_text": "-115",
@@ -665,8 +665,8 @@
       ],
       "has_recommendation": true,
       "confidence_rank": 3,
-      "expected_value_per_unit": 0.027156800000000092,
-      "probability_edge": 0.04478726368159203,
+      "expected_value_per_unit": 0.06868319999999994,
+      "probability_edge": 0.05952000000000002,
       "commence_sort_key": 1773428419.0
     },
     {
@@ -982,26 +982,14 @@
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Moneyline",
       "best_bet_label": "Toledo",
-      "best_price_text": "-161",
-      "best_ev_text": "7.1%",
-      "best_edge_text": "6.8%",
+      "best_price_text": "-164",
+      "best_ev_text": "6.4%",
+      "best_edge_text": "6.7%",
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
-      "bookmaker_title": "DraftKings",
+      "bookmaker_title": "FanDuel",
       "rows": [
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Toledo",
-          "price_text": "-161",
-          "ev_text": "7.1%",
-          "edge_text": "6.8%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "status_label": "Official",
-          "status_class": "official",
-          "bookmaker_title": "DraftKings"
-        },
         {
           "market_title": "Moneyline",
           "bet_label": "Toledo",
@@ -1013,6 +1001,18 @@
           "status_label": "Official",
           "status_class": "official",
           "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Toledo",
+          "price_text": "-169",
+          "ev_text": "5.1%",
+          "edge_text": "5.7%",
+          "confidence_label": "Medium-High",
+          "confidence_class": "medium_high",
+          "status_label": "Official",
+          "status_class": "official",
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
@@ -1048,25 +1048,25 @@
           "confidence_class": "low",
           "status_label": "Value Only",
           "status_class": "value_only",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Spread",
           "bet_label": "Toledo -3.5",
-          "price_text": "-115",
-          "ev_text": "-1.8%",
-          "edge_text": "1.5%",
+          "price_text": "-110",
+          "ev_text": "0.3%",
+          "edge_text": "2.5%",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "status_label": "Pass",
-          "status_class": "pass",
-          "bookmaker_title": "DraftKings"
+          "status_label": "Value Only",
+          "status_class": "value_only",
+          "bookmaker_title": "FanDuel"
         }
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.07075520000000007,
-      "probability_edge": 0.06799517587939707,
+      "expected_value_per_unit": 0.06414560000000002,
+      "probability_edge": 0.06650156171284638,
       "commence_sort_key": 1773435600.0
     },
     {
@@ -1204,14 +1204,14 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Howard",
-          "price_text": "-1667",
-          "ev_text": "-4.1%",
-          "edge_text": "0.1%",
+          "bet_label": "South Carolina St.",
+          "price_text": "+1000",
+          "ev_text": "4.9%",
+          "edge_text": "0.7%",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "status_label": "Pass",
-          "status_class": "pass",
+          "status_label": "Value Only",
+          "status_class": "value_only",
           "bookmaker_title": "DraftKings"
         },
         {
@@ -1252,7 +1252,7 @@
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
-      "bookmaker_title": "DraftKings",
+      "bookmaker_title": "FanDuel",
       "rows": [
         {
           "market_title": "Total",
@@ -1264,19 +1264,19 @@
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Total",
-          "bet_label": "Over 142.5",
-          "price_text": "-110",
+          "bet_label": "Over 143.5",
+          "price_text": "-105",
           "ev_text": "66.6%",
-          "edge_text": "37.2%",
+          "edge_text": "36.5%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Moneyline",
@@ -1381,14 +1381,14 @@
         {
           "market_title": "Spread",
           "bet_label": "Iowa St. +4.5",
-          "price_text": "-112",
-          "ev_text": "14.7%",
-          "edge_text": "10.1%",
+          "price_text": "-110",
+          "ev_text": "15.9%",
+          "edge_text": "10.7%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Spread",
@@ -1400,7 +1400,7 @@
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Moneyline",
@@ -1417,9 +1417,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Iowa St.",
-          "price_text": "+145",
-          "ev_text": "3.2%",
-          "edge_text": "3.1%",
+          "price_text": "+154",
+          "ev_text": "7.0%",
+          "edge_text": "4.4%",
           "confidence_label": "Low",
           "confidence_class": "low",
           "status_label": "Value Only",
@@ -1446,9 +1446,9 @@
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Moneyline",
       "best_bet_label": "Alabama",
-      "best_price_text": "-435",
-      "best_ev_text": "15.7%",
-      "best_edge_text": "15.9%",
+      "best_price_text": "-526",
+      "best_ev_text": "11.9%",
+      "best_edge_text": "13.3%",
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
@@ -1457,9 +1457,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Alabama",
-          "price_text": "-435",
-          "ev_text": "15.7%",
-          "edge_text": "15.9%",
+          "price_text": "-526",
+          "ev_text": "11.9%",
+          "edge_text": "13.3%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -1469,9 +1469,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Alabama",
-          "price_text": "-588",
-          "ev_text": "10.0%",
-          "edge_text": "12.4%",
+          "price_text": "-556",
+          "ev_text": "11.0%",
+          "edge_text": "13.1%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -1512,25 +1512,25 @@
           "confidence_class": "low",
           "status_label": "Value Only",
           "status_class": "value_only",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
           "bet_label": "Under 163.5",
-          "price_text": "-110",
-          "ev_text": "0.1%",
-          "edge_text": "2.4%",
+          "price_text": "-105",
+          "ev_text": "2.2%",
+          "edge_text": "3.4%",
           "confidence_label": "Low",
           "confidence_class": "low",
           "status_label": "Value Only",
           "status_class": "value_only",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         }
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.15679039999999997,
-      "probability_edge": 0.1589524689165186,
+      "expected_value_per_unit": 0.11917119999999992,
+      "probability_edge": 0.13272555735056546,
       "commence_sort_key": 1773442800.0
     },
     {
@@ -1580,10 +1580,10 @@
         },
         {
           "market_title": "Spread",
-          "bet_label": "Davidson +1.5",
-          "price_text": "-105",
-          "ev_text": "28.6%",
-          "edge_text": "17.0%",
+          "bet_label": "Davidson +2.5",
+          "price_text": "-115",
+          "ev_text": "31.6%",
+          "edge_text": "19.3%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -1617,9 +1617,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Davidson",
-          "price_text": "+105",
-          "ev_text": "26.2%",
-          "edge_text": "14.8%",
+          "price_text": "+114",
+          "ev_text": "31.7%",
+          "edge_text": "16.7%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -1746,9 +1746,9 @@
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Moneyline",
       "best_bet_label": "Southern",
-      "best_price_text": "-147",
-      "best_ev_text": "24.0%",
-      "best_edge_text": "16.7%",
+      "best_price_text": "-154",
+      "best_ev_text": "21.8%",
+      "best_edge_text": "15.6%",
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
@@ -1757,9 +1757,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Southern",
-          "price_text": "-147",
-          "ev_text": "24.0%",
-          "edge_text": "16.7%",
+          "price_text": "-154",
+          "ev_text": "21.8%",
+          "edge_text": "15.6%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -1829,19 +1829,19 @@
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.24004159999999997,
-      "probability_edge": 0.1666914285714285,
+      "expected_value_per_unit": 0.21789799999999993,
+      "probability_edge": 0.15584151898734178,
       "commence_sort_key": 1773448200.0
     },
     {
       "event_id": "4281039c140bcb13efed3eededacb05b",
-      "game_label": "UCLA at Michigan St.",
-      "home_team": "Michigan St.",
+      "game_label": "UCLA at Michigan",
+      "home_team": "Michigan",
       "away_team": "UCLA",
       "commence_time": "Fri, Mar 13 | 8:00 PM Central Daylight Time",
-      "projected_score_text": "Michigan St. 77.7, UCLA 74.1",
-      "win_prob_text": "Michigan St. 68.1%",
-      "spread_text": "Michigan St. -3.6",
+      "projected_score_text": "Michigan 77.7, UCLA 74.1",
+      "win_prob_text": "Michigan 68.1%",
+      "spread_text": "Michigan -3.6",
       "total_text": "151.8",
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Total",
@@ -1852,7 +1852,7 @@
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
-      "bookmaker_title": "DraftKings",
+      "bookmaker_title": "FanDuel",
       "rows": [
         {
           "market_title": "Total",
@@ -1864,7 +1864,7 @@
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Total",
@@ -1876,7 +1876,7 @@
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Spread",
@@ -1904,10 +1904,10 @@
         },
         {
           "market_title": "Moneyline",
-          "bet_label": "Michigan St.",
-          "price_text": "-238",
-          "ev_text": "-3.2%",
-          "edge_text": "0.6%",
+          "bet_label": "UCLA",
+          "price_text": "+205",
+          "ev_text": "-2.8%",
+          "edge_text": "0.4%",
           "confidence_label": "Low",
           "confidence_class": "low",
           "status_label": "Pass",
@@ -1946,9 +1946,9 @@
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Moneyline",
       "best_bet_label": "Utah Valley",
-      "best_price_text": "-345",
-      "best_ev_text": "13.7%",
-      "best_edge_text": "13.7%",
+      "best_price_text": "-400",
+      "best_ev_text": "10.2%",
+      "best_edge_text": "11.5%",
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
@@ -1957,9 +1957,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Utah Valley",
-          "price_text": "-345",
-          "ev_text": "13.7%",
-          "edge_text": "13.7%",
+          "price_text": "-400",
+          "ev_text": "10.2%",
+          "edge_text": "11.5%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -1969,9 +1969,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Utah Valley",
-          "price_text": "-385",
-          "ev_text": "11.0%",
-          "edge_text": "12.5%",
+          "price_text": "-417",
+          "ev_text": "9.3%",
+          "edge_text": "11.3%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -2029,8 +2029,8 @@
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.13679960000000008,
-      "probability_edge": 0.13719238095238107,
+      "expected_value_per_unit": 0.10155000000000003,
+      "probability_edge": 0.11488485981308416,
       "commence_sort_key": 1773450000.0
     },
     {
@@ -2081,6 +2081,18 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Nevada",
+          "price_text": "+230",
+          "ev_text": "138.9%",
+          "edge_text": "43.3%",
+          "confidence_label": "High",
+          "confidence_class": "high",
+          "status_label": "Official",
+          "status_class": "official",
+          "bookmaker_title": "DraftKings"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Nevada",
           "price_text": "+225",
           "ev_text": "135.2%",
           "edge_text": "42.9%",
@@ -2091,23 +2103,11 @@
           "bookmaker_title": "FanDuel"
         },
         {
-          "market_title": "Moneyline",
-          "bet_label": "Nevada",
-          "price_text": "+215",
-          "ev_text": "128.0%",
-          "edge_text": "41.9%",
-          "confidence_label": "High",
-          "confidence_class": "high",
-          "status_label": "Official",
-          "status_class": "official",
-          "bookmaker_title": "DraftKings"
-        },
-        {
           "market_title": "Total",
           "bet_label": "Over 144.5",
-          "price_text": "-115",
-          "ev_text": "31.3%",
-          "edge_text": "19.2%",
+          "price_text": "-112",
+          "ev_text": "32.7%",
+          "edge_text": "19.7%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -2205,18 +2205,6 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Arkansas",
-          "price_text": "-244",
-          "ev_text": "3.9%",
-          "edge_text": "5.6%",
-          "confidence_label": "Medium",
-          "confidence_class": "medium",
-          "status_label": "Official",
-          "status_class": "official",
-          "bookmaker_title": "DraftKings"
-        },
-        {
-          "market_title": "Moneyline",
-          "bet_label": "Arkansas",
           "price_text": "-278",
           "ev_text": "0.2%",
           "edge_text": "3.5%",
@@ -2225,6 +2213,18 @@
           "status_label": "Value Only",
           "status_class": "value_only",
           "bookmaker_title": "FanDuel"
+        },
+        {
+          "market_title": "Moneyline",
+          "bet_label": "Arkansas",
+          "price_text": "-278",
+          "ev_text": "0.2%",
+          "edge_text": "3.2%",
+          "confidence_label": "Low",
+          "confidence_class": "low",
+          "status_label": "Value Only",
+          "status_class": "value_only",
+          "bookmaker_title": "DraftKings"
         }
       ],
       "has_recommendation": true,
@@ -2346,9 +2346,9 @@
       "recommendation_title": "Top Recommendation",
       "best_market_title": "Moneyline",
       "best_bet_label": "Duke",
-      "best_price_text": "-769",
-      "best_ev_text": "9.1%",
-      "best_edge_text": "11.8%",
+      "best_price_text": "-714",
+      "best_ev_text": "10.0%",
+      "best_edge_text": "12.5%",
       "best_status_label": "Official",
       "confidence_label": "High",
       "confidence_class": "high",
@@ -2357,9 +2357,9 @@
         {
           "market_title": "Moneyline",
           "bet_label": "Duke",
-          "price_text": "-769",
-          "ev_text": "9.1%",
-          "edge_text": "11.8%",
+          "price_text": "-714",
+          "ev_text": "10.0%",
+          "edge_text": "12.5%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
@@ -2381,14 +2381,14 @@
         {
           "market_title": "Total",
           "bet_label": "Over 134.5",
-          "price_text": "-115",
-          "ev_text": "61.9%",
-          "edge_text": "35.5%",
+          "price_text": "-110",
+          "ev_text": "65.3%",
+          "edge_text": "36.6%",
           "confidence_label": "High",
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "FanDuel"
+          "bookmaker_title": "DraftKings"
         },
         {
           "market_title": "Total",
@@ -2400,7 +2400,7 @@
           "confidence_class": "high",
           "status_label": "Official",
           "status_class": "official",
-          "bookmaker_title": "DraftKings"
+          "bookmaker_title": "FanDuel"
         },
         {
           "market_title": "Spread",
@@ -2429,8 +2429,8 @@
       ],
       "has_recommendation": true,
       "confidence_rank": 5,
-      "expected_value_per_unit": 0.09076639999999991,
-      "probability_edge": 0.11839653116531157,
+      "expected_value_per_unit": 0.10041919999999993,
+      "probability_edge": 0.12494386554621861,
       "commence_sort_key": 1773451832.0
     },
     {
