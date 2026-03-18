@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NHL3.0 Morning Board</title>
+  <title>SportzStatz</title>
   <style>
     :root {
       --bg: #f7f7f5;
@@ -12,1207 +12,141 @@
       --muted: #667085;
       --line: #d0d5dd;
       --accent: #0f4c81;
-      --good: #156f3c;
-      --bad: #b42318;
-      --warn: #b54708;
-      --soft-good: #f3fbf5;
-      --soft-bad: #fff6f5;
-      --soft: #eef4ff;
       --shadow: 0 10px 24px rgba(16, 24, 40, 0.07);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--ink);
       background: var(--bg);
+      color: var(--ink);
     }
     .wrap {
-      max-width: 1220px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 24px 18px 48px;
+      padding: 28px 18px 48px;
     }
-    .header {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
-      margin-bottom: 14px;
-      align-items: start;
-    }
-    .header-main {
-      display: grid;
-      gap: 10px;
-    }
-    .header-performance {
-      min-width: 220px;
-      background: #fcfcfd;
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
       border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 14px;
+      border-radius: 18px;
+      padding: 24px;
       box-shadow: var(--shadow);
-      cursor: pointer;
-      user-select: none;
-      transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
-    }
-    .header-performance:hover {
-      transform: translateY(-1px);
-      border-color: #b8c1cc;
-    }
-    .header-performance:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-    .performance-views {
-      position: relative;
-      min-height: 94px;
-    }
-    .performance-view {
-      display: none;
-    }
-    .performance-view.active {
-      display: block;
-    }
-    .performance-title {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-    .performance-subtitle {
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.35;
-      min-height: 32px;
-    }
-    .performance-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 8px;
-    }
-    .performance-dots {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 12px;
-    }
-    .performance-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #cbd5e1;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-    }
-    .performance-dot.active {
-      background: var(--accent);
-      transform: scale(1.15);
     }
     h1 {
-      margin: 0;
-      font-size: clamp(28px, 4vw, 44px);
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
       line-height: 1.05;
     }
     .subtitle {
+      margin: 0;
       color: var(--muted);
-      max-width: 78ch;
       line-height: 1.5;
-      font-size: 15px;
+      max-width: 72ch;
     }
-    .meta {
+    .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
+      margin-top: 14px;
     }
     .pill {
       border: 1px solid var(--line);
       background: var(--panel);
-      padding: 7px 11px;
       border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
       font-size: 13px;
-      color: var(--muted);
     }
-    .games {
+    .grid {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
+      margin-top: 22px;
     }
-    .quick-guide {
+    .card {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .quick-guide-card {
-      background: #fcfcfd;
+      gap: 12px;
+      padding: 20px;
+      border-radius: 18px;
       border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px 12px;
-    }
-    .section-title {
-      margin: 24px 0 8px;
-      font-size: 17px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-    .game-tile-grid {
-      display: grid;
-      gap: 14px;
-    }
-    .game-tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .game-card {
       background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
       box-shadow: var(--shadow);
     }
-    .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-    .value { font-size: 18px; font-weight: 700; }
-    .reason { color: var(--muted); line-height: 1.45; font-size: 14px; }
-    .status-bet { color: var(--good); }
-    .status-pass { color: var(--bad); }
-    .confidence-high { color: var(--good); }
-    .confidence-medium_high { color: #16734b; }
-    .confidence-medium { color: var(--accent); }
-    .confidence-medium_low { color: var(--warn); }
-    .confidence-low { color: var(--bad); }
-    .market-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-    .market-table th,
-    .market-table td {
-      padding: 10px 8px;
-      border-bottom: 1px solid #eaecf0;
-      text-align: left;
-      vertical-align: top;
-    }
-    .market-table th {
-      color: var(--muted);
+    .label {
       font-size: 12px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 700;
+      color: var(--muted);
     }
-    .market-table td:last-child,
-    .market-table th:last-child { text-align: right; }
-    .market-table tr:last-child td { border-bottom: none; }
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 10px 0 14px;
-    }
-    .tab-button {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      color: var(--ink);
-      border-radius: 999px;
-      padding: 9px 14px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .tab-button.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-    }
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
-    .best-card {
-      border: 1px solid #eaecf0;
-      border-radius: 12px;
-      padding: 12px 14px;
-      margin-bottom: 12px;
-      background: #fcfcfd;
-    }
-    .game-card.top-edge .best-card {
-      background: #fff6dd;
-      border-color: #e7c772;
-    }
-    .best-bet {
-      font-size: 19px;
+    .title {
+      font-size: 26px;
       font-weight: 800;
       line-height: 1.1;
-      margin-top: 2px;
     }
-    .best-meta {
+    .body {
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.45;
+      line-height: 1.5;
     }
-    .best-metrics {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px solid #eaecf0;
-    }
-    .metric-value {
-      font-size: 14px;
-      font-weight: 700;
-    }
-    .game-tile {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      background: var(--panel);
-      box-shadow: var(--shadow);
-    }
-    .tile-top {
+    .actions {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: start;
-      margin-bottom: 12px;
-    }
-    .tile-level {
-      font-size: 14px;
-      font-weight: 800;
-      text-align: right;
-    }
-    .dropdown-stack {
-      display: grid;
       gap: 10px;
+      flex-wrap: wrap;
     }
-    .market-dropdown {
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
       border: 1px solid var(--line);
-      border-radius: 12px;
-      overflow: hidden;
+      color: var(--ink);
       background: #fcfcfd;
     }
-    .market-dropdown summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 12px 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
     }
-    .dropdown-summary-label {
-      font-weight: 700;
-    }
-    .dropdown-summary-label.confidence-high { color: var(--good); }
-    .dropdown-summary-label.confidence-medium_high { color: var(--accent); }
-    .dropdown-summary-label.confidence-medium { color: var(--accent); }
-    .dropdown-summary-label.confidence-medium_low { color: var(--warn); }
-    .dropdown-summary-label.confidence-low { color: var(--bad); }
-    .market-dropdown summary::-webkit-details-marker { display: none; }
-    .market-dropdown summary::after {
-      content: '+';
-      color: var(--muted);
-      font-size: 20px;
-      line-height: 1;
-    }
-    .market-dropdown[open] summary::after { content: '−'; }
-    .dropdown-body {
-      padding: 0 14px 14px;
-      border-top: 1px solid #eaecf0;
-    }
-    .dropdown-line {
-      padding: 10px 0;
-      border-bottom: 1px solid #eaecf0;
-    }
-    .dropdown-line:last-child { border-bottom: none; }
-    .dropdown-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: baseline;
-    }
-    .dropdown-metrics {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 8px;
-    }
-    .footer {
-      margin-top: 36px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    @media (max-width: 900px) {
-      .header { grid-template-columns: 1fr; }
-      .quick-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .best-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .game-tile-grid { grid-template-columns: 1fr; }
-      .dropdown-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <section class="header">
-      <div class="header-main">
-        <div class="meta">
-          <a class="pill" href="../index.html">All Sports</a>
-          <a class="pill" href="../ncaamb/index.html">NCAAMB Board</a>
-        </div>
-        <h1>NHL3.0 Morning Board</h1>
-        <div class="meta">
-          <div class="pill">Generated Thursday, March 19, 2026 09:55 PM CT</div>
-          <div class="pill">Matched games 1</div>
-          <div class="pill">Recommended bets 1</div>
-        </div>
-      </div>
-      <aside class="header-performance" id="performance-tile" tabindex="0" role="button" aria-label="Cycle performance records">
-        <div class="performance-views">
-          <div class="performance-view" data-performance-view="0">
-            <div class="performance-title">All Bets</div>
-            <div class="performance-subtitle">All settled recommendations</div>
-            <div class="performance-grid">
-              <div>
-                <div class="label">Record</div>
-                <div class="value">0-0</div>
-              </div>
-              <div>
-                <div class="label">Units</div>
-                <div class="value">+0.00</div>
-              </div>
-            </div>
-          </div>
-          <div class="performance-view active" data-performance-view="1">
-            <div class="performance-title">High Confidence</div>
-            <div class="performance-subtitle">High bets only</div>
-            <div class="performance-grid">
-              <div>
-                <div class="label">Record</div>
-                <div class="value">0-0</div>
-              </div>
-              <div>
-                <div class="label">Units</div>
-                <div class="value">+0.00</div>
-              </div>
-            </div>
-          </div>
-          <div class="performance-view" data-performance-view="2">
-            <div class="performance-title">Medium Confidence</div>
-            <div class="performance-subtitle">Medium-high, medium, and medium-low bets</div>
-            <div class="performance-grid">
-              <div>
-                <div class="label">Record</div>
-                <div class="value">0-0</div>
-              </div>
-              <div>
-                <div class="label">Units</div>
-                <div class="value">+0.00</div>
-              </div>
-            </div>
-          </div>
-          <div class="performance-view" data-performance-view="3">
-            <div class="performance-title">Passed Markets</div>
-            <div class="performance-subtitle">Settled pass lines that were left alone</div>
-            <div class="performance-grid">
-              <div>
-                <div class="label">Record</div>
-                <div class="value">0-0</div>
-              </div>
-              <div>
-                <div class="label">Type</div>
-                <div class="value">Pass</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="performance-dots" aria-hidden="true">
-          <button class="performance-dot" type="button" data-performance-dot="0" aria-label="Show All Bets"></button>
-          <button class="performance-dot active" type="button" data-performance-dot="1" aria-label="Show High Confidence"></button>
-          <button class="performance-dot" type="button" data-performance-dot="2" aria-label="Show Medium Confidence"></button>
-          <button class="performance-dot" type="button" data-performance-dot="3" aria-label="Show Passed Markets"></button>
-        </div>
-      </aside>
-    </section>
-
-    <div class="quick-guide">
-      <article class="quick-guide-card">
-        <div class="label">Model</div>
-        <div class="reason" style="margin-top:4px;">NHL3.0's estimated chance the bet wins.</div>
-      </article>
-      <article class="quick-guide-card">
-        <div class="label">Market</div>
-        <div class="reason" style="margin-top:4px;">The sportsbook's fair win chance after removing juice.</div>
-      </article>
-      <article class="quick-guide-card">
-        <div class="label">Edge</div>
-        <div class="reason" style="margin-top:4px;">Model minus Market. Positive means the number favors the bet.</div>
-      </article>
-      <article class="quick-guide-card">
-        <div class="label">EV</div>
-        <div class="reason" style="margin-top:4px;">Expected value at the listed odds. Positive is bettable, negative is pass.</div>
-      </article>
-    </div>
-
-    <div class="section-title">Game Board</div>
-    <section class="games">
-      <div class="tabs">
-        <button class="tab-button active" data-tab="game-top">Top 3 1</button>
-        <button class="tab-button" data-tab="game-all">All Games 1</button>
-        <button class="tab-button" data-tab="game-non-pass">Non-Pass Games 1</button>
-        <button class="tab-button" data-tab="game-passes">Pass Games 0</button>
-      </div>
-
-      <div class="tab-panel active" data-panel="game-top">
-        <div class="game-tile-grid">
-            <article class="game-card top-edge" id="philadelphia_flyers_los_angeles_kings-top">
-              <div class="tile-top">
-                <div>
-                  <div class="label">Matchup</div>
-                  <div class="value">Philadelphia Flyers at Los Angeles Kings</div>
-                  <div class="reason">Thu Mar 19, 09:40 PM CT</div>
-                </div>
-                <div class="tile-level confidence-high">High</div>
-              </div>
-              <div class="best-card">
-                <div class="label">Best Available Bet</div>
-                <div class="best-bet">Under 5.5</div>
-                <div class="best-meta">DraftKings +110</div>
-                <div class="best-metrics">
-                  <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                  <div><div class="label">Market</div><div class="metric-value">45.73%</div></div>
-                  <div><div class="label">Edge</div><div class="metric-value">7.48%</div></div>
-                  <div><div class="label">EV</div><div class="metric-value">11.72%</div></div>
-                </div>
-              </div>
-              <div class="dropdown-stack">
-                <details class="market-dropdown">
-                  <summary>
-                    <span>Moneyline</span>
-                    <span class="dropdown-summary-label confidence-low">Los Angeles Kings</span>
-                  </summary>
-                  <div class="dropdown-body">
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings</div>
-                          <div class="reason">DraftKings -192 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">64.43%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">63.09%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">1.33%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-2.02%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings</div>
-                          <div class="reason">FanDuel -196 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">64.43%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">63.44%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">0.99%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-2.70%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers</div>
-                          <div class="reason">FanDuel +162 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">35.57%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">36.56%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-0.99%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-6.80%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers</div>
-                          <div class="reason">DraftKings +160 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">35.57%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">36.91%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-1.33%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-7.51%</div></div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-                <details class="market-dropdown">
-                  <summary>
-                    <span>Puck Line</span>
-                    <span class="dropdown-summary-label confidence-low">Philadelphia Flyers +1.5</span>
-                  </summary>
-                  <div class="dropdown-body">
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers +1.5</div>
-                          <div class="reason">FanDuel -160 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">61.15%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">58.60%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">2.55%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-0.63%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers +1.5</div>
-                          <div class="reason">DraftKings -175 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">61.15%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">60.92%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">0.23%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-3.90%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings -1.5</div>
-                          <div class="reason">DraftKings +145 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">38.85%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">39.08%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-0.23%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-4.82%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings -1.5</div>
-                          <div class="reason">FanDuel +130 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">38.85%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">41.40%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-2.55%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-10.65%</div></div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-                <details class="market-dropdown">
-                  <summary>
-                    <span>Total</span>
-                    <span class="dropdown-summary-label confidence-high">Under 5.5</span>
-                  </summary>
-                  <div class="dropdown-body">
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Under 5.5</div>
-                          <div class="reason">DraftKings +110 | <span class="status-bet">Bet</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">45.73%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">7.48%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">11.72%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Under 5.5</div>
-                          <div class="reason">FanDuel +106 | <span class="status-bet">Bet</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">46.20%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">7.00%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">9.59%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Over 5.5</div>
-                          <div class="reason">FanDuel -130 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">46.80%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">53.80%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-7.00%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-17.20%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Over 5.5</div>
-                          <div class="reason">DraftKings -130 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">46.80%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">54.27%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-7.48%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-17.20%</div></div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-        </div>
-      </div>
-
-      <div class="tab-panel" data-panel="game-all">
-        <div class="game-tile-grid">
-          <article class="game-card" id="philadelphia_flyers_los_angeles_kings-all">
-            <div class="tile-top">
-              <div>
-                <div class="label">Matchup</div>
-                <div class="value">Philadelphia Flyers at Los Angeles Kings</div>
-                <div class="reason">Thu Mar 19, 09:40 PM CT</div>
-              </div>
-              <div class="tile-level confidence-high">High</div>
-            </div>
-            <div class="best-card">
-              <div class="label">Best Available Bet</div>
-              <div class="best-bet">Under 5.5</div>
-              <div class="best-meta">DraftKings +110</div>
-              <div class="best-metrics">
-                <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                <div><div class="label">Market</div><div class="metric-value">45.73%</div></div>
-                <div><div class="label">Edge</div><div class="metric-value">7.48%</div></div>
-                <div><div class="label">EV</div><div class="metric-value">11.72%</div></div>
-              </div>
-            </div>
-            <div class="dropdown-stack">
-              <details class="market-dropdown">
-                <summary>
-                  <span>Moneyline</span>
-                  <span class="dropdown-summary-label confidence-low">Los Angeles Kings</span>
-                </summary>
-                <div class="dropdown-body">
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Los Angeles Kings</div>
-                        <div class="reason">DraftKings -192 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">64.43%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">63.09%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">1.33%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-2.02%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Los Angeles Kings</div>
-                        <div class="reason">FanDuel -196 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">64.43%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">63.44%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">0.99%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-2.70%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Philadelphia Flyers</div>
-                        <div class="reason">FanDuel +162 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">35.57%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">36.56%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">-0.99%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-6.80%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Philadelphia Flyers</div>
-                        <div class="reason">DraftKings +160 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">35.57%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">36.91%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">-1.33%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-7.51%</div></div>
-                    </div>
-                  </div>
-                </div>
-              </details>
-              <details class="market-dropdown">
-                <summary>
-                  <span>Puck Line</span>
-                  <span class="dropdown-summary-label confidence-low">Philadelphia Flyers +1.5</span>
-                </summary>
-                <div class="dropdown-body">
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Philadelphia Flyers +1.5</div>
-                        <div class="reason">FanDuel -160 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">61.15%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">58.60%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">2.55%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-0.63%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Philadelphia Flyers +1.5</div>
-                        <div class="reason">DraftKings -175 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">61.15%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">60.92%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">0.23%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-3.90%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Los Angeles Kings -1.5</div>
-                        <div class="reason">DraftKings +145 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">38.85%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">39.08%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">-0.23%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-4.82%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Los Angeles Kings -1.5</div>
-                        <div class="reason">FanDuel +130 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">38.85%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">41.40%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">-2.55%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-10.65%</div></div>
-                    </div>
-                  </div>
-                </div>
-              </details>
-              <details class="market-dropdown">
-                <summary>
-                  <span>Total</span>
-                  <span class="dropdown-summary-label confidence-high">Under 5.5</span>
-                </summary>
-                <div class="dropdown-body">
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Under 5.5</div>
-                        <div class="reason">DraftKings +110 | <span class="status-bet">Bet</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">45.73%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">7.48%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">11.72%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Under 5.5</div>
-                        <div class="reason">FanDuel +106 | <span class="status-bet">Bet</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">46.20%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">7.00%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">9.59%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Over 5.5</div>
-                        <div class="reason">FanDuel -130 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">46.80%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">53.80%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">-7.00%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-17.20%</div></div>
-                    </div>
-                  </div>
-                  <div class="dropdown-line">
-                    <div class="dropdown-head">
-                      <div>
-                        <div class="value" style="font-size:16px;">Over 5.5</div>
-                        <div class="reason">DraftKings -130 | <span class="status-pass">Pass</span></div>
-                      </div>
-                      <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                    </div>
-                    <div class="dropdown-metrics">
-                      <div><div class="label">Model</div><div class="metric-value">46.80%</div></div>
-                      <div><div class="label">Market</div><div class="metric-value">54.27%</div></div>
-                      <div><div class="label">Edge</div><div class="metric-value">-7.48%</div></div>
-                      <div><div class="label">EV</div><div class="metric-value">-17.20%</div></div>
-                    </div>
-                  </div>
-                </div>
-              </details>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="tab-panel" data-panel="game-non-pass">
-        <div class="game-tile-grid">
-            <article class="game-card" id="philadelphia_flyers_los_angeles_kings-non-pass">
-              <div class="tile-top">
-                <div>
-                  <div class="label">Matchup</div>
-                  <div class="value">Philadelphia Flyers at Los Angeles Kings</div>
-                  <div class="reason">Thu Mar 19, 09:40 PM CT</div>
-                </div>
-                <div class="tile-level confidence-high">High</div>
-              </div>
-              <div class="best-card">
-                <div class="label">Best Available Bet</div>
-                <div class="best-bet">Under 5.5</div>
-                <div class="best-meta">DraftKings +110</div>
-                <div class="best-metrics">
-                  <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                  <div><div class="label">Market</div><div class="metric-value">45.73%</div></div>
-                  <div><div class="label">Edge</div><div class="metric-value">7.48%</div></div>
-                  <div><div class="label">EV</div><div class="metric-value">11.72%</div></div>
-                </div>
-              </div>
-              <div class="dropdown-stack">
-                <details class="market-dropdown">
-                  <summary>
-                    <span>Moneyline</span>
-                    <span class="dropdown-summary-label confidence-low">Los Angeles Kings</span>
-                  </summary>
-                  <div class="dropdown-body">
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings</div>
-                          <div class="reason">DraftKings -192 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">64.43%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">63.09%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">1.33%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-2.02%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings</div>
-                          <div class="reason">FanDuel -196 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">64.43%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">63.44%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">0.99%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-2.70%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers</div>
-                          <div class="reason">FanDuel +162 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">35.57%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">36.56%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-0.99%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-6.80%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers</div>
-                          <div class="reason">DraftKings +160 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">35.57%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">36.91%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-1.33%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-7.51%</div></div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-                <details class="market-dropdown">
-                  <summary>
-                    <span>Puck Line</span>
-                    <span class="dropdown-summary-label confidence-low">Philadelphia Flyers +1.5</span>
-                  </summary>
-                  <div class="dropdown-body">
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers +1.5</div>
-                          <div class="reason">FanDuel -160 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">61.15%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">58.60%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">2.55%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-0.63%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Philadelphia Flyers +1.5</div>
-                          <div class="reason">DraftKings -175 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">61.15%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">60.92%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">0.23%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-3.90%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings -1.5</div>
-                          <div class="reason">DraftKings +145 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">38.85%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">39.08%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-0.23%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-4.82%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Los Angeles Kings -1.5</div>
-                          <div class="reason">FanDuel +130 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">38.85%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">41.40%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-2.55%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-10.65%</div></div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-                <details class="market-dropdown">
-                  <summary>
-                    <span>Total</span>
-                    <span class="dropdown-summary-label confidence-high">Under 5.5</span>
-                  </summary>
-                  <div class="dropdown-body">
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Under 5.5</div>
-                          <div class="reason">DraftKings +110 | <span class="status-bet">Bet</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">45.73%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">7.48%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">11.72%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Under 5.5</div>
-                          <div class="reason">FanDuel +106 | <span class="status-bet">Bet</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-high"><strong>High</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">53.20%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">46.20%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">7.00%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">9.59%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Over 5.5</div>
-                          <div class="reason">FanDuel -130 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">46.80%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">53.80%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-7.00%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-17.20%</div></div>
-                      </div>
-                    </div>
-                    <div class="dropdown-line">
-                      <div class="dropdown-head">
-                        <div>
-                          <div class="value" style="font-size:16px;">Over 5.5</div>
-                          <div class="reason">DraftKings -130 | <span class="status-pass">Pass</span></div>
-                        </div>
-                        <div class="reason"><span class="confidence-low"><strong>Low</strong></span></div>
-                      </div>
-                      <div class="dropdown-metrics">
-                        <div><div class="label">Model</div><div class="metric-value">46.80%</div></div>
-                        <div><div class="label">Market</div><div class="metric-value">54.27%</div></div>
-                        <div><div class="label">Edge</div><div class="metric-value">-7.48%</div></div>
-                        <div><div class="label">EV</div><div class="metric-value">-17.20%</div></div>
-                      </div>
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-        </div>
-      </div>
-
-      <div class="tab-panel" data-panel="game-passes">
-        <div class="game-tile-grid">
-            <article class="game-card">
-              <div class="value">No pass games right now.</div>
-              <div class="reason" style="margin-top:8px;">Every current game has at least one recommendation.</div>
-            </article>
-        </div>
+    <section class="hero">
+      <h1>SportzStatz</h1>
+      <p class="subtitle">Shared home for the NHL and NCAAMB morning boards, keeping the sport-specific outputs under one Pages destination.</p>
+      <div class="pill-row">
+        <div class="pill">Generated 2026-03-18 12:44 PM Central Daylight Time</div>
+        <div class="pill">NHL board ready</div>
+        <div class="pill">NCAAMB board ready</div>
       </div>
     </section>
 
-    <div class="footer">Static page generated for GitHub Pages from the NHL3.0 morning pipeline.</div>
+    <section class="grid">
+      <article class="card">
+        <div class="label">NHL</div>
+        <div class="title">Morning Board</div>
+        <div class="body">Current NHL styling and pipeline output, published under the shared Pages structure.</div>
+        <div class="actions">
+          <a class="button primary" href="nhl/index.html">Open NHL Board</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="label">NCAAMB</div>
+        <div class="title">Morning Board</div>
+        <div class="body">College basketball recommendations rendered as one long, confidence-ranked list using the existing prediction outputs and a matching presentation layer.</div>
+        <div class="actions">
+          <a class="button primary" href="ncaamb/index.html">Open NCAAMB Board</a>
+        </div>
+      </article>
+    </section>
   </div>
-  <script>
-    (function () {
-      const buttons = Array.from(document.querySelectorAll('.tab-button'));
-      const panels = Array.from(document.querySelectorAll('.tab-panel'));
-      buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const tab = button.getAttribute('data-tab');
-          buttons.forEach((item) => item.classList.toggle('active', item === button));
-          panels.forEach((panel) => panel.classList.toggle('active', panel.getAttribute('data-panel') === tab));
-        });
-      });
-
-      const performanceTile = document.getElementById('performance-tile');
-      const performanceViews = Array.from(document.querySelectorAll('[data-performance-view]'));
-      const performanceDots = Array.from(document.querySelectorAll('[data-performance-dot]'));
-      let activePerformanceIndex = Number(1);
-
-      function showPerformance(index) {
-        activePerformanceIndex = index;
-        performanceViews.forEach((view) => {
-          view.classList.toggle('active', Number(view.getAttribute('data-performance-view')) === activePerformanceIndex);
-        });
-        performanceDots.forEach((dot) => {
-          dot.classList.toggle('active', Number(dot.getAttribute('data-performance-dot')) === activePerformanceIndex);
-        });
-      }
-
-      if (performanceTile && performanceViews.length > 0) {
-        performanceTile.addEventListener('click', (event) => {
-          const dot = event.target.closest('[data-performance-dot]');
-          if (dot) {
-            showPerformance(Number(dot.getAttribute('data-performance-dot')));
-            event.stopPropagation();
-            return;
-          }
-          showPerformance((activePerformanceIndex + 1) % performanceViews.length);
-        });
-        performanceTile.addEventListener('keydown', (event) => {
-          if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            showPerformance((activePerformanceIndex + 1) % performanceViews.length);
-          }
-        });
-        showPerformance(activePerformanceIndex);
-      }
-    }());
-  </script>
 </body>
 </html>
