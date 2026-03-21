@@ -3,74 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NHL Morning Board</title>
+  <title>SportzStatz</title>
   <style>
     :root {
-      --bg: #f6f7fb;
+      --bg: #f7f7f5;
       --panel: #ffffff;
       --ink: #101828;
       --muted: #667085;
       --line: #d0d5dd;
       --accent: #0f4c81;
-      --good: #156f3c;
-      --warn: #b54708;
       --shadow: 0 10px 24px rgba(16, 24, 40, 0.07);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg);
       color: var(--ink);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
     .wrap {
-      max-width: 1240px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 24px 18px 48px;
-    }
-    .hero, .card, .game, .market {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
+      padding: 28px 18px 48px;
     }
     .hero {
-      padding: 22px;
-      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow);
     }
     h1 {
-      margin: 0;
-      font-size: clamp(30px, 4vw, 44px);
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
       line-height: 1.05;
     }
     .subtitle {
-      margin-top: 8px;
+      margin: 0;
       color: var(--muted);
-      max-width: 78ch;
       line-height: 1.5;
+      max-width: 72ch;
     }
-    .meta {
+    .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
       margin-top: 14px;
     }
     .pill {
       border: 1px solid var(--line);
+      background: var(--panel);
       border-radius: 999px;
-      padding: 7px 11px;
+      padding: 8px 12px;
       color: var(--muted);
       font-size: 13px;
-      background: #fcfcfd;
     }
-    .performance {
-      margin-top: 18px;
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
     }
     .card {
-      padding: 14px 16px;
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
     }
     .label {
       font-size: 12px;
@@ -78,966 +79,71 @@
       text-transform: uppercase;
       color: var(--muted);
     }
-    .value {
-      margin-top: 6px;
+    .title {
       font-size: 26px;
       font-weight: 800;
+      line-height: 1.1;
     }
-    .games {
-      display: grid;
-      gap: 18px;
-      margin-top: 20px;
+    .body {
+      color: var(--muted);
+      line-height: 1.5;
     }
-    .game {
-      padding: 18px;
-    }
-    .game-header {
+    .actions {
       display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: start;
-      margin-bottom: 12px;
-    }
-    .game-title {
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 1.15;
-    }
-    .game-time {
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .consensus {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 10px;
-      margin-bottom: 14px;
+      flex-wrap: wrap;
     }
-    .consensus .card {
-      padding: 10px 12px;
-      border-radius: 12px;
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fcfcfd;
     }
-    .markets {
-      display: grid;
-      gap: 12px;
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
     }
-    .market {
-      padding: 14px;
-      border-radius: 14px;
-    }
-    .market h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-    th, td {
-      text-align: left;
-      padding: 8px 6px;
-      border-top: 1px solid #eaecf0;
-      vertical-align: top;
-    }
-    th {
-      color: var(--muted);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      border-top: none;
-      padding-top: 0;
-    }
-    .good { color: var(--good); font-weight: 700; }
-    .pass { color: var(--warn); font-weight: 700; }
-    @media (max-width: 760px) {
-      .game-header { display: block; }
-      table { display: block; overflow-x: auto; }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <h1>NHL Morning Board</h1>
-      <div class="subtitle">Live NHL pipeline output from the SportsPredictionsHub morning run.</div>
-      <div class="meta">
-        <div class="pill">Generated Saturday, March 21, 2026 05:59 PM CT</div>
-        <div class="pill">Games 4</div>
-        <div class="pill">Recommendations 6</div>
-      </div>
-      <div class="performance">
-        <div class="card">
-          <div class="label">All Bets</div>
-          <div class="value">1-2</div>
-          <div class="subtitle">All settled recommendations</div>
-          <div class="meta">
-            <div class="pill">Wins 1</div>
-            <div class="pill">Losses 2</div>
-            <div class="pill">Units -1.38</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="label">High Confidence</div>
-          <div class="value">0-2</div>
-          <div class="subtitle">High bets only</div>
-          <div class="meta">
-            <div class="pill">Wins 0</div>
-            <div class="pill">Losses 2</div>
-            <div class="pill">Units -2.00</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="label">Medium Confidence</div>
-          <div class="value">1-0</div>
-          <div class="subtitle">Medium-high, medium, and medium-low bets</div>
-          <div class="meta">
-            <div class="pill">Wins 1</div>
-            <div class="pill">Losses 0</div>
-            <div class="pill">Units +0.62</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="label">Passed Markets</div>
-          <div class="value">2-1</div>
-          <div class="subtitle">Settled pass lines that were left alone</div>
-          <div class="meta">
-            <div class="pill">Wins 2</div>
-            <div class="pill">Losses 1</div>
-            <div class="pill">Units +1.18</div>
-          </div>
-        </div>
+      <h1>SportzStatz</h1>
+      <p class="subtitle">Shared home for the NHL and NCAAMB morning boards, keeping the sport-specific outputs under one Pages destination.</p>
+      <div class="pill-row">
+        <div class="pill">Generated 2026-03-21 06:17 PM CDT</div>
+        <div class="pill">NHL board ready</div>
+        <div class="pill">NCAAMB board ready</div>
       </div>
     </section>
 
-    <section class="games">
-      <article class="game" id="toronto_maple_leafs_ottawa_senators">
-        <div class="game-header">
-          <div>
-            <div class="game-title">Toronto Maple Leafs @ Ottawa Senators</div>
-            <div class="game-time">Sat Mar 21, 06:10 PM CT</div>
-          </div>
-        </div>
-
-        <div class="consensus">
-          <div class="card">
-            <div class="label">Home ML</div>
-            <div>72.82%</div>
-          </div>
-          <div class="card">
-            <div class="label">Away ML</div>
-            <div>27.18%</div>
-          </div>
-          <div class="card">
-            <div class="label">Puck Line</div>
-            <div>-1.5</div>
-          </div>
-          <div class="card">
-            <div class="label">Total</div>
-            <div>6.5</div>
-          </div>
-        </div>
-
-        <div class="markets">
-          <section class="market">
-            <h3>Moneyline</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Toronto Maple Leafs</td>
-                  <td>+260</td>
-                  <td>27.75%</td>
-                  <td>26.65%</td>
-                  <td>1.11%</td>
-                  <td>-0.09%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Toronto Maple Leafs</td>
-                  <td>+245</td>
-                  <td>27.75%</td>
-                  <td>27.71%</td>
-                  <td>0.04%</td>
-                  <td>-4.25%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Ottawa Senators</td>
-                  <td>-310</td>
-                  <td>72.25%</td>
-                  <td>72.29%</td>
-                  <td>-0.04%</td>
-                  <td>-4.45%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Ottawa Senators</td>
-                  <td>-325</td>
-                  <td>72.25%</td>
-                  <td>73.35%</td>
-                  <td>-1.11%</td>
-                  <td>-5.52%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Puck Line</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Toronto Maple Leafs +1.5</td>
-                  <td>+110</td>
-                  <td>50.27%</td>
-                  <td>45.40%</td>
-                  <td>4.87%</td>
-                  <td>5.57%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Toronto Maple Leafs +1.5</td>
-                  <td>+102</td>
-                  <td>50.27%</td>
-                  <td>47.39%</td>
-                  <td>2.88%</td>
-                  <td>1.55%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Ottawa Senators -1.5</td>
-                  <td>-122</td>
-                  <td>49.73%</td>
-                  <td>52.61%</td>
-                  <td>-2.88%</td>
-                  <td>-9.51%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Ottawa Senators -1.5</td>
-                  <td>-134</td>
-                  <td>49.73%</td>
-                  <td>54.60%</td>
-                  <td>-4.87%</td>
-                  <td>-13.16%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Total</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Over 6.5</td>
-                  <td>+114</td>
-                  <td>47.35%</td>
-                  <td>44.86%</td>
-                  <td>2.49%</td>
-                  <td>1.32%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Over 6.5</td>
-                  <td>+110</td>
-                  <td>47.35%</td>
-                  <td>45.40%</td>
-                  <td>1.95%</td>
-                  <td>-0.57%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Under 6.5</td>
-                  <td>-134</td>
-                  <td>52.65%</td>
-                  <td>54.60%</td>
-                  <td>-1.95%</td>
-                  <td>-8.05%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Under 6.5</td>
-                  <td>-135</td>
-                  <td>52.65%</td>
-                  <td>55.14%</td>
-                  <td>-2.49%</td>
-                  <td>-8.35%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
+    <section class="grid">
+      <article class="card">
+        <div class="label">NHL</div>
+        <div class="title">Morning Board</div>
+        <div class="body">Current NHL styling and pipeline output, published under the shared Pages structure.</div>
+        <div class="actions">
+          <a class="button primary" href="nhl/index.html">Open NHL Board</a>
         </div>
       </article>
-      <article class="game" id="st_louis_blues_vancouver_canucks">
-        <div class="game-header">
-          <div>
-            <div class="game-title">St Louis Blues @ Vancouver Canucks</div>
-            <div class="game-time">Sat Mar 21, 06:10 PM CT</div>
-          </div>
-        </div>
 
-        <div class="consensus">
-          <div class="card">
-            <div class="label">Home ML</div>
-            <div>42.55%</div>
-          </div>
-          <div class="card">
-            <div class="label">Away ML</div>
-            <div>57.45%</div>
-          </div>
-          <div class="card">
-            <div class="label">Puck Line</div>
-            <div>+1.5</div>
-          </div>
-          <div class="card">
-            <div class="label">Total</div>
-            <div>5.5</div>
-          </div>
-        </div>
-
-        <div class="markets">
-          <section class="market">
-            <h3>Moneyline</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Vancouver Canucks</td>
-                  <td>+126</td>
-                  <td>42.91%</td>
-                  <td>42.32%</td>
-                  <td>0.59%</td>
-                  <td>-3.03%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Vancouver Canucks</td>
-                  <td>+124</td>
-                  <td>42.91%</td>
-                  <td>42.79%</td>
-                  <td>0.11%</td>
-                  <td>-3.89%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>St Louis Blues</td>
-                  <td>-148</td>
-                  <td>57.09%</td>
-                  <td>57.21%</td>
-                  <td>-0.11%</td>
-                  <td>-4.33%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>St Louis Blues</td>
-                  <td>-152</td>
-                  <td>57.09%</td>
-                  <td>57.68%</td>
-                  <td>-0.59%</td>
-                  <td>-5.35%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Puck Line</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Vancouver Canucks +1.5</td>
-                  <td>-205</td>
-                  <td>68.29%</td>
-                  <td>64.47%</td>
-                  <td>3.82%</td>
-                  <td>1.60%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Vancouver Canucks +1.5</td>
-                  <td>-210</td>
-                  <td>68.29%</td>
-                  <td>64.48%</td>
-                  <td>3.81%</td>
-                  <td>0.81%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>St Louis Blues -1.5</td>
-                  <td>+170</td>
-                  <td>31.71%</td>
-                  <td>35.53%</td>
-                  <td>-3.82%</td>
-                  <td>-14.38%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>St Louis Blues -1.5</td>
-                  <td>+168</td>
-                  <td>31.71%</td>
-                  <td>35.52%</td>
-                  <td>-3.81%</td>
-                  <td>-15.02%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Total</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Under 5.5</td>
-                  <td>+114</td>
-                  <td>52.89%</td>
-                  <td>44.86%</td>
-                  <td>8.04%</td>
-                  <td>13.19%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Under 5.5</td>
-                  <td>+104</td>
-                  <td>52.89%</td>
-                  <td>46.61%</td>
-                  <td>6.28%</td>
-                  <td>7.90%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Over 5.5</td>
-                  <td>-128</td>
-                  <td>47.11%</td>
-                  <td>53.39%</td>
-                  <td>-6.28%</td>
-                  <td>-16.09%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Over 5.5</td>
-                  <td>-135</td>
-                  <td>47.11%</td>
-                  <td>55.14%</td>
-                  <td>-8.04%</td>
-                  <td>-18.00%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </div>
-      </article>
-      <article class="game" id="boston_bruins_detroit_red_wings">
-        <div class="game-header">
-          <div>
-            <div class="game-title">Boston Bruins @ Detroit Red Wings</div>
-            <div class="game-time">Sat Mar 21, 07:10 PM CT</div>
-          </div>
-        </div>
-
-        <div class="consensus">
-          <div class="card">
-            <div class="label">Home ML</div>
-            <div>52.93%</div>
-          </div>
-          <div class="card">
-            <div class="label">Away ML</div>
-            <div>47.07%</div>
-          </div>
-          <div class="card">
-            <div class="label">Puck Line</div>
-            <div>-1.5</div>
-          </div>
-          <div class="card">
-            <div class="label">Total</div>
-            <div>5.5</div>
-          </div>
-        </div>
-
-        <div class="markets">
-          <section class="market">
-            <h3>Moneyline</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Boston Bruins</td>
-                  <td>+105</td>
-                  <td>47.07%</td>
-                  <td>46.75%</td>
-                  <td>0.32%</td>
-                  <td>-3.50%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Detroit Red Wings</td>
-                  <td>-122</td>
-                  <td>52.93%</td>
-                  <td>52.61%</td>
-                  <td>0.32%</td>
-                  <td>-3.69%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Detroit Red Wings</td>
-                  <td>-125</td>
-                  <td>52.93%</td>
-                  <td>53.25%</td>
-                  <td>-0.32%</td>
-                  <td>-4.73%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Boston Bruins</td>
-                  <td>+102</td>
-                  <td>47.07%</td>
-                  <td>47.39%</td>
-                  <td>-0.32%</td>
-                  <td>-4.91%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Puck Line</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Boston Bruins +1.5</td>
-                  <td>-245</td>
-                  <td>72.02%</td>
-                  <td>67.61%</td>
-                  <td>4.40%</td>
-                  <td>1.41%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Boston Bruins +1.5</td>
-                  <td>-250</td>
-                  <td>72.02%</td>
-                  <td>68.54%</td>
-                  <td>3.48%</td>
-                  <td>0.82%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Detroit Red Wings -1.5</td>
-                  <td>+205</td>
-                  <td>27.98%</td>
-                  <td>31.46%</td>
-                  <td>-3.48%</td>
-                  <td>-14.65%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Detroit Red Wings -1.5</td>
-                  <td>+194</td>
-                  <td>27.98%</td>
-                  <td>32.39%</td>
-                  <td>-4.40%</td>
-                  <td>-17.73%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Total</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Under 5.5</td>
-                  <td>+110</td>
-                  <td>52.89%</td>
-                  <td>45.73%</td>
-                  <td>7.17%</td>
-                  <td>11.07%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Under 5.5</td>
-                  <td>+106</td>
-                  <td>52.89%</td>
-                  <td>46.20%</td>
-                  <td>6.69%</td>
-                  <td>8.96%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Over 5.5</td>
-                  <td>-130</td>
-                  <td>47.11%</td>
-                  <td>53.80%</td>
-                  <td>-6.69%</td>
-                  <td>-16.65%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Over 5.5</td>
-                  <td>-130</td>
-                  <td>47.11%</td>
-                  <td>54.27%</td>
-                  <td>-7.17%</td>
-                  <td>-16.65%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </div>
-      </article>
-      <article class="game" id="tampa_bay_lightning_edmonton_oilers">
-        <div class="game-header">
-          <div>
-            <div class="game-title">Tampa Bay Lightning @ Edmonton Oilers</div>
-            <div class="game-time">Sat Mar 21, 09:10 PM CT</div>
-          </div>
-        </div>
-
-        <div class="consensus">
-          <div class="card">
-            <div class="label">Home ML</div>
-            <div>45.21%</div>
-          </div>
-          <div class="card">
-            <div class="label">Away ML</div>
-            <div>54.79%</div>
-          </div>
-          <div class="card">
-            <div class="label">Puck Line</div>
-            <div>+1.5</div>
-          </div>
-          <div class="card">
-            <div class="label">Total</div>
-            <div>6.5</div>
-          </div>
-        </div>
-
-        <div class="markets">
-          <section class="market">
-            <h3>Moneyline</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Edmonton Oilers</td>
-                  <td>+114</td>
-                  <td>45.21%</td>
-                  <td>44.86%</td>
-                  <td>0.35%</td>
-                  <td>-3.25%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Tampa Bay Lightning</td>
-                  <td>-132</td>
-                  <td>54.79%</td>
-                  <td>54.44%</td>
-                  <td>0.35%</td>
-                  <td>-3.70%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Tampa Bay Lightning</td>
-                  <td>-135</td>
-                  <td>54.79%</td>
-                  <td>55.14%</td>
-                  <td>-0.35%</td>
-                  <td>-4.62%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Edmonton Oilers</td>
-                  <td>+110</td>
-                  <td>45.21%</td>
-                  <td>45.56%</td>
-                  <td>-0.35%</td>
-                  <td>-5.06%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Puck Line</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Edmonton Oilers +1.5</td>
-                  <td>-205</td>
-                  <td>68.46%</td>
-                  <td>64.47%</td>
-                  <td>3.98%</td>
-                  <td>1.85%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Edmonton Oilers +1.5</td>
-                  <td>-230</td>
-                  <td>68.46%</td>
-                  <td>66.12%</td>
-                  <td>2.34%</td>
-                  <td>-1.78%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Tampa Bay Lightning -1.5</td>
-                  <td>+180</td>
-                  <td>31.54%</td>
-                  <td>33.88%</td>
-                  <td>-2.34%</td>
-                  <td>-11.67%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Tampa Bay Lightning -1.5</td>
-                  <td>+170</td>
-                  <td>31.54%</td>
-                  <td>35.53%</td>
-                  <td>-3.98%</td>
-                  <td>-14.83%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="market">
-            <h3>Total</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Book</th>
-                  <th>Bet</th>
-                  <th>Price</th>
-                  <th>Model</th>
-                  <th>Market</th>
-                  <th>Edge</th>
-                  <th>EV</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Under 6.5</td>
-                  <td>+114</td>
-                  <td>52.65%</td>
-                  <td>44.86%</td>
-                  <td>7.80%</td>
-                  <td>12.68%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Under 6.5</td>
-                  <td>+108</td>
-                  <td>52.65%</td>
-                  <td>45.80%</td>
-                  <td>6.85%</td>
-                  <td>9.52%</td>
-                  <td class="good">Bet</td>
-                </tr>
-                <tr>
-                  <td>FanDuel</td>
-                  <td>Over 6.5</td>
-                  <td>-132</td>
-                  <td>47.35%</td>
-                  <td>54.20%</td>
-                  <td>-6.85%</td>
-                  <td>-16.78%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-                <tr>
-                  <td>DraftKings</td>
-                  <td>Over 6.5</td>
-                  <td>-135</td>
-                  <td>47.35%</td>
-                  <td>55.14%</td>
-                  <td>-7.80%</td>
-                  <td>-17.58%</td>
-                  <td class="pass">Pass</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
+      <article class="card">
+        <div class="label">NCAAMB</div>
+        <div class="title">Morning Board</div>
+        <div class="body">College basketball recommendations rendered as one long, confidence-ranked list using the existing prediction outputs and a matching presentation layer.</div>
+        <div class="actions">
+          <a class="button primary" href="ncaamb/index.html">Open NCAAMB Board</a>
         </div>
       </article>
     </section>
