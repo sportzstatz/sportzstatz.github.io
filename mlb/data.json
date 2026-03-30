@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30 06:13 PM CDT",
+  "generated_at": "2026-03-30 06:19 PM CDT",
   "target_date": "2026-03-30",
   "mode": "probable",
   "game_count": 10,
@@ -33,18 +33,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T15:09:59-05:00",
       "details": {
-        "baseline_probability": 0.6985064583656707,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.604125,
-        "run_model_total_runs_p10": 5.0,
-        "run_model_total_runs_p50": 8.0,
-        "run_model_total_runs_p90": 12.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 4.0,
-        "run_model_home_runs_p90": 8.0,
-        "run_model_away_runs_p10": 1.0,
-        "run_model_away_runs_p50": 4.0,
-        "run_model_away_runs_p90": 6.0
+        "Baseline Win Prob": "69.9%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "60.4%",
+        "Total Runs p10": "5.0",
+        "Total Runs p50": "8.0",
+        "Total Runs p90": "12.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "4.0",
+        "Home Runs p90": "8.0",
+        "Away Runs p10": "1.0",
+        "Away Runs p50": "4.0",
+        "Away Runs p90": "6.0"
       }
     },
     {
@@ -73,18 +73,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T17:34:59-05:00",
       "details": {
-        "baseline_probability": 0.6022598810808889,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.3815,
-        "run_model_total_runs_p10": 5.0,
-        "run_model_total_runs_p50": 9.0,
-        "run_model_total_runs_p90": 13.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 4.0,
-        "run_model_home_runs_p90": 7.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 5.0,
-        "run_model_away_runs_p90": 8.0
+        "Baseline Win Prob": "60.2%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "38.1%",
+        "Total Runs p10": "5.0",
+        "Total Runs p50": "9.0",
+        "Total Runs p90": "13.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "4.0",
+        "Home Runs p90": "7.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "5.0",
+        "Away Runs p90": "8.0"
       }
     },
     {
@@ -113,18 +113,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T17:39:59-05:00",
       "details": {
-        "baseline_probability": 0.7203696363375189,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.483,
-        "run_model_total_runs_p10": 5.0,
-        "run_model_total_runs_p50": 9.0,
-        "run_model_total_runs_p90": 13.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 4.0,
-        "run_model_home_runs_p90": 7.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 5.0,
-        "run_model_away_runs_p90": 8.0
+        "Baseline Win Prob": "72.0%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "48.3%",
+        "Total Runs p10": "5.0",
+        "Total Runs p50": "9.0",
+        "Total Runs p90": "13.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "4.0",
+        "Home Runs p90": "7.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "5.0",
+        "Away Runs p90": "8.0"
       }
     },
     {
@@ -153,18 +153,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T17:39:59-05:00",
       "details": {
-        "baseline_probability": 0.6975022443093307,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.464375,
-        "run_model_total_runs_p10": 6.0,
-        "run_model_total_runs_p50": 9.0,
-        "run_model_total_runs_p90": 14.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 4.0,
-        "run_model_home_runs_p90": 8.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 5.0,
-        "run_model_away_runs_p90": 8.0
+        "Baseline Win Prob": "69.8%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "46.4%",
+        "Total Runs p10": "6.0",
+        "Total Runs p50": "9.0",
+        "Total Runs p90": "14.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "4.0",
+        "Home Runs p90": "8.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "5.0",
+        "Away Runs p90": "8.0"
       }
     },
     {
@@ -193,18 +193,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T17:39:59-05:00",
       "details": {
-        "baseline_probability": 0.5730537738279665,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.47625,
-        "run_model_total_runs_p10": 5.0,
-        "run_model_total_runs_p50": 8.0,
-        "run_model_total_runs_p90": 12.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 4.0,
-        "run_model_home_runs_p90": 7.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 4.0,
-        "run_model_away_runs_p90": 7.0
+        "Baseline Win Prob": "57.3%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "47.6%",
+        "Total Runs p10": "5.0",
+        "Total Runs p50": "8.0",
+        "Total Runs p90": "12.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "4.0",
+        "Home Runs p90": "7.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "4.0",
+        "Away Runs p90": "7.0"
       }
     },
     {
@@ -233,18 +233,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T18:06:59-05:00",
       "details": {
-        "baseline_probability": 0.8549960381360816,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.811625,
-        "run_model_total_runs_p10": 5.0,
-        "run_model_total_runs_p50": 9.0,
-        "run_model_total_runs_p90": 13.0,
-        "run_model_home_runs_p10": 3.0,
-        "run_model_home_runs_p50": 6.0,
-        "run_model_home_runs_p90": 9.0,
-        "run_model_away_runs_p10": 1.0,
-        "run_model_away_runs_p50": 3.0,
-        "run_model_away_runs_p90": 5.0
+        "Baseline Win Prob": "85.5%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "81.2%",
+        "Total Runs p10": "5.0",
+        "Total Runs p50": "9.0",
+        "Total Runs p90": "13.0",
+        "Home Runs p10": "3.0",
+        "Home Runs p50": "6.0",
+        "Home Runs p90": "9.0",
+        "Away Runs p10": "1.0",
+        "Away Runs p50": "3.0",
+        "Away Runs p90": "5.0"
       }
     },
     {
@@ -273,18 +273,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T18:14:59-05:00",
       "details": {
-        "baseline_probability": 0.5489929022970903,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.633625,
-        "run_model_total_runs_p10": 5.0,
-        "run_model_total_runs_p50": 9.0,
-        "run_model_total_runs_p90": 13.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 5.0,
-        "run_model_home_runs_p90": 8.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 4.0,
-        "run_model_away_runs_p90": 6.0
+        "Baseline Win Prob": "54.9%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "63.4%",
+        "Total Runs p10": "5.0",
+        "Total Runs p50": "9.0",
+        "Total Runs p90": "13.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "5.0",
+        "Home Runs p90": "8.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "4.0",
+        "Away Runs p90": "6.0"
       }
     },
     {
@@ -313,18 +313,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T18:39:59-05:00",
       "details": {
-        "baseline_probability": 0.6667069539996883,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.599,
-        "run_model_total_runs_p10": 6.0,
-        "run_model_total_runs_p50": 10.0,
-        "run_model_total_runs_p90": 14.0,
-        "run_model_home_runs_p10": 3.0,
-        "run_model_home_runs_p50": 5.0,
-        "run_model_home_runs_p90": 8.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 4.0,
-        "run_model_away_runs_p90": 7.0
+        "Baseline Win Prob": "66.7%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "59.9%",
+        "Total Runs p10": "6.0",
+        "Total Runs p50": "10.0",
+        "Total Runs p90": "14.0",
+        "Home Runs p10": "3.0",
+        "Home Runs p50": "5.0",
+        "Home Runs p90": "8.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "4.0",
+        "Away Runs p90": "7.0"
       }
     },
     {
@@ -353,18 +353,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T18:39:59-05:00",
       "details": {
-        "baseline_probability": 0.683595032536393,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.54375,
-        "run_model_total_runs_p10": 5.0,
-        "run_model_total_runs_p50": 9.0,
-        "run_model_total_runs_p90": 13.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 4.0,
-        "run_model_home_runs_p90": 7.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 4.0,
-        "run_model_away_runs_p90": 7.0
+        "Baseline Win Prob": "68.4%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "54.4%",
+        "Total Runs p10": "5.0",
+        "Total Runs p50": "9.0",
+        "Total Runs p90": "13.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "4.0",
+        "Home Runs p90": "7.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "4.0",
+        "Away Runs p90": "7.0"
       }
     },
     {
@@ -393,18 +393,18 @@
       "model_version": "ensemble_probable_20260329T152809Z",
       "snapshot_ts_utc": "2026-03-30T18:44:59-05:00",
       "details": {
-        "baseline_probability": 0.5399546491580117,
-        "calibrated_probability": 0.5430486944248414,
-        "run_model_home_win_probability": 0.550625,
-        "run_model_total_runs_p10": 6.0,
-        "run_model_total_runs_p50": 9.0,
-        "run_model_total_runs_p90": 14.0,
-        "run_model_home_runs_p10": 2.0,
-        "run_model_home_runs_p50": 5.0,
-        "run_model_home_runs_p90": 8.0,
-        "run_model_away_runs_p10": 2.0,
-        "run_model_away_runs_p50": 4.0,
-        "run_model_away_runs_p90": 7.0
+        "Baseline Win Prob": "54.0%",
+        "Calibrated Win Prob": "54.3%",
+        "Run-Model Home Win Prob": "55.1%",
+        "Total Runs p10": "6.0",
+        "Total Runs p50": "9.0",
+        "Total Runs p90": "14.0",
+        "Home Runs p10": "2.0",
+        "Home Runs p50": "5.0",
+        "Home Runs p90": "8.0",
+        "Away Runs p10": "2.0",
+        "Away Runs p50": "4.0",
+        "Away Runs p90": "7.0"
       }
     }
   ]
