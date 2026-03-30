@@ -60,7 +60,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
       margin-top: 22px;
     }
@@ -120,11 +120,12 @@
   <div class="wrap">
     <section class="hero">
       <h1>SportzStatz</h1>
-      <p class="subtitle">Shared home for the NHL and NCAAMB morning boards, keeping the sport-specific outputs under one Pages destination.</p>
+      <p class="subtitle">Shared home for the NHL, NCAAMB, and MLB boards, keeping the sport-specific outputs under one Pages destination.</p>
       <div class="pill-row">
-        <div class="pill">Generated 2026-03-30 06:52 AM CDT</div>
+        <div class="pill">Generated 2026-03-30 06:13 PM CDT</div>
         <div class="pill">NHL board ready</div>
         <div class="pill">NCAAMB board ready</div>
+        <div class="pill">MLB board ready</div>
       </div>
     </section>
 
@@ -144,6 +145,15 @@
         <div class="body">College basketball recommendations rendered as one long, confidence-ranked list using the existing prediction outputs and a matching presentation layer.</div>
         <div class="actions">
           <a class="button primary" href="ncaamb/index.html">Open NCAAMB Board</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="label">MLB</div>
+        <div class="title">Forecast Board</div>
+        <div class="body">Model-generated win probabilities, projected scores, and pitching matchups from the mlb-forecast-platform pipeline.</div>
+        <div class="actions">
+          <a class="button primary" href="mlb/index.html">Open MLB Board</a>
         </div>
       </article>
     </section>

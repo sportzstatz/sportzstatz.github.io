@@ -1,0 +1,1326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MLB Forecast Board</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --panel: #ffffff;
+      --ink: #101828;
+      --muted: #667085;
+      --line: #d0d5dd;
+      --accent: #0f4c81;
+      --good: #156f3c;
+      --good-soft: #edf9f0;
+      --accent-soft: #eef4ff;
+      --shadow: 0 10px 24px rgba(16, 24, 40, 0.07);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    .wrap {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px 18px 48px;
+    }
+    .header {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+    }
+    .subtitle {
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 78ch;
+      font-size: 15px;
+    }
+    .meta,
+    .nav-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill,
+    .nav-link {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .nav-link {
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .quick-guide {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .quick-guide-card {
+      background: #fcfcfd;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    .tile-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .tile {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-left-width: 6px;
+      border-left-color: var(--accent);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .tile.strong { border-left-color: var(--good); }
+    .tile-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .game-label {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .game-time {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .venue-text {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .favorite-badge {
+      text-align: right;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .stat {
+      border: 1px solid #eaecf0;
+      border-radius: 12px;
+      padding: 12px;
+      background: #fcfcfd;
+    }
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .stat-value {
+      margin-top: 4px;
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .pitchers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .pitcher-card {
+      border: 1px solid #eaecf0;
+      border-radius: 12px;
+      padding: 12px;
+      background: #fcfcfd;
+    }
+    .pitcher-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .pitcher-name {
+      margin-top: 4px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .lineup-tag {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .lineup-tag.confirmed {
+      color: var(--good);
+      background: var(--good-soft);
+      border-color: rgba(21, 111, 60, 0.2);
+    }
+    .lineup-tag.projected {
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-color: rgba(15, 76, 129, 0.18);
+    }
+    .lineup-tag.unknown {
+      color: var(--muted);
+      background: #f2f4f7;
+      border-color: var(--line);
+    }
+    .details-dropdown {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fcfcfd;
+    }
+    .details-dropdown summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+    .details-dropdown summary::-webkit-details-marker { display: none; }
+    .details-dropdown summary::after {
+      content: '+';
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1;
+    }
+    .details-dropdown[open] summary::after { content: '\2212'; }
+    .dropdown-body {
+      padding: 0 14px 14px;
+      border-top: 1px solid #eaecf0;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      padding-top: 10px;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 4px 0;
+    }
+    .detail-row .label { color: var(--muted); }
+    .detail-row .value { font-weight: 700; }
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 980px) {
+      .quick-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .tile-top { display: grid; }
+      .favorite-badge { text-align: left; }
+      .quick-guide { grid-template-columns: 1fr; }
+      .tile-list { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .pitchers { grid-template-columns: 1fr; }
+      .detail-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="header">
+      <div class="nav-row">
+        <a class="nav-link" href="../index.html">All Sports</a>
+        <a class="nav-link" href="../nhl/index.html">NHL Board</a>
+        <a class="nav-link" href="../ncaamb/index.html">NCAAMB Board</a>
+      </div>
+      <h1>MLB Forecast Board</h1>
+      <div class="subtitle">Model-generated win probabilities, projected scores, and pitching matchups. This is a forecast board &mdash; not betting recommendations.</div>
+      <div class="meta">
+        <div class="pill">Generated 2026-03-30 06:13 PM CDT</div>
+        <div class="pill">Date 2026-03-30</div>
+        <div class="pill">Mode probable</div>
+        <div class="pill">Games 10</div>
+        <div class="pill">Model ensemble_probable_20260329T152809Z</div>
+      </div>
+    </section>
+
+    <section class="quick-guide">
+      <article class="quick-guide-card">
+        <div class="stat-label">Win Probability</div>
+        <div style="color:var(--muted);font-size:14px;margin-top:4px">Estimated chance each team wins based on all available features.</div>
+      </article>
+      <article class="quick-guide-card">
+        <div class="stat-label">Projected Score</div>
+        <div style="color:var(--muted);font-size:14px;margin-top:4px">Model expected final score for each team.</div>
+      </article>
+      <article class="quick-guide-card">
+        <div class="stat-label">Projected Total</div>
+        <div style="color:var(--muted);font-size:14px;margin-top:4px">Combined predicted run total for the game.</div>
+      </article>
+      <article class="quick-guide-card">
+        <div class="stat-label">Lineup Status</div>
+        <div style="color:var(--muted);font-size:14px;margin-top:4px">Confirmed = official lineup; Projected = based on recent games.</div>
+      </article>
+    </section>
+
+    <section class="tile-list">
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Minnesota Twins at Kansas City Royals</div>
+            <div class="game-time">Mon, Mar 30 | 3:10 PM CDT</div>
+            <div class="venue-text">Kauffman Stadium — Kansas City, MO</div>
+          </div>
+          <div class="favorite-badge">Kansas City Royals<br>59.8%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">40.2%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">59.8%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Kansas City Royals 4.7, Minnesota Twins 3.9</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">8.5</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (MIN)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (KC)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.6985064583656707</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.604125</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">8.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">12.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">1.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">6.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Texas Rangers at Baltimore Orioles</div>
+            <div class="game-time">Mon, Mar 30 | 5:35 PM CDT</div>
+            <div class="venue-text">Oriole Park at Camden Yards — Baltimore, MD</div>
+          </div>
+          <div class="favorite-badge">Baltimore Orioles<br>56.9%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">43.1%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">56.9%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Baltimore Orioles 4.2, Texas Rangers 5.1</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">9.2</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (TEX)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (BAL)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.6022598810808889</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.3815</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">13.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Washington Nationals at Philadelphia Phillies</div>
+            <div class="game-time">Mon, Mar 30 | 5:40 PM CDT</div>
+            <div class="venue-text">Citizens Bank Park — Philadelphia, PA</div>
+          </div>
+          <div class="favorite-badge">Philadelphia Phillies<br>61.2%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">38.8%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">61.2%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Philadelphia Phillies 4.6, Washington Nationals 4.7</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">9.3</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (WSH)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (PHI)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.7203696363375189</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.483</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">13.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Chicago White Sox at Miami Marlins</div>
+            <div class="game-time">Mon, Mar 30 | 5:40 PM CDT</div>
+            <div class="venue-text">loanDepot park — Miami, FL</div>
+          </div>
+          <div class="favorite-badge">Miami Marlins<br>60.4%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">39.6%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">60.4%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Miami Marlins 4.7, Chicago White Sox 5.0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">9.6</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (CWS)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (MIA)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.6975022443093307</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.464375</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">6.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">14.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Pittsburgh Pirates at Cincinnati Reds</div>
+            <div class="game-time">Mon, Mar 30 | 5:40 PM CDT</div>
+            <div class="venue-text">Great American Ball Park — Cincinnati, OH</div>
+          </div>
+          <div class="favorite-badge">Cincinnati Reds<br>55.3%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">44.7%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">55.3%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Cincinnati Reds 4.0, Pittsburgh Pirates 4.1</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">8.1</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (PIT)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (CIN)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.5730537738279665</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.47625</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">8.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">12.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile strong">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Colorado Rockies at Toronto Blue Jays</div>
+            <div class="game-time">Mon, Mar 30 | 6:07 PM CDT</div>
+            <div class="venue-text">Rogers Centre — Toronto, ON</div>
+          </div>
+          <div class="favorite-badge">Toronto Blue Jays<br>65.1%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">34.9%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">65.1%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Toronto Blue Jays 5.8, Colorado Rockies 3.1</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">8.9</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (COL)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (TOR)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.8549960381360816</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.811625</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">13.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">3.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">6.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">1.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">3.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">5.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Athletics at Atlanta Braves</div>
+            <div class="game-time">Mon, Mar 30 | 6:15 PM CDT</div>
+            <div class="venue-text">Truist Park — Atlanta, GA</div>
+          </div>
+          <div class="favorite-badge">Atlanta Braves<br>53.6%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">46.4%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">53.6%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Atlanta Braves 4.9, Athletics 3.9</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">8.8</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (ATH)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (ATL)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.5489929022970903</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.633625</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">13.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">6.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Tampa Bay Rays at Milwaukee Brewers</div>
+            <div class="game-time">Mon, Mar 30 | 6:40 PM CDT</div>
+            <div class="venue-text">American Family Field — Milwaukee, WI</div>
+          </div>
+          <div class="favorite-badge">Milwaukee Brewers<br>58.6%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">41.4%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">58.6%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Milwaukee Brewers 5.3, Tampa Bay Rays 4.6</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">9.9</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (TB)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (MIL)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.6667069539996883</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.599</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">6.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">10.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">14.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">3.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">Los Angeles Angels at Chicago Cubs</div>
+            <div class="game-time">Mon, Mar 30 | 6:40 PM CDT</div>
+            <div class="venue-text">Wrigley Field — Chicago, IL</div>
+          </div>
+          <div class="favorite-badge">Chicago Cubs<br>59.5%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">40.5%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">59.5%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">Chicago Cubs 4.6, Los Angeles Angels 4.2</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">8.8</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (LAA)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (CHC)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.683595032536393</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.54375</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">13.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+      <article class="tile">
+        <div class="tile-top">
+          <div>
+            <div class="game-label">New York Mets at St. Louis Cardinals</div>
+            <div class="game-time">Mon, Mar 30 | 6:45 PM CDT</div>
+            <div class="venue-text">Busch Stadium — St. Louis, MO</div>
+          </div>
+          <div class="favorite-badge">St. Louis Cardinals<br>53.6%</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Away Win Prob</div>
+            <div class="stat-value">46.4%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Home Win Prob</div>
+            <div class="stat-value">53.6%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Score</div>
+            <div class="stat-value">St. Louis Cardinals 4.9, New York Mets 4.6</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Projected Total</div>
+            <div class="stat-value">9.5</div>
+          </div>
+        </div>
+
+        <div class="pitchers">
+          <div class="pitcher-card">
+            <div class="pitcher-label">Away Pitcher (NYM)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+          <div class="pitcher-card">
+            <div class="pitcher-label">Home Pitcher (STL)</div>
+            <div class="pitcher-name">TBD</div>
+            <span class="lineup-tag projected">projected</span>
+          </div>
+        </div>
+
+        <details class="details-dropdown">
+          <summary><span>Model Details</span></summary>
+          <div class="dropdown-body">
+            <div class="detail-grid">
+              <div class="detail-row">
+                <span class="label">baseline_probability</span>
+                <span class="value">0.5399546491580117</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">calibrated_probability</span>
+                <span class="value">0.5430486944248414</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_win_probability</span>
+                <span class="value">0.550625</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p10</span>
+                <span class="value">6.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p50</span>
+                <span class="value">9.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_total_runs_p90</span>
+                <span class="value">14.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p50</span>
+                <span class="value">5.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_home_runs_p90</span>
+                <span class="value">8.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p10</span>
+                <span class="value">2.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p50</span>
+                <span class="value">4.0</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">run_model_away_runs_p90</span>
+                <span class="value">7.0</span>
+              </div>
+            </div>
+            <div class="detail-row" style="margin-top:8px;border-top:1px solid #eaecf0;padding-top:8px">
+              <span class="label">Model Version</span>
+              <span class="value">ensemble_probable_20260329T152809Z</span>
+            </div>
+          </div>
+        </details>
+      </article>
+    </section>
+
+    <section class="footer">Pages path: <a href="../nhl/index.html">NHL</a> | <a href="../ncaamb/index.html">NCAAMB</a> | <a href="../index.html">All Sports</a></section>
+  </div>
+</body>
+</html>
