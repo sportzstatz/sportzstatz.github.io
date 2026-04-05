@@ -114,6 +114,98 @@
     @media (max-width: 800px) {
       .grid { grid-template-columns: 1fr; }
     }
+
+    /* ── Last Night's Picks ── */
+    .picks-section {
+      margin-top: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .picks-header {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .picks-header h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .picks-date {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .picks-summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .picks-summary strong {
+      color: var(--ink);
+      font-size: 17px;
+    }
+    .bucket {
+      margin-bottom: 16px;
+    }
+    .bucket-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 6px;
+    }
+    .bucket-label {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .bucket-record {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .pick-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 0 5px 12px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+    .pick-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .pick-team {
+      font-weight: 600;
+      min-width: 120px;
+    }
+    .pick-prob {
+      color: var(--muted);
+      min-width: 60px;
+    }
+    .pick-result {
+      font-weight: 600;
+    }
+    .pick-result.won { color: #16a34a; }
+    .pick-result.lost { color: #dc2626; }
+    .pick-result.push { color: #ca8a04; }
+    .pick-score {
+      color: var(--muted);
+      font-size: 13px;
+      margin-left: auto;
+    }
+    .picks-none {
+      color: var(--muted);
+      font-style: italic;
+      padding: 12px 0;
+    }
   </style>
 </head>
 <body>
@@ -122,7 +214,7 @@
       <h1>SportzStatz</h1>
       <p class="subtitle">Shared home for the NHL, NCAAMB, and MLB boards, keeping the sport-specific outputs under one Pages destination.</p>
       <div class="pill-row">
-        <div class="pill">Generated 2026-03-30 06:01 PM CDT</div>
+        <div class="pill">Generated 2026-04-05 05:49 PM CDT</div>
         <div class="pill">NHL board ready</div>
         <div class="pill">NCAAMB board ready</div>
         <div class="pill">MLB board ready</div>
@@ -156,6 +248,146 @@
           <a class="button primary" href="mlb/index.html">Open MLB Board</a>
         </div>
       </article>
+    </section>
+
+    <section class="picks-section">
+      <div class="picks-header">
+        <h2>Last Night's Picks</h2>
+        <span class="picks-date">NHL Puck Lines — Saturday, April 04</span>
+      </div>
+      <div class="picks-summary">
+        Overall: <strong>10-4</strong>
+        (71.4% win rate)
+      </div>
+
+      <div class="bucket">
+        <div class="bucket-header">
+          <span class="bucket-label">50.00%–54.99%:</span>
+          <span class="bucket-record">1-0</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">New York Islanders +1.5</span>
+          <span class="pick-prob">54.51%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">New York Islanders 3 @ Carolina Hurricanes 4</span>
+        </div>
+      </div>
+      <div class="bucket">
+        <div class="bucket-header">
+          <span class="bucket-label">55.00%–59.99%:</span>
+          <span class="bucket-record">0-2</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">❌</span>
+          <span class="pick-team">Vancouver Canucks +1.5</span>
+          <span class="pick-prob">57.76%</span>
+          <span class="pick-result lost">lost.</span>
+          <span class="pick-score">Utah Mammoth 7 @ Vancouver Canucks 4</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">❌</span>
+          <span class="pick-team">Florida Panthers +1.5</span>
+          <span class="pick-prob">57.72%</span>
+          <span class="pick-result lost">lost.</span>
+          <span class="pick-score">Florida Panthers 4 @ Pittsburgh Penguins 9</span>
+        </div>
+      </div>
+      <div class="bucket">
+        <div class="bucket-header">
+          <span class="bucket-label">60.00%–64.99%:</span>
+          <span class="bucket-record">3-1</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Calgary Flames +1.5</span>
+          <span class="pick-prob">64.73%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Calgary Flames 5 @ Anaheim Ducks 3</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Chicago Blackhawks +1.5</span>
+          <span class="pick-prob">63.26%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Chicago Blackhawks 4 @ Seattle Kraken 2</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Toronto Maple Leafs +1.5</span>
+          <span class="pick-prob">62.19%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Toronto Maple Leafs 6 @ Los Angeles Kings 7</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">❌</span>
+          <span class="pick-team">Boston Bruins +1.5</span>
+          <span class="pick-prob">60.94%</span>
+          <span class="pick-result lost">lost.</span>
+          <span class="pick-score">Boston Bruins 1 @ Tampa Bay Lightning 3</span>
+        </div>
+      </div>
+      <div class="bucket">
+        <div class="bucket-header">
+          <span class="bucket-label">65.00%–69.99%:</span>
+          <span class="bucket-record">2-0</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Winnipeg Jets +1.5</span>
+          <span class="pick-prob">68.35%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Winnipeg Jets 2 @ Columbus Blue Jackets 1</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">New York Rangers +1.5</span>
+          <span class="pick-prob">66.79%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Detroit Red Wings 1 @ New York Rangers 4</span>
+        </div>
+      </div>
+      <div class="bucket">
+        <div class="bucket-header">
+          <span class="bucket-label">70.00% and up:</span>
+          <span class="bucket-record">4-1</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">❌</span>
+          <span class="pick-team">Dallas Stars +1.5</span>
+          <span class="pick-prob">72.48%</span>
+          <span class="pick-result lost">lost.</span>
+          <span class="pick-score">Colorado Avalanche 2 @ Dallas Stars 0</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Vegas Golden Knights +1.5</span>
+          <span class="pick-prob">72.16%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Vegas Golden Knights 5 @ Edmonton Oilers 1</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Nashville Predators +1.5</span>
+          <span class="pick-prob">71.68%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Nashville Predators 6 @ San Jose Sharks 3</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Minnesota Wild +1.5</span>
+          <span class="pick-prob">71.52%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Minnesota Wild 4 @ Ottawa Senators 1</span>
+        </div>
+        <div class="pick-row">
+          <span class="pick-icon">✅</span>
+          <span class="pick-team">Washington Capitals +1.5</span>
+          <span class="pick-prob">71.35%</span>
+          <span class="pick-result won">won.</span>
+          <span class="pick-score">Buffalo Sabres 2 @ Washington Capitals 6</span>
+        </div>
+      </div>
     </section>
   </div>
 </body>
