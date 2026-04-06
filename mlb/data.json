@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-05 03:26 PM CDT",
+  "generated_at": "2026-04-06 04:28 PM CDT",
   "target_date": "2026-04-06",
-  "requested_mode": "probable",
+  "requested_mode": "auto",
   "mode": "probable",
-  "mode_note": null,
+  "mode_note": "Probable-mode board shown because confirmed rows are not active or no confirmed rows were found.",
   "game_count": 13,
   "betting_game_count": 10,
   "recommendation_count": 23,
