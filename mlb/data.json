@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08 10:26 AM CDT",
+  "generated_at": "2026-04-08 10:42 AM CDT",
   "target_date": "2026-04-08",
   "requested_mode": "auto",
   "mode": "probable",
@@ -870,7 +870,9 @@
             "raw_ev": 0.011828,
             "raw_edge": 0.025102,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -892,7 +894,9 @@
               "raw_ev": -0.08551842857142855,
               "raw_edge": -0.04380212195121952,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -913,7 +917,9 @@
               "raw_ev": 0.011828,
               "raw_edge": 0.025102,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -943,7 +949,9 @@
             "raw_ev": 0.10813,
             "raw_edge": 0.09782,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "70%+",
+            "prob_rating_color": "#156f3c"
           },
           "options": [
             {
@@ -965,7 +973,9 @@
               "raw_ev": -0.2415117000000001,
               "raw_edge": -0.09113649056603779,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -986,7 +996,9 @@
               "raw_ev": 0.10813,
               "raw_edge": 0.09782,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "70%+",
+              "prob_rating_color": "#156f3c"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -1016,7 +1028,9 @@
             "raw_ev": 0.331497,
             "raw_edge": 0.187488,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -1038,7 +1052,9 @@
               "raw_ev": 0.331497,
               "raw_edge": 0.187488,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             },
             {
               "side_key": "under",
@@ -1059,7 +1075,9 @@
               "raw_ev": -0.32147046999999984,
               "raw_edge": -0.15835983743842358,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -1353,7 +1371,9 @@
             "raw_ev": 0.104705,
             "raw_edge": 0.068794,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -1375,7 +1395,9 @@
               "raw_ev": -0.21048220000000006,
               "raw_edge": -0.1169345555555556,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -1396,7 +1418,9 @@
               "raw_ev": 0.104705,
               "raw_edge": 0.068794,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -1426,7 +1450,9 @@
             "raw_ev": 0.183083,
             "raw_edge": 0.140331,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "70%+",
+            "prob_rating_color": "#156f3c"
           },
           "options": [
             {
@@ -1448,7 +1474,9 @@
               "raw_ev": -0.34377285999999996,
               "raw_edge": -0.13974506504065037,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -1469,7 +1497,9 @@
               "raw_ev": 0.183083,
               "raw_edge": 0.140331,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "70%+",
+              "prob_rating_color": "#156f3c"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -1499,7 +1529,9 @@
             "raw_ev": 0.088908,
             "raw_edge": 0.07758,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -1521,7 +1553,9 @@
               "raw_ev": 0.088908,
               "raw_edge": 0.07758,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             },
             {
               "side_key": "under",
@@ -1542,7 +1576,9 @@
               "raw_ev": -0.06114999999999993,
               "raw_edge": -0.027795454545454512,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -1811,7 +1847,9 @@
             "raw_ev": -0.024054104477611915,
             "raw_edge": -0.013774572649572714,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -1833,7 +1871,9 @@
               "raw_ev": -0.05158125000000002,
               "raw_edge": -0.023991279069767446,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -1854,7 +1894,9 @@
               "raw_ev": -0.024054104477611915,
               "raw_edge": -0.013774572649572714,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -1884,7 +1926,9 @@
             "raw_ev": 0.014368,
             "raw_edge": 0.035655,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -1906,7 +1950,9 @@
               "raw_ev": 0.014368,
               "raw_edge": 0.035655,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             },
             {
               "side_key": "home",
@@ -1927,7 +1973,9 @@
               "raw_ev": -0.07804644999999999,
               "raw_edge": -0.02945149056603774,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -1957,7 +2005,9 @@
             "raw_ev": 0.117882,
             "raw_edge": 0.083408,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -1979,7 +2029,9 @@
               "raw_ev": 0.117882,
               "raw_edge": 0.083408,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             },
             {
               "side_key": "under",
@@ -2000,7 +2052,9 @@
               "raw_ev": -0.18400490909090916,
               "raw_edge": -0.09638352380952386,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -2294,7 +2348,9 @@
             "raw_ev": -0.1525576774193549,
             "raw_edge": -0.09273113725490201,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -2316,7 +2372,9 @@
               "raw_ev": -0.1525576774193549,
               "raw_edge": -0.09273113725490201,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "home",
@@ -2337,7 +2395,9 @@
               "raw_ev": 0.080701,
               "raw_edge": 0.051294,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -2367,7 +2427,9 @@
             "raw_ev": 0.182831,
             "raw_edge": 0.125813,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -2389,7 +2451,9 @@
               "raw_ev": -0.28739755,
               "raw_edge": -0.13367327906976745,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -2410,7 +2474,9 @@
               "raw_ev": 0.182831,
               "raw_edge": 0.125813,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -2440,7 +2506,9 @@
             "raw_ev": 0.052506,
             "raw_edge": 0.049923,
             "ev_rating": "Medium-High",
-            "ev_rating_color": "#669f2a"
+            "ev_rating_color": "#669f2a",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -2462,7 +2530,9 @@
               "raw_ev": 0.052506,
               "raw_edge": 0.049923,
               "ev_rating": "Medium-High",
-              "ev_rating_color": "#669f2a"
+              "ev_rating_color": "#669f2a",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "under",
@@ -2483,7 +2553,9 @@
               "raw_ev": -0.12756132142857146,
               "raw_edge": -0.06739088679245281,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#669f2a",
@@ -2777,7 +2849,9 @@
             "raw_ev": -0.09753177777777788,
             "raw_edge": -0.05437612389380542,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -2799,7 +2873,9 @@
               "raw_ev": -0.09753177777777788,
               "raw_edge": -0.05437612389380542,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "home",
@@ -2820,7 +2896,9 @@
               "raw_ev": 0.028466,
               "raw_edge": 0.033905,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -2850,7 +2928,9 @@
             "raw_ev": 0.128374,
             "raw_edge": 0.105057,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -2872,7 +2952,9 @@
               "raw_ev": -0.2502472000000001,
               "raw_edge": -0.1042696666666667,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -2893,7 +2975,9 @@
               "raw_ev": 0.128374,
               "raw_edge": 0.105057,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -2923,7 +3007,9 @@
             "raw_ev": 0.109461,
             "raw_edge": 0.081146,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -2945,7 +3031,9 @@
               "raw_ev": 0.109461,
               "raw_edge": 0.081146,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             },
             {
               "side_key": "under",
@@ -2966,7 +3054,9 @@
               "raw_ev": -0.18223742857142855,
               "raw_edge": -0.09334112195121952,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -3260,7 +3350,9 @@
             "raw_ev": 0.163515,
             "raw_edge": 0.079441,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -3282,7 +3374,9 @@
               "raw_ev": -0.21480347058823523,
               "raw_edge": -0.13524662962962952,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -3303,7 +3397,9 @@
               "raw_ev": 0.163515,
               "raw_edge": 0.079441,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -3333,7 +3429,9 @@
             "raw_ev": 0.278502,
             "raw_edge": 0.169691,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -3355,7 +3453,9 @@
               "raw_ev": -0.33938199999999996,
               "raw_edge": -0.16969099999999998,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -3376,7 +3476,9 @@
               "raw_ev": 0.278502,
               "raw_edge": 0.169691,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -3406,7 +3508,9 @@
             "raw_ev": 0.114919,
             "raw_edge": 0.088513,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "60\u201364%",
+            "prob_rating_color": "#dc6803"
           },
           "options": [
             {
@@ -3428,7 +3532,9 @@
               "raw_ev": 0.114919,
               "raw_edge": 0.088513,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "60\u201364%",
+              "prob_rating_color": "#dc6803"
             },
             {
               "side_key": "under",
@@ -3449,7 +3555,9 @@
               "raw_ev": -0.20697600000000005,
               "raw_edge": -0.10348800000000002,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -3743,7 +3851,9 @@
             "raw_ev": -0.10780106451612903,
             "raw_edge": -0.06552613725490197,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -3765,7 +3875,9 @@
               "raw_ev": -0.10780106451612903,
               "raw_edge": -0.06552613725490197,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "home",
@@ -3786,7 +3898,9 @@
               "raw_ev": 0.036512,
               "raw_edge": 0.03398,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -3816,7 +3930,9 @@
             "raw_ev": 0.197534,
             "raw_edge": 0.127279,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "60\u201364%",
+            "prob_rating_color": "#dc6803"
           },
           "options": [
             {
@@ -3838,7 +3954,9 @@
               "raw_ev": -0.27230857142857146,
               "raw_edge": -0.13947512195121953,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -3859,7 +3977,9 @@
               "raw_ev": 0.197534,
               "raw_edge": 0.127279,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "60\u201364%",
+              "prob_rating_color": "#dc6803"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -3889,7 +4009,9 @@
             "raw_ev": 0.290541,
             "raw_edge": 0.171843,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -3911,7 +4033,9 @@
               "raw_ev": -0.322018,
               "raw_edge": -0.161009,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "under",
@@ -3932,7 +4056,9 @@
               "raw_ev": 0.290541,
               "raw_edge": 0.171843,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -4222,7 +4348,9 @@
             "raw_ev": -0.10948680597014937,
             "raw_edge": -0.06269757264957276,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -4244,7 +4372,9 @@
               "raw_ev": -0.10948680597014937,
               "raw_edge": -0.06269757264957276,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "home",
@@ -4265,7 +4395,9 @@
               "raw_ev": 0.022087,
               "raw_edge": 0.027983,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -4295,7 +4427,9 @@
             "raw_ev": 0.123436,
             "raw_edge": 0.100629,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -4317,7 +4451,9 @@
               "raw_ev": -0.2461911,
               "raw_edge": -0.10703960869565221,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -4338,7 +4474,9 @@
               "raw_ev": 0.123436,
               "raw_edge": 0.100629,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -4368,7 +4506,9 @@
             "raw_ev": 0.152841,
             "raw_edge": 0.118184,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -4390,7 +4530,9 @@
               "raw_ev": 0.152841,
               "raw_edge": 0.118184,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "under",
@@ -4411,7 +4553,9 @@
               "raw_ev": -0.11415985714285715,
               "raw_edge": -0.058472121951219536,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -4705,7 +4849,9 @@
             "raw_ev": 0.068744,
             "raw_edge": 0.05167,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -4727,7 +4873,9 @@
               "raw_ev": -0.13906666666666656,
               "raw_edge": -0.0758545454545454,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -4748,7 +4896,9 @@
               "raw_ev": 0.068744,
               "raw_edge": 0.05167,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -4778,7 +4928,9 @@
             "raw_ev": 0.144833,
             "raw_edge": 0.116426,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "70%+",
+            "prob_rating_color": "#156f3c"
           },
           "options": [
             {
@@ -4800,7 +4952,9 @@
               "raw_ev": -0.29083120000000007,
               "raw_edge": -0.12117966666666669,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -4821,7 +4975,9 @@
               "raw_ev": 0.144833,
               "raw_edge": 0.116426,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "70%+",
+              "prob_rating_color": "#156f3c"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -4851,7 +5007,9 @@
             "raw_ev": 0.094899,
             "raw_edge": 0.083252,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -4873,7 +5031,9 @@
               "raw_ev": 0.094899,
               "raw_edge": 0.083252,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "under",
@@ -4894,7 +5054,9 @@
               "raw_ev": -0.04939394117647056,
               "raw_edge": -0.024941495049504936,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -5184,7 +5346,9 @@
             "raw_ev": -0.07794238461538461,
             "raw_edge": -0.04405439130434785,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -5206,7 +5370,9 @@
               "raw_ev": -0.07794238461538461,
               "raw_edge": -0.04405439130434785,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "home",
@@ -5227,7 +5393,9 @@
               "raw_ev": 0.009607,
               "raw_edge": 0.022179,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -5257,7 +5425,9 @@
             "raw_ev": 0.161519,
             "raw_edge": 0.120308,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -5279,7 +5449,9 @@
               "raw_ev": -0.2675696000000001,
               "raw_edge": -0.11633460869565221,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -5300,7 +5472,9 @@
               "raw_ev": 0.161519,
               "raw_edge": 0.120308,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -5330,7 +5504,9 @@
             "raw_ev": 0.220049,
             "raw_edge": 0.135738,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "60\u201364%",
+            "prob_rating_color": "#dc6803"
           },
           "options": [
             {
@@ -5352,7 +5528,9 @@
               "raw_ev": -0.2839057272727272,
               "raw_edge": -0.14871252380952382,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "under",
@@ -5373,7 +5551,9 @@
               "raw_ev": 0.220049,
               "raw_edge": 0.135738,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "60\u201364%",
+              "prob_rating_color": "#dc6803"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -5663,7 +5843,9 @@
             "raw_ev": -0.07235338461538476,
             "raw_edge": -0.04089539130434794,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -5685,7 +5867,9 @@
               "raw_ev": 0.024714,
               "raw_edge": 0.029271,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -5706,7 +5890,9 @@
               "raw_ev": -0.07235338461538476,
               "raw_edge": -0.04089539130434794,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -5736,7 +5922,9 @@
             "raw_ev": 0.047865,
             "raw_edge": 0.059002,
             "ev_rating": "Medium",
-            "ev_rating_color": "#0f4c81"
+            "ev_rating_color": "#0f4c81",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -5758,7 +5946,9 @@
               "raw_ev": 0.047865,
               "raw_edge": 0.059002,
               "ev_rating": "Medium",
-              "ev_rating_color": "#0f4c81"
+              "ev_rating_color": "#0f4c81",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             },
             {
               "side_key": "home",
@@ -5779,7 +5969,9 @@
               "raw_ev": -0.12238929999999992,
               "raw_edge": -0.045329370370370325,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#0f4c81",
@@ -5809,7 +6001,9 @@
             "raw_ev": 0.070865,
             "raw_edge": 0.059326,
             "ev_rating": "Medium-High",
-            "ev_rating_color": "#669f2a"
+            "ev_rating_color": "#669f2a",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -5831,7 +6025,9 @@
               "raw_ev": 0.070865,
               "raw_edge": 0.059326,
               "ev_rating": "Medium-High",
-              "ev_rating_color": "#669f2a"
+              "ev_rating_color": "#669f2a",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             },
             {
               "side_key": "under",
@@ -5852,7 +6048,9 @@
               "raw_ev": -0.11434969230769221,
               "raw_edge": -0.058295921568627396,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#669f2a",
@@ -6125,7 +6323,9 @@
             "raw_ev": -0.017913333333333337,
             "raw_edge": -0.0091751219512195,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -6147,7 +6347,9 @@
               "raw_ev": -0.025154615384615386,
               "raw_edge": -0.012823921568627439,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -6168,7 +6370,9 @@
               "raw_ev": -0.017913333333333337,
               "raw_edge": -0.0091751219512195,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -6198,7 +6402,9 @@
             "raw_ev": 0.090362,
             "raw_edge": 0.086274,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "70%+",
+            "prob_rating_color": "#156f3c"
           },
           "options": [
             {
@@ -6220,7 +6426,9 @@
               "raw_ev": -0.23672320000000002,
               "raw_edge": -0.09104738461538459,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -6241,7 +6449,9 @@
               "raw_ev": 0.090362,
               "raw_edge": 0.086274,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "70%+",
+              "prob_rating_color": "#156f3c"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -6271,7 +6481,9 @@
             "raw_ev": 0.035141,
             "raw_edge": 0.042611,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -6293,7 +6505,9 @@
               "raw_ev": 0.012248999999999954,
               "raw_edge": 0.005975121951219464,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "under",
@@ -6314,7 +6528,9 @@
               "raw_ev": 0.035141,
               "raw_edge": 0.042611,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -6566,7 +6782,9 @@
             "raw_ev": -0.0013488461538461172,
             "raw_edge": -0.0007623913043478536,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -6588,7 +6806,9 @@
               "raw_ev": -0.06357825000000006,
               "raw_edge": -0.02957127906976742,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -6609,7 +6829,9 @@
               "raw_ev": -0.0013488461538461172,
               "raw_edge": -0.0007623913043478536,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -6639,7 +6861,9 @@
             "raw_ev": -0.022456061855670173,
             "raw_edge": -0.01481794557823135,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "60\u201364%",
+            "prob_rating_color": "#dc6803"
           },
           "options": [
             {
@@ -6661,7 +6885,9 @@
               "raw_ev": -0.022456061855670173,
               "raw_edge": -0.01481794557823135,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "60\u201364%",
+              "prob_rating_color": "#dc6803"
             },
             {
               "side_key": "home",
@@ -6682,7 +6908,9 @@
               "raw_ev": -0.0416242,
               "raw_edge": -0.015416370370370358,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -6712,7 +6940,9 @@
             "raw_ev": 0.234171,
             "raw_edge": 0.14416,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "60\u201364%",
+            "prob_rating_color": "#dc6803"
           },
           "options": [
             {
@@ -6734,7 +6964,9 @@
               "raw_ev": 0.234171,
               "raw_edge": 0.14416,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "60\u201364%",
+              "prob_rating_color": "#dc6803"
             },
             {
               "side_key": "under",
@@ -6755,7 +6987,9 @@
               "raw_ev": -0.30673717391304356,
               "raw_edge": -0.16406872093023261,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -7049,7 +7283,9 @@
             "raw_ev": -0.11583849999999996,
             "raw_edge": -0.07722566666666664,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -7071,7 +7307,9 @@
               "raw_ev": 0.089025,
               "raw_edge": 0.047324,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -7092,7 +7330,9 @@
               "raw_ev": -0.11583849999999996,
               "raw_edge": -0.07722566666666664,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -7122,7 +7362,9 @@
             "raw_ev": 0.122874,
             "raw_edge": 0.089772,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "60\u201364%",
+            "prob_rating_color": "#dc6803"
           },
           "options": [
             {
@@ -7144,7 +7386,9 @@
               "raw_ev": 0.122874,
               "raw_edge": 0.089772,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "60\u201364%",
+              "prob_rating_color": "#dc6803"
             },
             {
               "side_key": "home",
@@ -7165,7 +7409,9 @@
               "raw_ev": -0.201214,
               "raw_edge": -0.100607,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -7195,7 +7441,9 @@
             "raw_ev": 0.08082,
             "raw_edge": 0.0671,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -7217,7 +7465,9 @@
               "raw_ev": -0.15984635294117644,
               "raw_edge": -0.08071449504950495,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "under",
@@ -7238,7 +7488,9 @@
               "raw_ev": 0.08082,
               "raw_edge": 0.0671,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -7532,7 +7784,9 @@
             "raw_ev": 0.087527,
             "raw_edge": 0.055212,
             "ev_rating": "Low",
-            "ev_rating_color": "#b42318"
+            "ev_rating_color": "#b42318",
+            "prob_rating": "50\u201354%",
+            "prob_rating_color": "#b54708"
           },
           "options": [
             {
@@ -7554,7 +7808,9 @@
               "raw_ev": -0.16922166666666671,
               "raw_edge": -0.1015330000000001,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -7575,7 +7831,9 @@
               "raw_ev": 0.087527,
               "raw_edge": 0.055212,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "50\u201354%",
+              "prob_rating_color": "#b54708"
             }
           ],
           "ev_summary_color": "#b42318",
@@ -7605,7 +7863,9 @@
             "raw_ev": 0.185962,
             "raw_edge": 0.130174,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "65\u201369%",
+            "prob_rating_color": "#669f2a"
           },
           "options": [
             {
@@ -7627,7 +7887,9 @@
               "raw_ev": -0.2959997,
               "raw_edge": -0.13767427906976742,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             },
             {
               "side_key": "home",
@@ -7648,7 +7910,9 @@
               "raw_ev": 0.185962,
               "raw_edge": 0.130174,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "65\u201369%",
+              "prob_rating_color": "#669f2a"
             }
           ],
           "ev_summary_color": "#156f3c",
@@ -7678,7 +7942,9 @@
             "raw_ev": 0.114995,
             "raw_edge": 0.093432,
             "ev_rating": "High",
-            "ev_rating_color": "#156f3c"
+            "ev_rating_color": "#156f3c",
+            "prob_rating": "55\u201359%",
+            "prob_rating_color": "#e04f16"
           },
           "options": [
             {
@@ -7700,7 +7966,9 @@
               "raw_ev": 0.114995,
               "raw_edge": 0.093432,
               "ev_rating": "High",
-              "ev_rating_color": "#156f3c"
+              "ev_rating_color": "#156f3c",
+              "prob_rating": "55\u201359%",
+              "prob_rating_color": "#e04f16"
             },
             {
               "side_key": "under",
@@ -7721,7 +7989,9 @@
               "raw_ev": -0.209877283018868,
               "raw_edge": -0.10799510679611651,
               "ev_rating": "Low",
-              "ev_rating_color": "#b42318"
+              "ev_rating_color": "#b42318",
+              "prob_rating": "<50%",
+              "prob_rating_color": "#93370d"
             }
           ],
           "ev_summary_color": "#156f3c",
