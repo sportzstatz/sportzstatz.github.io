@@ -230,8 +230,6 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 8px;
       margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px solid #eaecf0;
     }
     .metric-bubble {
       border: 1px solid #eaecf0;
@@ -318,8 +316,14 @@
       gap: 8px;
     }
     .option-label {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .option-meta {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
     }
     .option-badge {
       border: 1px solid var(--line);
@@ -336,9 +340,9 @@
     }
     .option-metrics {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 8px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
     /* ── confidence colours ──────────────────────────── */
     .confidence-high { color: var(--good); }
@@ -438,7 +442,7 @@
       .tile-list { grid-template-columns: 1fr; }
       .pitchers { grid-template-columns: 1fr; }
       .best-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .option-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .option-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .md-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -454,7 +458,7 @@
       <h1>MLB Forecast and Betting Board</h1>
       <div class="subtitle">Forecasts render from the MLB platform. When matched odds are present, each tile shows a best available bet card and market-level dropdowns with both sides of every market.</div>
       <div class="meta">
-        <div class="pill">Generated 2026-04-08 08:21 AM CDT</div>
+        <div class="pill">Generated 2026-04-08 08:56 AM CDT</div>
         <div class="pill">Date 2026-04-08</div>
         <div class="pill">Requested probable</div>
         <div class="pill">Mode probable</div>
@@ -556,7 +560,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">46.8%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 50.0%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -564,14 +567,13 @@
                   <span class="option-label">Pittsburgh Pirates</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">FanDuel -106</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">53.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-106</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 50.0%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">53.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+2.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.01u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.2%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -596,13 +598,13 @@
                   <span class="option-label">Pittsburgh Pirates +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -181</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">71.4%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-181</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">71.4%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+9.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.11u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -619,13 +621,13 @@
                   <span class="option-label">Over 7.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM +100</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">66.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+100</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">66.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+18.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.33u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -802,7 +804,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">43.9%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 54.0%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -810,14 +811,13 @@
                   <span class="option-label">Cleveland Guardians</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">theScore Bet +110</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">56.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+110</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 46.0%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">56.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+6.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.10u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">theScore Bet</div></div>
                 </div>
               </div>
             </div>
@@ -842,13 +842,13 @@
                   <span class="option-label">Cleveland Guardians +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -163</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">73.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-163</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">73.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+14.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.18u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -865,13 +865,13 @@
                   <span class="option-label">Over 7.0</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -108</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">57.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-108</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">57.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+7.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.09u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -1048,7 +1048,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">44.1%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 44.8%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -1057,7 +1056,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">55.9%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 55.2%</div></div>
                 </div>
               </div>
             </div>
@@ -1074,13 +1072,13 @@
                   <span class="option-label">Milwaukee Brewers +1.5</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">theScore Bet -180</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">65.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-180</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">65.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+3.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.01u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.4%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">theScore Bet</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -1105,13 +1103,13 @@
                   <span class="option-label">Over 7.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -105</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">57.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-105</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">57.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+8.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.12u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -1288,7 +1286,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">51.5%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 59.1%</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -1296,14 +1293,13 @@
                   <span class="option-label">Chicago White Sox</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">FanDuel +136</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">48.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+136</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 40.9%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">48.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+5.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.08u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.9%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -1328,13 +1324,13 @@
                   <span class="option-label">Chicago White Sox +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -130</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">66.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-130</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">66.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+12.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.18u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
             </div>
@@ -1351,13 +1347,13 @@
                   <span class="option-label">Over 7.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -105</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">53.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-105</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">53.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+5.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.05u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.8%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -1534,7 +1530,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.3%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 54.3%</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -1542,14 +1537,13 @@
                   <span class="option-label">Texas Rangers</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">DraftKings +113</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">49.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+113</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 45.7%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">49.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+3.4%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.03u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.4%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -1574,13 +1568,13 @@
                   <span class="option-label">Texas Rangers +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -156</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">68.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-156</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">68.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+10.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.13u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -1597,13 +1591,13 @@
                   <span class="option-label">Over 7.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -110</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">58.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-110</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">58.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+8.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.11u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -1780,7 +1774,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">49.4%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 60.8%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -1788,14 +1781,13 @@
                   <span class="option-label">Toronto Blue Jays</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">theScore Bet +150</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+150</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 39.2%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+7.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.16u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">theScore Bet</div></div>
                 </div>
               </div>
             </div>
@@ -1820,13 +1812,13 @@
                   <span class="option-label">Toronto Blue Jays +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -110</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-110</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+17.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.28u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -1843,13 +1835,13 @@
                   <span class="option-label">Over 7.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">FanDuel -118</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">60.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-118</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">60.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+8.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.11u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -2026,7 +2018,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">54.2%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 58.9%</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -2034,14 +2025,13 @@
                   <span class="option-label">Colorado Rockies</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">DraftKings +135</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">45.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+135</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 41.1%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">45.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+3.4%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.04u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.4%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -2066,13 +2056,13 @@
                   <span class="option-label">Colorado Rockies +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -110</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">62.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-110</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">62.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+12.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.20u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
             </div>
@@ -2097,13 +2087,13 @@
                   <span class="option-label">Under 11.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -105</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">66.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-105</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">66.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+17.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.29u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
             </div>
@@ -2272,7 +2262,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">51.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 55.2%</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -2280,14 +2269,13 @@
                   <span class="option-label">San Francisco Giants</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">BetMGM +115</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">49.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+115</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 44.8%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">49.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+2.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.02u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.3%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
             </div>
@@ -2312,13 +2300,13 @@
                   <span class="option-label">San Francisco Giants +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -149</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-149</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+10.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.12u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -2335,13 +2323,13 @@
                   <span class="option-label">Over 8.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -115</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">54.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-115</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">54.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+11.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.15u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -2518,7 +2506,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">47.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 53.1%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -2526,14 +2513,13 @@
                   <span class="option-label">Washington Nationals</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">FanDuel +110</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">53.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+110</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 46.9%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">53.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+5.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.07u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.9%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -2558,13 +2544,13 @@
                   <span class="option-label">Washington Nationals +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">FanDuel -160</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">70.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-160</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">70.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+11.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.14u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -2581,13 +2567,13 @@
                   <span class="option-label">Over 8.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -118</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">52.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-118</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">52.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+8.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.09u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -2764,7 +2750,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">52.1%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 54.8%</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -2772,14 +2757,13 @@
                   <span class="option-label">Los Angeles Angels</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">BetMGM +115</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">47.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+115</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 45.2%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">47.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+2.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.01u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.1%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
             </div>
@@ -2804,13 +2788,13 @@
                   <span class="option-label">Los Angeles Angels +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">FanDuel -142</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">68.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-142</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">68.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+12.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.16u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -2835,13 +2819,13 @@
                   <span class="option-label">Under 8.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -105</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">62.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-105</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">62.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+13.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.22u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -3009,14 +2993,13 @@
                   <span class="option-label">Arizona Diamondbacks</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">FanDuel +120</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">47.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+120</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 44.7%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">47.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+2.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.02u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.3%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -3025,7 +3008,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">52.4%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 55.3%</div></div>
                 </div>
               </div>
             </div>
@@ -3042,13 +3024,13 @@
                   <span class="option-label">Arizona Diamondbacks +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -181</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-181</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+5.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.05u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -3073,13 +3055,13 @@
                   <span class="option-label">Over 7.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -105</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">54.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-105</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">54.8%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+5.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.07u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -3256,7 +3238,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">49.7%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 49.9%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -3265,7 +3246,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.3%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 50.1%</div></div>
                 </div>
               </div>
             </div>
@@ -3290,13 +3270,13 @@
                   <span class="option-label">Tampa Bay Rays +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">FanDuel -184</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">70.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-184</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">70.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+8.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.09u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -3321,13 +3301,13 @@
                   <span class="option-label">Under 8.0</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">theScore Bet -125</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-125</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+4.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.04u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.7%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">theScore Bet</div></div>
                 </div>
               </div>
             </div>
@@ -3496,7 +3476,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">43.6%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 45.3%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -3505,7 +3484,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">56.4%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 54.7%</div></div>
                 </div>
               </div>
             </div>
@@ -3547,13 +3525,13 @@
                   <span class="option-label">Over 7.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">FanDuel -104</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">62.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-104</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">62.9%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+14.4%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.23u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -3729,14 +3707,13 @@
                   <span class="option-label">Athletics</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">DraftKings +179</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">41.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+179</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 35.4%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">41.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+4.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.09u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">0.7%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -3745,7 +3722,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">58.9%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 64.6%</div></div>
                 </div>
               </div>
             </div>
@@ -3762,13 +3738,13 @@
                   <span class="option-label">Athletics +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -115</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">60.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-115</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">60.1%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+9.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.12u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
               <div class="option-card">
@@ -3801,13 +3777,13 @@
                   <span class="option-label">Under 8.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">FanDuel -114</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">57.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-114</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">57.6%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+6.7%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.08u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -3976,7 +3952,6 @@
                 </div>
                 <div class="option-metrics">
                   <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">49.8%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 58.0%</div></div>
                 </div>
               </div>
               <div class="option-card primary">
@@ -3984,14 +3959,13 @@
                   <span class="option-label">Minnesota Twins</span>
                   <span class="option-badge">Low</span>
                 </div>
+                <div class="option-meta">FanDuel +130</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">+130</div></div>
-                  <div class="metric-bubble"><div class="m-label">Fair</div><div class="m-value">fair 42.0%</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">50.2%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+5.5%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.09u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">FanDuel</div></div>
                 </div>
               </div>
             </div>
@@ -4016,13 +3990,13 @@
                   <span class="option-label">Minnesota Twins +1.5</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">DraftKings -131</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-131</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">67.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+13.0%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.19u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">DraftKings</div></div>
                 </div>
               </div>
             </div>
@@ -4039,13 +4013,13 @@
                   <span class="option-label">Over 8.0</span>
                   <span class="option-badge official">Official</span>
                 </div>
+                <div class="option-meta">BetMGM -110</div>
                 <div class="option-metrics">
-                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">59.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Odds</div><div class="m-value">-110</div></div>
+                  <div class="metric-bubble"><div class="m-label">Model Prob</div><div class="m-value">59.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">Edge</div><div class="m-value">+9.3%</div></div>
                   <div class="metric-bubble"><div class="m-label">EV / Unit</div><div class="m-value">+0.11u</div></div>
                   <div class="metric-bubble"><div class="m-label">Stake</div><div class="m-value">1.0%</div></div>
-                  <div class="metric-bubble"><div class="m-label">Book</div><div class="m-value">BetMGM</div></div>
                 </div>
               </div>
               <div class="option-card">
