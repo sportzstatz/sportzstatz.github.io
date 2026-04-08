@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08 08:56 AM CDT",
+  "generated_at": "2026-04-08 09:07 AM CDT",
   "target_date": "2026-04-08",
   "requested_mode": "probable",
   "mode": "probable",
@@ -806,19 +806,19 @@
             {
               "side_key": "away",
               "label": "San Diego Padres",
-              "odds_text": "N/A",
+              "odds_text": "-105",
               "model_probability": 0.468393,
               "model_probability_text": "46.8%",
               "fair_text": "fair 50.0%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-4.4%",
+              "ev_text": "-0.09u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             },
             {
               "side_key": "home",
@@ -865,19 +865,19 @@
             {
               "side_key": "away",
               "label": "San Diego Padres -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+165",
               "model_probability": 0.286222,
               "model_probability_text": "28.6%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-9.1%",
+              "ev_text": "-0.24u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             },
             {
               "side_key": "home",
@@ -941,19 +941,19 @@
             {
               "side_key": "under",
               "label": "Under 7.5",
-              "odds_text": "N/A",
+              "odds_text": "+103",
               "model_probability": 0.334251,
               "model_probability_text": "33.4%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-15.8%",
+              "ev_text": "-0.32u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "DraftKings"
             }
           ]
         }
@@ -1231,19 +1231,19 @@
             {
               "side_key": "away",
               "label": "Kansas City Royals",
-              "odds_text": "N/A",
+              "odds_text": "-125",
               "model_probability": 0.438621,
               "model_probability_text": "43.9%",
               "fair_text": "fair 54.0%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-11.7%",
+              "ev_text": "-0.21u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             },
             {
               "side_key": "home",
@@ -1290,19 +1290,19 @@
             {
               "side_key": "away",
               "label": "Kansas City Royals -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+146",
               "model_probability": 0.266759,
               "model_probability_text": "26.7%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-14.0%",
+              "ev_text": "-0.34u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "home",
@@ -1366,19 +1366,19 @@
             {
               "side_key": "under",
               "label": "Under 7.0",
-              "odds_text": "N/A",
+              "odds_text": "+120",
               "model_probability": 0.42675,
               "model_probability_text": "42.7%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-2.8%",
+              "ev_text": "-0.06u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             }
           ]
         }
@@ -1617,54 +1617,54 @@
           "primary_option": {
             "side_key": "home",
             "label": "Boston Red Sox",
-            "odds_text": "N/A",
+            "odds_text": "-134",
             "model_probability": 0.558875,
             "model_probability_text": "55.9%",
             "fair_text": "fair 55.2%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-1.4%",
+            "ev_text": "-0.02u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "FanDuel"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Milwaukee Brewers",
-              "odds_text": "N/A",
+              "odds_text": "+115",
               "model_probability": 0.441125,
               "model_probability_text": "44.1%",
               "fair_text": "fair 44.8%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-2.4%",
+              "ev_text": "-0.05u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
               "label": "Boston Red Sox",
-              "odds_text": "N/A",
+              "odds_text": "-134",
               "model_probability": 0.558875,
               "model_probability_text": "55.9%",
               "fair_text": "fair 55.2%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-1.4%",
+              "ev_text": "-0.02u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             }
           ]
         },
@@ -1711,19 +1711,19 @@
             {
               "side_key": "home",
               "label": "Boston Red Sox -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+165",
               "model_probability": 0.347907,
               "model_probability_text": "34.8%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-2.9%",
+              "ev_text": "-0.08u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         },
@@ -1770,19 +1770,19 @@
             {
               "side_key": "under",
               "label": "Under 7.5",
-              "odds_text": "N/A",
+              "odds_text": "-110",
               "model_probability": 0.427426,
               "model_probability_text": "42.7%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-9.6%",
+              "ev_text": "-0.18u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             }
           ]
         }
@@ -2042,37 +2042,37 @@
           "primary_option": {
             "side_key": "away",
             "label": "Baltimore Orioles",
-            "odds_text": "N/A",
+            "odds_text": "-155",
             "model_probability": 0.515112,
             "model_probability_text": "51.5%",
             "fair_text": "fair 59.1%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-9.3%",
+            "ev_text": "-0.15u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "theScore Bet"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Baltimore Orioles",
-              "odds_text": "N/A",
+              "odds_text": "-155",
               "model_probability": 0.515112,
               "model_probability_text": "51.5%",
               "fair_text": "fair 59.1%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-9.3%",
+              "ev_text": "-0.15u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -2119,19 +2119,19 @@
             {
               "side_key": "away",
               "label": "Baltimore Orioles -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+115",
               "model_probability": 0.331443,
               "model_probability_text": "33.1%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-13.4%",
+              "ev_text": "-0.29u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -2195,19 +2195,19 @@
             {
               "side_key": "under",
               "label": "Under 7.5",
-              "odds_text": "N/A",
+              "odds_text": "-112",
               "model_probability": 0.460911,
               "model_probability_text": "46.1%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-6.7%",
+              "ev_text": "-0.13u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "DraftKings"
             }
           ]
         }
@@ -2467,37 +2467,37 @@
           "primary_option": {
             "side_key": "away",
             "label": "Seattle Mariners",
-            "odds_text": "N/A",
+            "odds_text": "-126",
             "model_probability": 0.503146,
             "model_probability_text": "50.3%",
             "fair_text": "fair 54.3%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-5.4%",
+            "ev_text": "-0.10u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "FanDuel"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Seattle Mariners",
-              "odds_text": "N/A",
+              "odds_text": "-126",
               "model_probability": 0.503146,
               "model_probability_text": "50.3%",
               "fair_text": "fair 54.3%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-5.4%",
+              "ev_text": "-0.10u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "home",
@@ -2544,19 +2544,19 @@
             {
               "side_key": "away",
               "label": "Seattle Mariners -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+140",
               "model_probability": 0.312397,
               "model_probability_text": "31.2%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-10.4%",
+              "ev_text": "-0.25u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -2620,19 +2620,19 @@
             {
               "side_key": "under",
               "label": "Under 7.5",
-              "odds_text": "N/A",
+              "odds_text": "-105",
               "model_probability": 0.418854,
               "model_probability_text": "41.9%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-9.3%",
+              "ev_text": "-0.18u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         }
@@ -2910,19 +2910,19 @@
             {
               "side_key": "away",
               "label": "Los Angeles Dodgers",
-              "odds_text": "N/A",
+              "odds_text": "-170",
               "model_probability": 0.494383,
               "model_probability_text": "49.4%",
               "fair_text": "fair 60.8%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-13.5%",
+              "ev_text": "-0.21u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             },
             {
               "side_key": "home",
@@ -2969,19 +2969,19 @@
             {
               "side_key": "away",
               "label": "Los Angeles Dodgers -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+100",
               "model_probability": 0.330309,
               "model_probability_text": "33.0%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-17.0%",
+              "ev_text": "-0.34u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -3045,19 +3045,19 @@
             {
               "side_key": "under",
               "label": "Under 7.5",
-              "odds_text": "N/A",
+              "odds_text": "+100",
               "model_probability": 0.396512,
               "model_probability_text": "39.7%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-10.3%",
+              "ev_text": "-0.21u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             }
           ]
         }
@@ -3317,37 +3317,37 @@
           "primary_option": {
             "side_key": "away",
             "label": "Houston Astros",
-            "odds_text": "N/A",
+            "odds_text": "-155",
             "model_probability": 0.542317,
             "model_probability_text": "54.2%",
             "fair_text": "fair 58.9%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-6.6%",
+            "ev_text": "-0.11u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "theScore Bet"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Houston Astros",
-              "odds_text": "N/A",
+              "odds_text": "-155",
               "model_probability": 0.542317,
               "model_probability_text": "54.2%",
               "fair_text": "fair 58.9%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-6.6%",
+              "ev_text": "-0.11u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -3394,19 +3394,19 @@
             {
               "side_key": "away",
               "label": "Houston Astros -1.5",
-              "odds_text": "N/A",
+              "odds_text": "-105",
               "model_probability": 0.37272,
               "model_probability_text": "37.3%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-13.9%",
+              "ev_text": "-0.27u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -3453,19 +3453,19 @@
             {
               "side_key": "over",
               "label": "Over 11.5",
-              "odds_text": "N/A",
+              "odds_text": "+100",
               "model_probability": 0.338991,
               "model_probability_text": "33.9%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-16.1%",
+              "ev_text": "-0.32u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "under",
@@ -3742,37 +3742,37 @@
           "primary_option": {
             "side_key": "away",
             "label": "Philadelphia Phillies",
-            "odds_text": "N/A",
+            "odds_text": "-134",
             "model_probability": 0.509952,
             "model_probability_text": "51.0%",
             "fair_text": "fair 55.2%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-6.3%",
+            "ev_text": "-0.11u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "FanDuel"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Philadelphia Phillies",
-              "odds_text": "N/A",
+              "odds_text": "-134",
               "model_probability": 0.509952,
               "model_probability_text": "51.0%",
               "fair_text": "fair 55.2%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-6.3%",
+              "ev_text": "-0.11u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "home",
@@ -3819,19 +3819,19 @@
             {
               "side_key": "away",
               "label": "Philadelphia Phillies -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+130",
               "model_probability": 0.327743,
               "model_probability_text": "32.8%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-10.7%",
+              "ev_text": "-0.25u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -3895,19 +3895,19 @@
             {
               "side_key": "under",
               "label": "Under 8.5",
-              "odds_text": "N/A",
+              "odds_text": "-105",
               "model_probability": 0.453723,
               "model_probability_text": "45.4%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-5.8%",
+              "ev_text": "-0.11u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         }
@@ -4185,19 +4185,19 @@
             {
               "side_key": "away",
               "label": "St. Louis Cardinals",
-              "odds_text": "N/A",
+              "odds_text": "-120",
               "model_probability": 0.4696,
               "model_probability_text": "47.0%",
               "fair_text": "fair 53.1%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-7.6%",
+              "ev_text": "-0.14u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             },
             {
               "side_key": "home",
@@ -4244,19 +4244,19 @@
             {
               "side_key": "away",
               "label": "St. Louis Cardinals -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+140",
               "model_probability": 0.295487,
               "model_probability_text": "29.5%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-12.1%",
+              "ev_text": "-0.29u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             },
             {
               "side_key": "home",
@@ -4320,19 +4320,19 @@
             {
               "side_key": "under",
               "label": "Under 8.5",
-              "odds_text": "N/A",
+              "odds_text": "-102",
               "model_probability": 0.480009,
               "model_probability_text": "48.0%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-2.5%",
+              "ev_text": "-0.05u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "DraftKings"
             }
           ]
         }
@@ -4592,37 +4592,37 @@
           "primary_option": {
             "side_key": "away",
             "label": "Atlanta Braves",
-            "odds_text": "N/A",
+            "odds_text": "-130",
             "model_probability": 0.521163,
             "model_probability_text": "52.1%",
             "fair_text": "fair 54.8%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-4.4%",
+            "ev_text": "-0.08u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "FanDuel"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Atlanta Braves",
-              "odds_text": "N/A",
+              "odds_text": "-130",
               "model_probability": 0.521163,
               "model_probability_text": "52.1%",
               "fair_text": "fair 54.8%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-4.4%",
+              "ev_text": "-0.08u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "home",
@@ -4669,19 +4669,19 @@
             {
               "side_key": "away",
               "label": "Atlanta Braves -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+130",
               "model_probability": 0.318448,
               "model_probability_text": "31.8%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-11.6%",
+              "ev_text": "-0.27u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -4728,19 +4728,19 @@
             {
               "side_key": "over",
               "label": "Over 8.5",
-              "odds_text": "N/A",
+              "odds_text": "-110",
               "model_probability": 0.375097,
               "model_probability_text": "37.5%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-14.9%",
+              "ev_text": "-0.28u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "under",
@@ -5017,19 +5017,19 @@
           "primary_option": {
             "side_key": "home",
             "label": "New York Mets",
-            "odds_text": "N/A",
+            "odds_text": "-130",
             "model_probability": 0.524322,
             "model_probability_text": "52.4%",
             "fair_text": "fair 55.3%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-4.1%",
+            "ev_text": "-0.07u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "BetMGM"
           },
           "options": [
             {
@@ -5052,19 +5052,19 @@
             {
               "side_key": "home",
               "label": "New York Mets",
-              "odds_text": "N/A",
+              "odds_text": "-130",
               "model_probability": 0.524322,
               "model_probability_text": "52.4%",
               "fair_text": "fair 55.3%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-4.1%",
+              "ev_text": "-0.07u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         },
@@ -5111,19 +5111,19 @@
             {
               "side_key": "home",
               "label": "New York Mets -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+170",
               "model_probability": 0.325041,
               "model_probability_text": "32.5%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-4.5%",
+              "ev_text": "-0.12u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         },
@@ -5170,19 +5170,19 @@
             {
               "side_key": "under",
               "label": "Under 7.5",
-              "odds_text": "N/A",
+              "odds_text": "-104",
               "model_probability": 0.451508,
               "model_probability_text": "45.2%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-5.8%",
+              "ev_text": "-0.11u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             }
           ]
         }
@@ -5421,54 +5421,54 @@
           "primary_option": {
             "side_key": "home",
             "label": "Tampa Bay Rays",
-            "odds_text": "N/A",
+            "odds_text": "-105",
             "model_probability": 0.50302,
             "model_probability_text": "50.3%",
             "fair_text": "fair 50.1%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-0.9%",
+            "ev_text": "-0.02u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "BetMGM"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Chicago Cubs",
-              "odds_text": "N/A",
+              "odds_text": "-104",
               "model_probability": 0.49698,
               "model_probability_text": "49.7%",
               "fair_text": "fair 49.9%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-1.3%",
+              "ev_text": "-0.03u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "home",
               "label": "Tampa Bay Rays",
-              "odds_text": "N/A",
+              "odds_text": "-105",
               "model_probability": 0.50302,
               "model_probability_text": "50.3%",
               "fair_text": "fair 50.1%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-0.9%",
+              "ev_text": "-0.02u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         },
@@ -5498,19 +5498,19 @@
             {
               "side_key": "away",
               "label": "Chicago Cubs -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+160",
               "model_probability": 0.293568,
               "model_probability_text": "29.4%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-9.1%",
+              "ev_text": "-0.24u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -5557,19 +5557,19 @@
             {
               "side_key": "over",
               "label": "Over 8.0",
-              "odds_text": "N/A",
+              "odds_text": "+105",
               "model_probability": 0.49378,
               "model_probability_text": "49.4%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "+0.6%",
+              "ev_text": "+0.01u",
+              "stake_text": "0.1%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "under",
@@ -5804,54 +5804,54 @@
           "primary_option": {
             "side_key": "home",
             "label": "Miami Marlins",
-            "odds_text": "N/A",
+            "odds_text": "-130",
             "model_probability": 0.564455,
             "model_probability_text": "56.4%",
             "fair_text": "fair 54.7%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-0.1%",
+            "ev_text": "-0.00u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "FanDuel"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Cincinnati Reds",
-              "odds_text": "N/A",
+              "odds_text": "+115",
               "model_probability": 0.435545,
               "model_probability_text": "43.6%",
               "fair_text": "fair 45.3%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-3.0%",
+              "ev_text": "-0.06u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
               "label": "Miami Marlins",
-              "odds_text": "N/A",
+              "odds_text": "-130",
               "model_probability": 0.564455,
               "model_probability_text": "56.4%",
               "fair_text": "fair 54.7%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-0.1%",
+              "ev_text": "-0.00u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             }
           ]
         },
@@ -5863,54 +5863,54 @@
           "primary_option": {
             "side_key": "away",
             "label": "Cincinnati Reds +1.5",
-            "odds_text": "N/A",
+            "odds_text": "-194",
             "model_probability": 0.645046,
             "model_probability_text": "64.5%",
             "fair_text": "N/A",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-1.5%",
+            "ev_text": "-0.02u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "FanDuel"
           },
           "options": [
             {
               "side_key": "away",
               "label": "Cincinnati Reds +1.5",
-              "odds_text": "N/A",
+              "odds_text": "-194",
               "model_probability": 0.645046,
               "model_probability_text": "64.5%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-1.5%",
+              "ev_text": "-0.02u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             },
             {
               "side_key": "home",
               "label": "Miami Marlins -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+170",
               "model_probability": 0.354954,
               "model_probability_text": "35.5%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-1.5%",
+              "ev_text": "-0.04u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         },
@@ -5957,19 +5957,19 @@
             {
               "side_key": "under",
               "label": "Under 7.5",
-              "odds_text": "N/A",
+              "odds_text": "-115",
               "model_probability": 0.370815,
               "model_probability_text": "37.1%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-16.4%",
+              "ev_text": "-0.31u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             }
           ]
         }
@@ -6229,19 +6229,19 @@
           "primary_option": {
             "side_key": "home",
             "label": "New York Yankees",
-            "odds_text": "N/A",
+            "odds_text": "-200",
             "model_probability": 0.589441,
             "model_probability_text": "58.9%",
             "fair_text": "fair 64.6%",
-            "edge_text": "N/A",
-            "ev_text": "N/A",
-            "stake_text": "N/A",
+            "edge_text": "-7.7%",
+            "ev_text": "-0.12u",
+            "stake_text": "0.0%",
             "is_official": false,
             "is_primary": true,
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": ""
+            "sportsbook": "BetMGM"
           },
           "options": [
             {
@@ -6264,19 +6264,19 @@
             {
               "side_key": "home",
               "label": "New York Yankees",
-              "odds_text": "N/A",
+              "odds_text": "-200",
               "model_probability": 0.589441,
               "model_probability_text": "58.9%",
               "fair_text": "fair 64.6%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-7.7%",
+              "ev_text": "-0.12u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": true,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             }
           ]
         },
@@ -6323,19 +6323,19 @@
             {
               "side_key": "home",
               "label": "New York Yankees -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+100",
               "model_probability": 0.399393,
               "model_probability_text": "39.9%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-10.1%",
+              "ev_text": "-0.20u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             }
           ]
         },
@@ -6365,19 +6365,19 @@
             {
               "side_key": "over",
               "label": "Over 8.5",
-              "odds_text": "N/A",
+              "odds_text": "-102",
               "model_probability": 0.424236,
               "model_probability_text": "42.4%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-8.1%",
+              "ev_text": "-0.16u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "DraftKings"
             },
             {
               "side_key": "under",
@@ -6672,19 +6672,19 @@
             {
               "side_key": "away",
               "label": "Detroit Tigers",
-              "odds_text": "N/A",
+              "odds_text": "-150",
               "model_probability": 0.498467,
               "model_probability_text": "49.8%",
               "fair_text": "fair 58.0%",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-10.2%",
+              "ev_text": "-0.17u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "BetMGM"
             },
             {
               "side_key": "home",
@@ -6731,19 +6731,19 @@
             {
               "side_key": "away",
               "label": "Detroit Tigers -1.5",
-              "odds_text": "N/A",
+              "odds_text": "+115",
               "model_probability": 0.327442,
               "model_probability_text": "32.7%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-13.8%",
+              "ev_text": "-0.30u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "theScore Bet"
             },
             {
               "side_key": "home",
@@ -6807,19 +6807,19 @@
             {
               "side_key": "under",
               "label": "Under 8.0",
-              "odds_text": "N/A",
+              "odds_text": "-106",
               "model_probability": 0.406568,
               "model_probability_text": "40.7%",
               "fair_text": "N/A",
-              "edge_text": "N/A",
-              "ev_text": "N/A",
-              "stake_text": "N/A",
+              "edge_text": "-10.8%",
+              "ev_text": "-0.21u",
+              "stake_text": "0.0%",
               "is_official": false,
               "is_primary": false,
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": ""
+              "sportsbook": "FanDuel"
             }
           ]
         }
