@@ -352,6 +352,18 @@
     .confidence-medium { color: var(--accent); }
     .confidence-medium_low { color: #b54708; }
     .confidence-low { color: #b42318; }
+    /* ── rating badge ────────────────────────────────── */
+    .rating-badge {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      white-space: nowrap;
+    }
     /* ── model details ──────────────────────────────── */
     .md-projected-score {
       border: 1px solid #eaecf0;
@@ -459,9 +471,9 @@
       <h1>MLB Forecast and Betting Board</h1>
       <div class="subtitle">Forecasts render from the MLB platform. When matched odds are present, each tile shows a best available bet card and market-level dropdowns with both sides of every market.</div>
       <div class="meta">
-        <div class="pill">Generated 2026-04-08 09:42 AM CDT</div>
+        <div class="pill">Generated 2026-04-08 10:07 AM CDT</div>
         <div class="pill">Date 2026-04-08</div>
-        <div class="pill">Requested probable</div>
+        <div class="pill">Requested auto</div>
         <div class="pill">Mode probable</div>
         <div class="pill">Games 15</div>
         <div class="pill">Betting Games 15</div>
@@ -469,6 +481,7 @@
         <div class="pill">Books Seen 4</div>
         <div class="pill">Model ensemble_probable_20260329T152809Z</div>
       </div>
+      <div class="forecast-only-note">Probable-mode board shown because confirmed rows are not active or no confirmed rows were found.</div>
     </section>
 
     <section class="quick-guide">
@@ -496,7 +509,7 @@
     </div>
 
     <section class="tile-list">
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#156f3c">
         <div class="tile-top">
           <div>
             <div class="game-label">San Diego Padres at Pittsburgh Pirates</div>
@@ -522,7 +535,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Over 7.5</div>
           <div class="best-meta">BetMGM +100</div>
           <div class="best-metrics">
@@ -535,7 +550,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#156f3c">70%+</span>          </div>
           <div class="best-bet">Pittsburgh Pirates +1.5</div>
           <div class="best-meta">DraftKings -181</div>
           <div class="best-metrics">
@@ -551,7 +568,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Pittsburgh Pirates 53.2%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Pittsburgh Pirates 53.2%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -587,7 +604,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Pittsburgh Pirates +1.5 71.4%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#156f3c" style="color:#156f3c">Pittsburgh Pirates +1.5 71.4%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -623,7 +640,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.5 66.6%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">Over 7.5 66.6%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -755,7 +772,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#156f3c">
         <div class="tile-top">
           <div>
             <div class="game-label">Kansas City Royals at Cleveland Guardians</div>
@@ -781,7 +798,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Cleveland Guardians +1.5</div>
           <div class="best-meta">DraftKings -163</div>
           <div class="best-metrics">
@@ -794,7 +813,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#156f3c">70%+</span>          </div>
           <div class="best-bet">Cleveland Guardians +1.5</div>
           <div class="best-meta">DraftKings -163</div>
           <div class="best-metrics">
@@ -810,7 +831,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Cleveland Guardians 56.1%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#667085" style="color:#b42318">Cleveland Guardians 56.1%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -846,7 +867,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Cleveland Guardians +1.5 73.3%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#156f3c" style="color:#156f3c">Cleveland Guardians +1.5 73.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -882,7 +903,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.0 57.3%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#667085" style="color:#156f3c">Over 7.0 57.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1014,7 +1035,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Milwaukee Brewers at Boston Red Sox</div>
@@ -1040,7 +1061,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Over 7.5</div>
           <div class="best-meta">BetMGM -105</div>
           <div class="best-metrics">
@@ -1053,7 +1076,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Milwaukee Brewers +1.5</div>
           <div class="best-meta">theScore Bet -180</div>
           <div class="best-metrics">
@@ -1069,7 +1094,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Boston Red Sox 55.9%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#667085" style="color:#b42318">Boston Red Sox 55.9%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1104,7 +1129,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Milwaukee Brewers +1.5 65.2%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#344054" style="color:#b42318">Milwaukee Brewers +1.5 65.2%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1140,7 +1165,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.5 57.3%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#667085" style="color:#156f3c">Over 7.5 57.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1272,7 +1297,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Baltimore Orioles at Chicago White Sox</div>
@@ -1298,7 +1323,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Chicago White Sox +1.5</div>
           <div class="best-meta">BetMGM -130</div>
           <div class="best-metrics">
@@ -1311,7 +1338,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Chicago White Sox +1.5</div>
           <div class="best-meta">BetMGM -130</div>
           <div class="best-metrics">
@@ -1327,7 +1356,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Baltimore Orioles 51.5%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Baltimore Orioles 51.5%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1363,7 +1392,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Chicago White Sox +1.5 66.9%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">Chicago White Sox +1.5 66.9%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1399,7 +1428,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.5 53.9%</span>
+              <span class="summary-center" data-ev-color="#16734b" data-prob-color="#98a2b3" style="color:#16734b">Over 7.5 53.9%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1531,7 +1560,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Seattle Mariners at Texas Rangers</div>
@@ -1557,7 +1586,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Texas Rangers +1.5</div>
           <div class="best-meta">DraftKings -156</div>
           <div class="best-metrics">
@@ -1570,7 +1601,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Texas Rangers +1.5</div>
           <div class="best-meta">DraftKings -156</div>
           <div class="best-metrics">
@@ -1586,7 +1619,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Seattle Mariners 50.3%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Seattle Mariners 50.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1622,7 +1655,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Texas Rangers +1.5 68.8%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">Texas Rangers +1.5 68.8%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1658,7 +1691,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.5 58.1%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#667085" style="color:#156f3c">Over 7.5 58.1%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1790,7 +1823,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Los Angeles Dodgers at Toronto Blue Jays</div>
@@ -1816,7 +1849,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Toronto Blue Jays +1.5</div>
           <div class="best-meta">DraftKings -110</div>
           <div class="best-metrics">
@@ -1829,7 +1864,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Toronto Blue Jays +1.5</div>
           <div class="best-meta">DraftKings -110</div>
           <div class="best-metrics">
@@ -1845,7 +1882,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Toronto Blue Jays 50.6%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Toronto Blue Jays 50.6%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1881,7 +1918,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Toronto Blue Jays +1.5 67.0%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">Toronto Blue Jays +1.5 67.0%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -1917,7 +1954,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.5 60.3%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#475467" style="color:#156f3c">Over 7.5 60.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2049,7 +2086,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Houston Astros at Colorado Rockies</div>
@@ -2075,7 +2112,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Under 11.5</div>
           <div class="best-meta">BetMGM -105</div>
           <div class="best-metrics">
@@ -2088,7 +2127,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Under 11.5</div>
           <div class="best-meta">BetMGM -105</div>
           <div class="best-metrics">
@@ -2104,7 +2145,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Houston Astros 54.2%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Houston Astros 54.2%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2140,7 +2181,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Colorado Rockies +1.5 62.7%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#475467" style="color:#156f3c">Colorado Rockies +1.5 62.7%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2176,7 +2217,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Under 11.5 66.1%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">Under 11.5 66.1%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2308,7 +2349,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Philadelphia Phillies at San Francisco Giants</div>
@@ -2334,7 +2375,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Over 8.0</div>
           <div class="best-meta">BetMGM -115</div>
           <div class="best-metrics">
@@ -2347,7 +2390,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">San Francisco Giants +1.5</div>
           <div class="best-meta">DraftKings -149</div>
           <div class="best-metrics">
@@ -2363,7 +2408,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Philadelphia Phillies 51.0%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Philadelphia Phillies 51.0%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2399,7 +2444,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">San Francisco Giants +1.5 67.2%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">San Francisco Giants +1.5 67.2%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2435,7 +2480,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 8.5 54.6%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#98a2b3" style="color:#156f3c">Over 8.5 54.6%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2567,7 +2612,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#156f3c">
         <div class="tile-top">
           <div>
             <div class="game-label">St. Louis Cardinals at Washington Nationals</div>
@@ -2593,7 +2638,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Washington Nationals +1.5</div>
           <div class="best-meta">FanDuel -160</div>
           <div class="best-metrics">
@@ -2606,7 +2653,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#156f3c">70%+</span>          </div>
           <div class="best-bet">Washington Nationals +1.5</div>
           <div class="best-meta">FanDuel -160</div>
           <div class="best-metrics">
@@ -2622,7 +2671,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Washington Nationals 53.0%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Washington Nationals 53.0%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2658,7 +2707,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Washington Nationals +1.5 70.5%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#156f3c" style="color:#156f3c">Washington Nationals +1.5 70.5%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2694,7 +2743,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 8.5 52.0%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Over 8.5 52.0%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2826,7 +2875,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Atlanta Braves at Los Angeles Angels</div>
@@ -2852,7 +2901,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Under 8.5</div>
           <div class="best-meta">DraftKings -105</div>
           <div class="best-metrics">
@@ -2865,7 +2916,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Los Angeles Angels +1.5</div>
           <div class="best-meta">FanDuel -142</div>
           <div class="best-metrics">
@@ -2881,7 +2934,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Atlanta Braves 52.1%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Atlanta Braves 52.1%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2917,7 +2970,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Los Angeles Angels +1.5 68.2%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">Los Angeles Angels +1.5 68.2%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -2953,7 +3006,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Under 8.5 62.5%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#475467" style="color:#156f3c">Under 8.5 62.5%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3085,7 +3138,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#16734b" data-ev-border="#16734b" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Arizona Diamondbacks at New York Mets</div>
@@ -3111,7 +3164,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#16734b">Medium-High</span>          </div>
           <div class="best-bet">Over 7.5</div>
           <div class="best-meta">BetMGM -105</div>
           <div class="best-metrics">
@@ -3124,7 +3179,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Arizona Diamondbacks +1.5</div>
           <div class="best-meta">DraftKings -181</div>
           <div class="best-metrics">
@@ -3140,7 +3197,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">New York Mets 52.4%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">New York Mets 52.4%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3176,7 +3233,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Arizona Diamondbacks +1.5 67.5%</span>
+              <span class="summary-center" data-ev-color="#0f4c81" data-prob-color="#344054" style="color:#0f4c81">Arizona Diamondbacks +1.5 67.5%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3212,7 +3269,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.5 54.8%</span>
+              <span class="summary-center" data-ev-color="#16734b" data-prob-color="#98a2b3" style="color:#16734b">Over 7.5 54.8%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3344,7 +3401,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#156f3c">
         <div class="tile-top">
           <div>
             <div class="game-label">Chicago Cubs at Tampa Bay Rays</div>
@@ -3370,7 +3427,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Tampa Bay Rays +1.5</div>
           <div class="best-meta">FanDuel -184</div>
           <div class="best-metrics">
@@ -3383,7 +3442,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#156f3c">70%+</span>          </div>
           <div class="best-bet">Tampa Bay Rays +1.5</div>
           <div class="best-meta">FanDuel -184</div>
           <div class="best-metrics">
@@ -3399,7 +3460,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Tampa Bay Rays 50.3%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Tampa Bay Rays 50.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3434,7 +3495,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Tampa Bay Rays +1.5 70.6%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#156f3c" style="color:#156f3c">Tampa Bay Rays +1.5 70.6%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3470,7 +3531,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Under 8.0 50.6%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Under 8.0 50.6%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3602,7 +3663,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#475467">
         <div class="tile-top">
           <div>
             <div class="game-label">Cincinnati Reds at Miami Marlins</div>
@@ -3628,7 +3689,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Over 7.5</div>
           <div class="best-meta">FanDuel -104</div>
           <div class="best-metrics">
@@ -3641,7 +3704,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#475467">60–64%</span>          </div>
           <div class="best-bet">Over 7.5</div>
           <div class="best-meta">FanDuel -104</div>
           <div class="best-metrics">
@@ -3657,7 +3722,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Miami Marlins 56.4%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#667085" style="color:#b42318">Miami Marlins 56.4%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3692,7 +3757,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Cincinnati Reds +1.5 64.5%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#475467" style="color:#b42318">Cincinnati Reds +1.5 64.5%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3727,7 +3792,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 7.5 62.9%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#475467" style="color:#156f3c">Over 7.5 62.9%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3859,7 +3924,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#475467">
         <div class="tile-top">
           <div>
             <div class="game-label">Athletics at New York Yankees</div>
@@ -3885,7 +3950,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Athletics +1.5</div>
           <div class="best-meta">DraftKings -115</div>
           <div class="best-metrics">
@@ -3898,7 +3965,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#475467">60–64%</span>          </div>
           <div class="best-bet">Athletics +1.5</div>
           <div class="best-meta">DraftKings -115</div>
           <div class="best-metrics">
@@ -3914,7 +3983,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">New York Yankees 58.9%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#667085" style="color:#b42318">New York Yankees 58.9%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3950,7 +4019,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Athletics +1.5 60.1%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#475467" style="color:#156f3c">Athletics +1.5 60.1%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -3986,7 +4055,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Under 8.5 57.6%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#667085" style="color:#156f3c">Under 8.5 57.6%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -4118,7 +4187,7 @@
         </div>
 
       </article>
-      <article class="tile">
+      <article class="tile" style="border-left-color:#156f3c" data-ev-border="#156f3c" data-prob-border="#344054">
         <div class="tile-top">
           <div>
             <div class="game-label">Detroit Tigers at Minnesota Twins</div>
@@ -4144,7 +4213,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_ev">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest EV)</span></div>
+<span class="rating-badge" style="background:#156f3c">High</span>          </div>
           <div class="best-bet">Minnesota Twins +1.5</div>
           <div class="best-meta">DraftKings -131</div>
           <div class="best-metrics">
@@ -4157,7 +4228,9 @@
         </div>
 
         <div class="best-card" data-best-card-variant="highest_model_prob" style="display:none">
-          <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="label">Best Available Bet <span style="font-weight:400;color:var(--muted)">(Highest Model Prob)</span></div>
+<span class="rating-badge" style="background:#344054">65–69%</span>          </div>
           <div class="best-bet">Minnesota Twins +1.5</div>
           <div class="best-meta">DraftKings -131</div>
           <div class="best-metrics">
@@ -4173,7 +4246,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Money Line</span>
-              <span class="summary-center">Minnesota Twins 50.2%</span>
+              <span class="summary-center" data-ev-color="#b42318" data-prob-color="#98a2b3" style="color:#b42318">Minnesota Twins 50.2%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -4209,7 +4282,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Run Line</span>
-              <span class="summary-center">Minnesota Twins +1.5 67.3%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#344054" style="color:#156f3c">Minnesota Twins +1.5 67.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -4245,7 +4318,7 @@
           <details class="market-dropdown">
             <summary>
               <span class="summary-label">Total</span>
-              <span class="summary-center">Over 8.0 59.3%</span>
+              <span class="summary-center" data-ev-color="#156f3c" data-prob-color="#667085" style="color:#156f3c">Over 8.0 59.3%</span>
               <span class="summary-icon"><span class="summary-icon-plus">+</span><span class="summary-icon-minus">&minus;</span></span>
             </summary>
             <div class="dropdown-body">
@@ -4385,13 +4458,29 @@
     (function () {
       var buttons = document.querySelectorAll('[data-best-card-sort]');
       var cards = document.querySelectorAll('[data-best-card-variant]');
+      var tiles = document.querySelectorAll('.tile[data-ev-border]');
+      var summaries = document.querySelectorAll('.summary-center[data-ev-color]');
+
+      function applySort(variant) {
+        buttons.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-best-card-sort') === variant); });
+        cards.forEach(function (card) {
+          card.style.display = card.getAttribute('data-best-card-variant') === variant ? '' : 'none';
+        });
+        var borderAttr = variant === 'highest_ev' ? 'data-ev-border' : 'data-prob-border';
+        tiles.forEach(function (tile) {
+          var c = tile.getAttribute(borderAttr);
+          if (c) tile.style.borderLeftColor = c;
+        });
+        var colorAttr = variant === 'highest_ev' ? 'data-ev-color' : 'data-prob-color';
+        summaries.forEach(function (s) {
+          var c = s.getAttribute(colorAttr);
+          if (c) s.style.color = c;
+        });
+      }
+
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          var variant = btn.getAttribute('data-best-card-sort');
-          buttons.forEach(function (b) { b.classList.toggle('active', b === btn); });
-          cards.forEach(function (card) {
-            card.style.display = card.getAttribute('data-best-card-variant') === variant ? '' : 'none';
-          });
+          applySort(btn.getAttribute('data-best-card-sort'));
         });
       });
     }());

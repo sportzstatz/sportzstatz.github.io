@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-08 09:42 AM CDT",
+  "generated_at": "2026-04-08 10:07 AM CDT",
   "target_date": "2026-04-08",
-  "requested_mode": "probable",
+  "requested_mode": "auto",
   "mode": "probable",
-  "mode_note": null,
+  "mode_note": "Probable-mode board shown because confirmed rows are not active or no confirmed rows were found.",
   "game_count": 15,
   "betting_game_count": 15,
   "recommendation_count": 41,
@@ -28,6 +28,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
       "game_label": "San Diego Padres at Pittsburgh Pirates"
     },
     {
@@ -50,6 +52,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "prob_rating": "70%+",
+      "prob_rating_color": "#156f3c",
       "game_label": "San Diego Padres at Pittsburgh Pirates"
     },
     {
@@ -72,6 +76,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "70%+",
+      "prob_rating_color": "#156f3c",
       "game_label": "Kansas City Royals at Cleveland Guardians"
     },
     {
@@ -116,6 +124,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
       "game_label": "Milwaukee Brewers at Boston Red Sox"
     },
     {
@@ -138,6 +148,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Baltimore Orioles at Chicago White Sox"
     },
     {
@@ -182,6 +196,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Seattle Mariners at Texas Rangers"
     },
     {
@@ -226,6 +244,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Los Angeles Dodgers at Toronto Blue Jays"
     },
     {
@@ -270,6 +292,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Houston Astros at Colorado Rockies"
     },
     {
@@ -314,6 +340,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
       "game_label": "Philadelphia Phillies at San Francisco Giants"
     },
     {
@@ -336,6 +364,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Philadelphia Phillies at San Francisco Giants"
     },
     {
@@ -358,6 +388,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "70%+",
+      "prob_rating_color": "#156f3c",
       "game_label": "St. Louis Cardinals at Washington Nationals"
     },
     {
@@ -402,6 +436,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
       "game_label": "Atlanta Braves at Los Angeles Angels"
     },
     {
@@ -424,6 +460,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Atlanta Braves at Los Angeles Angels"
     },
     {
@@ -446,6 +484,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "Medium-High",
+      "ev_rating_color": "#16734b",
       "game_label": "Arizona Diamondbacks at New York Mets"
     },
     {
@@ -468,6 +508,8 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Arizona Diamondbacks at New York Mets"
     },
     {
@@ -490,6 +532,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "70%+",
+      "prob_rating_color": "#156f3c",
       "game_label": "Chicago Cubs at Tampa Bay Rays"
     },
     {
@@ -534,6 +580,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "60\u201364%",
+      "prob_rating_color": "#475467",
       "game_label": "Cincinnati Reds at Miami Marlins"
     },
     {
@@ -556,6 +606,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "60\u201364%",
+      "prob_rating_color": "#475467",
       "game_label": "Athletics at New York Yankees"
     },
     {
@@ -600,6 +654,10 @@
       "confidence_label": "Medium",
       "confidence_class": "medium",
       "is_official": true,
+      "ev_rating": "High",
+      "ev_rating_color": "#156f3c",
+      "prob_rating": "65\u201369%",
+      "prob_rating_color": "#344054",
       "game_label": "Detroit Tigers at Minnesota Twins"
     },
     {
@@ -690,7 +748,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         {
           "market_key": "spreads",
@@ -711,7 +771,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         },
         {
           "market_key": "h2h",
@@ -755,7 +817,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -776,7 +840,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         }
       },
       "market_dropdowns": [
@@ -800,7 +866,9 @@
             "confidence_label": "Low",
             "confidence_class": "low",
             "status_label": "Value",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.011828,
+            "raw_edge": 0.025102
           },
           "options": [
             {
@@ -818,7 +886,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.08551842857142855,
+              "raw_edge": -0.04380212195121952
             },
             {
               "side_key": "home",
@@ -835,9 +905,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.011828,
+              "raw_edge": 0.025102
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -859,7 +933,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.10813,
+            "raw_edge": 0.09782
           },
           "options": [
             {
@@ -877,7 +953,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.2415117000000001,
+              "raw_edge": -0.09113649056603779
             },
             {
               "side_key": "home",
@@ -894,9 +972,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.10813,
+              "raw_edge": 0.09782
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#156f3c"
         },
         {
           "market_key": "totals",
@@ -918,7 +1000,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.331497,
+            "raw_edge": 0.187488
           },
           "options": [
             {
@@ -936,7 +1020,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.331497,
+              "raw_edge": 0.187488
             },
             {
               "side_key": "under",
@@ -953,9 +1039,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": -0.32147046999999984,
+              "raw_edge": -0.15835983743842358
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         }
       ],
       "model_details_projected_score": "Pittsburgh Pirates 4.7, San Diego Padres 5.1",
@@ -1065,7 +1155,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "5.0",
         "Away Runs p90": "8.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "70%+",
+      "prob_bucket_color": "#156f3c"
     },
     {
       "game_pk": 824455,
@@ -1115,7 +1209,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         },
         {
           "market_key": "totals",
@@ -1180,7 +1278,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -1201,7 +1303,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         }
       },
       "market_dropdowns": [
@@ -1225,7 +1331,9 @@
             "confidence_label": "Low",
             "confidence_class": "low",
             "status_label": "Value",
-            "sportsbook": "theScore Bet"
+            "sportsbook": "theScore Bet",
+            "raw_ev": 0.104705,
+            "raw_edge": 0.068794
           },
           "options": [
             {
@@ -1243,7 +1351,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.21048220000000006,
+              "raw_edge": -0.1169345555555556
             },
             {
               "side_key": "home",
@@ -1260,9 +1370,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": 0.104705,
+              "raw_edge": 0.068794
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#667085"
         },
         {
           "market_key": "spreads",
@@ -1284,7 +1398,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.183083,
+            "raw_edge": 0.140331
           },
           "options": [
             {
@@ -1302,7 +1418,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.34377285999999996,
+              "raw_edge": -0.13974506504065037
             },
             {
               "side_key": "home",
@@ -1319,9 +1437,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.183083,
+              "raw_edge": 0.140331
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#156f3c"
         },
         {
           "market_key": "totals",
@@ -1343,7 +1465,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.088908,
+            "raw_edge": 0.07758
           },
           "options": [
             {
@@ -1361,7 +1485,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.088908,
+              "raw_edge": 0.07758
             },
             {
               "side_key": "under",
@@ -1378,9 +1504,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.06114999999999993,
+              "raw_edge": -0.027795454545454512
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#667085"
         }
       ],
       "model_details_projected_score": "Cleveland Guardians 3.8, Kansas City Royals 4.1",
@@ -1490,7 +1620,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "70%+",
+      "prob_bucket_color": "#156f3c"
     },
     {
       "game_pk": 824779,
@@ -1540,7 +1674,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         {
           "market_key": "spreads",
@@ -1561,7 +1697,9 @@
           "status_class": "value",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "is_official": false
+          "is_official": false,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       ],
       "best_card_options": {
@@ -1584,7 +1722,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -1605,7 +1745,9 @@
           "status_class": "value",
           "confidence_label": "Low",
           "confidence_class": "low",
-          "is_official": false
+          "is_official": false,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -1629,7 +1771,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": -0.024054104477611915,
+            "raw_edge": -0.013774572649572714
           },
           "options": [
             {
@@ -1647,7 +1791,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.05158125000000002,
+              "raw_edge": -0.023991279069767446
             },
             {
               "side_key": "home",
@@ -1664,9 +1810,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.024054104477611915,
+              "raw_edge": -0.013774572649572714
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#667085"
         },
         {
           "market_key": "spreads",
@@ -1688,7 +1838,9 @@
             "confidence_label": "Low",
             "confidence_class": "low",
             "status_label": "Value",
-            "sportsbook": "theScore Bet"
+            "sportsbook": "theScore Bet",
+            "raw_ev": 0.014368,
+            "raw_edge": 0.035655
           },
           "options": [
             {
@@ -1706,7 +1858,9 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": 0.014368,
+              "raw_edge": 0.035655
             },
             {
               "side_key": "home",
@@ -1723,9 +1877,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.07804644999999999,
+              "raw_edge": -0.02945149056603774
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -1747,7 +1905,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.117882,
+            "raw_edge": 0.083408
           },
           "options": [
             {
@@ -1765,7 +1925,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.117882,
+              "raw_edge": 0.083408
             },
             {
               "side_key": "under",
@@ -1782,9 +1944,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.18400490909090916,
+              "raw_edge": -0.09638352380952386
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#667085"
         }
       ],
       "model_details_projected_score": "Boston Red Sox 4.7, Milwaukee Brewers 3.8",
@@ -1894,7 +2060,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "6.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 824617,
@@ -1944,7 +2114,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -2009,7 +2183,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -2030,7 +2208,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -2054,7 +2236,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "theScore Bet"
+            "sportsbook": "theScore Bet",
+            "raw_ev": -0.1525576774193549,
+            "raw_edge": -0.09273113725490201
           },
           "options": [
             {
@@ -2072,7 +2256,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.1525576774193549,
+              "raw_edge": -0.09273113725490201
             },
             {
               "side_key": "home",
@@ -2089,9 +2275,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.080701,
+              "raw_edge": 0.051294
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -2113,7 +2303,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.182831,
+            "raw_edge": 0.125813
           },
           "options": [
             {
@@ -2131,7 +2323,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.28739755,
+              "raw_edge": -0.13367327906976745
             },
             {
               "side_key": "home",
@@ -2148,9 +2342,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.182831,
+              "raw_edge": 0.125813
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -2172,7 +2370,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.052506,
+            "raw_edge": 0.049923
           },
           "options": [
             {
@@ -2190,7 +2390,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.052506,
+              "raw_edge": 0.049923
             },
             {
               "side_key": "under",
@@ -2207,9 +2409,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": -0.12756132142857146,
+              "raw_edge": -0.06739088679245281
             }
-          ]
+          ],
+          "ev_summary_color": "#16734b",
+          "prob_summary_color": "#98a2b3"
         }
       ],
       "model_details_projected_score": "Chicago White Sox 4.2, Baltimore Orioles 4.0",
@@ -2319,7 +2525,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 822915,
@@ -2369,7 +2579,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -2434,7 +2648,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -2455,7 +2673,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -2479,7 +2701,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": -0.09753177777777788,
+            "raw_edge": -0.05437612389380542
           },
           "options": [
             {
@@ -2497,7 +2721,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.09753177777777788,
+              "raw_edge": -0.05437612389380542
             },
             {
               "side_key": "home",
@@ -2514,9 +2740,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.028466,
+              "raw_edge": 0.033905
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -2538,7 +2768,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.128374,
+            "raw_edge": 0.105057
           },
           "options": [
             {
@@ -2556,7 +2788,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.2502472000000001,
+              "raw_edge": -0.1042696666666667
             },
             {
               "side_key": "home",
@@ -2573,9 +2807,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.128374,
+              "raw_edge": 0.105057
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -2597,7 +2835,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.109461,
+            "raw_edge": 0.081146
           },
           "options": [
             {
@@ -2615,7 +2855,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.109461,
+              "raw_edge": 0.081146
             },
             {
               "side_key": "under",
@@ -2632,9 +2874,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.18223742857142855,
+              "raw_edge": -0.09334112195121952
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#667085"
         }
       ],
       "model_details_projected_score": "Texas Rangers 4.0, Seattle Mariners 4.6",
@@ -2744,7 +2990,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 822833,
@@ -2794,7 +3044,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -2859,7 +3113,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -2880,7 +3138,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -2904,7 +3166,9 @@
             "confidence_label": "Low",
             "confidence_class": "low",
             "status_label": "Value",
-            "sportsbook": "theScore Bet"
+            "sportsbook": "theScore Bet",
+            "raw_ev": 0.163515,
+            "raw_edge": 0.079441
           },
           "options": [
             {
@@ -2922,7 +3186,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.21480347058823523,
+              "raw_edge": -0.13524662962962952
             },
             {
               "side_key": "home",
@@ -2939,9 +3205,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": 0.163515,
+              "raw_edge": 0.079441
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -2963,7 +3233,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.278502,
+            "raw_edge": 0.169691
           },
           "options": [
             {
@@ -2981,7 +3253,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.33938199999999996,
+              "raw_edge": -0.16969099999999998
             },
             {
               "side_key": "home",
@@ -2998,9 +3272,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.278502,
+              "raw_edge": 0.169691
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -3022,7 +3300,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.114919,
+            "raw_edge": 0.088513
           },
           "options": [
             {
@@ -3040,7 +3320,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.114919,
+              "raw_edge": 0.088513
             },
             {
               "side_key": "under",
@@ -3057,9 +3339,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.20697600000000005,
+              "raw_edge": -0.10348800000000002
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#475467"
         }
       ],
       "model_details_projected_score": "Toronto Blue Jays 4.8, Los Angeles Dodgers 4.0",
@@ -3169,7 +3455,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 824374,
@@ -3219,7 +3509,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "spreads",
@@ -3284,7 +3578,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         "highest_model_prob": {
           "market_key": "totals",
@@ -3305,7 +3603,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -3329,7 +3631,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "theScore Bet"
+            "sportsbook": "theScore Bet",
+            "raw_ev": -0.10780106451612903,
+            "raw_edge": -0.06552613725490197
           },
           "options": [
             {
@@ -3347,7 +3651,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.10780106451612903,
+              "raw_edge": -0.06552613725490197
             },
             {
               "side_key": "home",
@@ -3364,9 +3670,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.036512,
+              "raw_edge": 0.03398
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -3388,7 +3698,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.197534,
+            "raw_edge": 0.127279
           },
           "options": [
             {
@@ -3406,7 +3718,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.27230857142857146,
+              "raw_edge": -0.13947512195121953
             },
             {
               "side_key": "home",
@@ -3423,9 +3737,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.197534,
+              "raw_edge": 0.127279
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#475467"
         },
         {
           "market_key": "totals",
@@ -3447,7 +3765,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.290541,
+            "raw_edge": 0.171843
           },
           "options": [
             {
@@ -3465,7 +3785,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.322018,
+              "raw_edge": -0.161009
             },
             {
               "side_key": "under",
@@ -3482,9 +3804,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.290541,
+              "raw_edge": 0.171843
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         }
       ],
       "model_details_projected_score": "Colorado Rockies 3.2, Houston Astros 6.2",
@@ -3594,7 +3920,11 @@
         "Away Runs p10": "3.0",
         "Away Runs p50": "6.0",
         "Away Runs p90": "10.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 823234,
@@ -3644,7 +3974,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         {
           "market_key": "spreads",
@@ -3665,7 +3997,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "h2h",
@@ -3709,7 +4043,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -3730,7 +4066,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -3754,7 +4092,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": -0.10948680597014937,
+            "raw_edge": -0.06269757264957276
           },
           "options": [
             {
@@ -3772,7 +4112,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.10948680597014937,
+              "raw_edge": -0.06269757264957276
             },
             {
               "side_key": "home",
@@ -3789,9 +4131,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.022087,
+              "raw_edge": 0.027983
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -3813,7 +4159,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.123436,
+            "raw_edge": 0.100629
           },
           "options": [
             {
@@ -3831,7 +4179,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.2461911,
+              "raw_edge": -0.10703960869565221
             },
             {
               "side_key": "home",
@@ -3848,9 +4198,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.123436,
+              "raw_edge": 0.100629
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -3872,7 +4226,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.152841,
+            "raw_edge": 0.118184
           },
           "options": [
             {
@@ -3890,7 +4246,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.152841,
+              "raw_edge": 0.118184
             },
             {
               "side_key": "under",
@@ -3907,9 +4265,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.11415985714285715,
+              "raw_edge": -0.058472121951219536
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#98a2b3"
         }
       ],
       "model_details_projected_score": "San Francisco Giants 4.8, Philadelphia Phillies 4.5",
@@ -4019,7 +4381,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 822753,
@@ -4069,7 +4435,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         },
         {
           "market_key": "totals",
@@ -4134,7 +4504,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -4155,7 +4529,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         }
       },
       "market_dropdowns": [
@@ -4179,7 +4557,9 @@
             "confidence_label": "Low",
             "confidence_class": "low",
             "status_label": "Value",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.068744,
+            "raw_edge": 0.05167
           },
           "options": [
             {
@@ -4197,7 +4577,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.13906666666666656,
+              "raw_edge": -0.0758545454545454
             },
             {
               "side_key": "home",
@@ -4214,9 +4596,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.068744,
+              "raw_edge": 0.05167
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -4238,7 +4624,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.144833,
+            "raw_edge": 0.116426
           },
           "options": [
             {
@@ -4256,7 +4644,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.29083120000000007,
+              "raw_edge": -0.12117966666666669
             },
             {
               "side_key": "home",
@@ -4273,9 +4663,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.144833,
+              "raw_edge": 0.116426
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#156f3c"
         },
         {
           "market_key": "totals",
@@ -4297,7 +4691,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.094899,
+            "raw_edge": 0.083252
           },
           "options": [
             {
@@ -4315,7 +4711,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.094899,
+              "raw_edge": 0.083252
             },
             {
               "side_key": "under",
@@ -4332,9 +4730,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": -0.04939394117647056,
+              "raw_edge": -0.024941495049504936
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         }
       ],
       "model_details_projected_score": "Washington Nationals 4.3, St. Louis Cardinals 4.7",
@@ -4444,7 +4846,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "5.0",
         "Away Runs p90": "8.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "70%+",
+      "prob_bucket_color": "#156f3c"
     },
     {
       "game_pk": 824050,
@@ -4494,7 +4900,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         {
           "market_key": "spreads",
@@ -4515,7 +4923,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "h2h",
@@ -4559,7 +4969,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -4580,7 +4992,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -4604,7 +5018,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": -0.07794238461538461,
+            "raw_edge": -0.04405439130434785
           },
           "options": [
             {
@@ -4622,7 +5038,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.07794238461538461,
+              "raw_edge": -0.04405439130434785
             },
             {
               "side_key": "home",
@@ -4639,9 +5057,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.009607,
+              "raw_edge": 0.022179
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -4663,7 +5085,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.161519,
+            "raw_edge": 0.120308
           },
           "options": [
             {
@@ -4681,7 +5105,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.2675696000000001,
+              "raw_edge": -0.11633460869565221
             },
             {
               "side_key": "home",
@@ -4698,9 +5124,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.161519,
+              "raw_edge": 0.120308
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -4722,7 +5152,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.220049,
+            "raw_edge": 0.135738
           },
           "options": [
             {
@@ -4740,7 +5172,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.2839057272727272,
+              "raw_edge": -0.14871252380952382
             },
             {
               "side_key": "under",
@@ -4757,9 +5191,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.220049,
+              "raw_edge": 0.135738
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#475467"
         }
       ],
       "model_details_projected_score": "Los Angeles Angels 3.9, Atlanta Braves 3.2",
@@ -4869,7 +5307,11 @@
         "Away Runs p10": "1.0",
         "Away Runs p50": "3.0",
         "Away Runs p90": "6.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 823646,
@@ -4919,7 +5361,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "Medium-High",
+          "ev_rating_color": "#16734b"
         },
         {
           "market_key": "spreads",
@@ -4940,7 +5384,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "h2h",
@@ -4984,7 +5430,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "Medium-High",
+          "ev_rating_color": "#16734b"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -5005,7 +5453,9 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -5029,7 +5479,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": -0.07235338461538476,
+            "raw_edge": -0.04089539130434794
           },
           "options": [
             {
@@ -5047,7 +5499,9 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.024714,
+              "raw_edge": 0.029271
             },
             {
               "side_key": "home",
@@ -5064,9 +5518,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.07235338461538476,
+              "raw_edge": -0.04089539130434794
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -5088,7 +5546,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.047865,
+            "raw_edge": 0.059002
           },
           "options": [
             {
@@ -5106,7 +5566,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.047865,
+              "raw_edge": 0.059002
             },
             {
               "side_key": "home",
@@ -5123,9 +5585,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.12238929999999992,
+              "raw_edge": -0.045329370370370325
             }
-          ]
+          ],
+          "ev_summary_color": "#0f4c81",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -5147,7 +5613,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.070865,
+            "raw_edge": 0.059326
           },
           "options": [
             {
@@ -5165,7 +5633,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.070865,
+              "raw_edge": 0.059326
             },
             {
               "side_key": "under",
@@ -5182,9 +5652,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.11434969230769221,
+              "raw_edge": -0.058295921568627396
             }
-          ]
+          ],
+          "ev_summary_color": "#16734b",
+          "prob_summary_color": "#98a2b3"
         }
       ],
       "model_details_projected_score": "New York Mets 4.2, Arizona Diamondbacks 4.0",
@@ -5294,7 +5768,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "Medium-High",
+      "ev_bucket_color": "#16734b",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     },
     {
       "game_pk": 823000,
@@ -5344,7 +5822,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         },
         {
           "market_key": "totals",
@@ -5388,7 +5870,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -5409,7 +5895,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "70%+",
+          "prob_rating_color": "#156f3c"
         }
       },
       "market_dropdowns": [
@@ -5433,7 +5923,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": -0.017913333333333337,
+            "raw_edge": -0.0091751219512195
           },
           "options": [
             {
@@ -5451,7 +5943,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.025154615384615386,
+              "raw_edge": -0.012823921568627439
             },
             {
               "side_key": "home",
@@ -5468,9 +5962,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.017913333333333337,
+              "raw_edge": -0.0091751219512195
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -5492,7 +5990,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.090362,
+            "raw_edge": 0.086274
           },
           "options": [
             {
@@ -5510,7 +6010,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.23672320000000002,
+              "raw_edge": -0.09104738461538459
             },
             {
               "side_key": "home",
@@ -5527,9 +6029,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.090362,
+              "raw_edge": 0.086274
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#156f3c"
         },
         {
           "market_key": "totals",
@@ -5551,7 +6057,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "theScore Bet"
+            "sportsbook": "theScore Bet",
+            "raw_ev": 0.035141,
+            "raw_edge": 0.042611
           },
           "options": [
             {
@@ -5569,7 +6077,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": 0.012248999999999954,
+              "raw_edge": 0.005975121951219464
             },
             {
               "side_key": "under",
@@ -5586,9 +6096,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": 0.035141,
+              "raw_edge": 0.042611
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         }
       ],
       "model_details_projected_score": "Tampa Bay Rays 3.9, Chicago Cubs 4.1",
@@ -5698,7 +6212,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "70%+",
+      "prob_bucket_color": "#156f3c"
     },
     {
       "game_pk": 823885,
@@ -5748,7 +6266,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "60\u201364%",
+          "prob_rating_color": "#475467"
         }
       ],
       "best_card_options": {
@@ -5771,7 +6293,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "60\u201364%",
+          "prob_rating_color": "#475467"
         },
         "highest_model_prob": {
           "market_key": "totals",
@@ -5792,7 +6318,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "60\u201364%",
+          "prob_rating_color": "#475467"
         }
       },
       "market_dropdowns": [
@@ -5816,7 +6346,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": -0.0013488461538461172,
+            "raw_edge": -0.0007623913043478536
           },
           "options": [
             {
@@ -5834,7 +6366,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.06357825000000006,
+              "raw_edge": -0.02957127906976742
             },
             {
               "side_key": "home",
@@ -5851,9 +6385,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.0013488461538461172,
+              "raw_edge": -0.0007623913043478536
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#667085"
         },
         {
           "market_key": "spreads",
@@ -5875,7 +6413,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": -0.022456061855670173,
+            "raw_edge": -0.01481794557823135
           },
           "options": [
             {
@@ -5893,7 +6433,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.022456061855670173,
+              "raw_edge": -0.01481794557823135
             },
             {
               "side_key": "home",
@@ -5910,9 +6452,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.0416242,
+              "raw_edge": -0.015416370370370358
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#475467"
         },
         {
           "market_key": "totals",
@@ -5934,7 +6480,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.234171,
+            "raw_edge": 0.14416
           },
           "options": [
             {
@@ -5952,7 +6500,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.234171,
+              "raw_edge": 0.14416
             },
             {
               "side_key": "under",
@@ -5969,9 +6519,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.30673717391304356,
+              "raw_edge": -0.16406872093023261
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#475467"
         }
       ],
       "model_details_projected_score": "Miami Marlins 4.0, Cincinnati Reds 5.3",
@@ -6081,7 +6635,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "5.0",
         "Away Runs p90": "8.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "60\u201364%",
+      "prob_bucket_color": "#475467"
     },
     {
       "game_pk": 823564,
@@ -6131,7 +6689,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "60\u201364%",
+          "prob_rating_color": "#475467"
         },
         {
           "market_key": "totals",
@@ -6196,7 +6758,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "60\u201364%",
+          "prob_rating_color": "#475467"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -6217,7 +6783,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "60\u201364%",
+          "prob_rating_color": "#475467"
         }
       },
       "market_dropdowns": [
@@ -6241,7 +6811,9 @@
             "confidence_label": "",
             "confidence_class": "low",
             "status_label": "Pass",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": -0.11583849999999996,
+            "raw_edge": -0.07722566666666664
           },
           "options": [
             {
@@ -6259,7 +6831,9 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.089025,
+              "raw_edge": 0.047324
             },
             {
               "side_key": "home",
@@ -6276,9 +6850,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.11583849999999996,
+              "raw_edge": -0.07722566666666664
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#667085"
         },
         {
           "market_key": "spreads",
@@ -6300,7 +6878,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.122874,
+            "raw_edge": 0.089772
           },
           "options": [
             {
@@ -6318,7 +6898,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.122874,
+              "raw_edge": 0.089772
             },
             {
               "side_key": "home",
@@ -6335,9 +6917,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.201214,
+              "raw_edge": -0.100607
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#475467"
         },
         {
           "market_key": "totals",
@@ -6359,7 +6945,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.08082,
+            "raw_edge": 0.0671
           },
           "options": [
             {
@@ -6377,7 +6965,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": -0.15984635294117644,
+              "raw_edge": -0.08071449504950495
             },
             {
               "side_key": "under",
@@ -6394,9 +6984,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.08082,
+              "raw_edge": 0.0671
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#667085"
         }
       ],
       "model_details_projected_score": "New York Yankees 3.8, Athletics 4.0",
@@ -6506,7 +7100,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "4.0",
         "Away Runs p90": "7.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "60\u201364%",
+      "prob_bucket_color": "#475467"
     },
     {
       "game_pk": 823726,
@@ -6556,7 +7154,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -6621,7 +7223,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         },
         "highest_model_prob": {
           "market_key": "spreads",
@@ -6642,7 +7248,11 @@
           "status_class": "official",
           "confidence_label": "Medium",
           "confidence_class": "medium",
-          "is_official": true
+          "is_official": true,
+          "ev_rating": "High",
+          "ev_rating_color": "#156f3c",
+          "prob_rating": "65\u201369%",
+          "prob_rating_color": "#344054"
         }
       },
       "market_dropdowns": [
@@ -6666,7 +7276,9 @@
             "confidence_label": "Low",
             "confidence_class": "low",
             "status_label": "Value",
-            "sportsbook": "FanDuel"
+            "sportsbook": "FanDuel",
+            "raw_ev": 0.087527,
+            "raw_edge": 0.055212
           },
           "options": [
             {
@@ -6684,7 +7296,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": -0.16922166666666671,
+              "raw_edge": -0.1015330000000001
             },
             {
               "side_key": "home",
@@ -6701,9 +7315,13 @@
               "confidence_label": "Low",
               "confidence_class": "low",
               "status_label": "Value",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": 0.087527,
+              "raw_edge": 0.055212
             }
-          ]
+          ],
+          "ev_summary_color": "#b42318",
+          "prob_summary_color": "#98a2b3"
         },
         {
           "market_key": "spreads",
@@ -6725,7 +7343,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "DraftKings"
+            "sportsbook": "DraftKings",
+            "raw_ev": 0.185962,
+            "raw_edge": 0.130174
           },
           "options": [
             {
@@ -6743,7 +7363,9 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "theScore Bet"
+              "sportsbook": "theScore Bet",
+              "raw_ev": -0.2959997,
+              "raw_edge": -0.13767427906976742
             },
             {
               "side_key": "home",
@@ -6760,9 +7382,13 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "DraftKings"
+              "sportsbook": "DraftKings",
+              "raw_ev": 0.185962,
+              "raw_edge": 0.130174
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#344054"
         },
         {
           "market_key": "totals",
@@ -6784,7 +7410,9 @@
             "confidence_label": "Medium",
             "confidence_class": "medium",
             "status_label": "Official",
-            "sportsbook": "BetMGM"
+            "sportsbook": "BetMGM",
+            "raw_ev": 0.114995,
+            "raw_edge": 0.093432
           },
           "options": [
             {
@@ -6802,7 +7430,9 @@
               "confidence_label": "Medium",
               "confidence_class": "medium",
               "status_label": "Official",
-              "sportsbook": "BetMGM"
+              "sportsbook": "BetMGM",
+              "raw_ev": 0.114995,
+              "raw_edge": 0.093432
             },
             {
               "side_key": "under",
@@ -6819,9 +7449,13 @@
               "confidence_label": "",
               "confidence_class": "low",
               "status_label": "Pass",
-              "sportsbook": "FanDuel"
+              "sportsbook": "FanDuel",
+              "raw_ev": -0.209877283018868,
+              "raw_edge": -0.10799510679611651
             }
-          ]
+          ],
+          "ev_summary_color": "#156f3c",
+          "prob_summary_color": "#667085"
         }
       ],
       "model_details_projected_score": "Minnesota Twins 4.0, Detroit Tigers 5.1",
@@ -6931,7 +7565,11 @@
         "Away Runs p10": "2.0",
         "Away Runs p50": "5.0",
         "Away Runs p90": "8.0"
-      }
+      },
+      "ev_bucket_label": "High",
+      "ev_bucket_color": "#156f3c",
+      "prob_bucket_label": "65\u201369%",
+      "prob_bucket_color": "#344054"
     }
   ]
 }
